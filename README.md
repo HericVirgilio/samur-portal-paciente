@@ -1,1 +1,0 @@
-# samur-portal-paciente
