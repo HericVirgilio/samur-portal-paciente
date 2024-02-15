@@ -19,7 +19,7 @@ const config: Config = {
         'botao-continuar': '#46E01F',
         'verde-claro': '#B1D7C6',
         'verde-escuro': '#2F6969',
-        'heather': '#FFFFFF',
+        'header': '#FFFFFF',
       },
     },
   },

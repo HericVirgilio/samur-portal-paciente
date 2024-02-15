@@ -1,7 +1,8 @@
+import Header from "@/components/headerLoginCadastro"
 export default function Login(){
     return(
         <main>
-            <h1>pagina login</h1>
+            <Header/>
         </main>
     )
 }
