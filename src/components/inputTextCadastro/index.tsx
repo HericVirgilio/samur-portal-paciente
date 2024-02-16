@@ -1,4 +1,5 @@
 import './style.css'
+import Link from 'next/link'
 export default function InputTextCadastro(){
     return(
         <form className="box-inputText">
@@ -29,14 +30,14 @@ export default function InputTextCadastro(){
             <input className="item-inputText border border-black rounded"
             type="text" name="nacionalidade" id="nacionalidade" placeholder="Nacionalidade"/>
 
-            <select className='item-select' name="sexo" id="sexo" aria-placeholder='Selecione o sexo'>
+            <select className='item-select' name="sexo" id="sexo">
                 <option value="invalido">Selecione o sexo</option>
                 <option value="masculino">Masculino</option>
                 <option value="feminino">Feminino</option>
                 <option value="indeterminado">Indeterminado</option>
             </select>
 
-            <select className='item-select' name="escolaridade" id="escolaridade" aria-placeholder='Selecione sua escolariade'>
+            <select className='item-select' name="escolaridade" id="escolaridade">
                 <option value="invalido" className='optioText'>Selecione a escolariade</option>
                 <option value="masculino" className='optioText'>Masculino</option>
                 <option value="feminino" className='optioText'>Feminino</option>
@@ -77,7 +78,9 @@ export default function InputTextCadastro(){
                 <input type="checkbox" name="aceito-compartilhar" id="aceito-compartilhar"/>
                 <span className='checkBoxText'>Aceito compartilhar os meus dados pessoais!</span>
             </label>
+            <Link href={'/'}>
             <input className='botao-entrar-login' type="button" value="Entrar" />
+            </Link>
         </form>
     )
 }
