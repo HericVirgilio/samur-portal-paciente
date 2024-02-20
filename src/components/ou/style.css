@@ -1,0 +1,18 @@
+.boxOu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.linhaDireita{
+    background-color: var(--preto);
+    width: 35vw;
+    height: 1px;
+}
+.tituloOu{
+    margin: 10px;
+}
+.linhaEsquerda{
+    background-color: var(--preto);
+    width: 35vw;
+    height: 1px;
+}

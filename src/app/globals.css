@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root{
+    --azul-claro: #2C6EF2;
+    --branco: white;
+    --preto: black;
+    --cinza-input: #808080;
+}
+body{
+    background-color: #F5F2F2;
+}

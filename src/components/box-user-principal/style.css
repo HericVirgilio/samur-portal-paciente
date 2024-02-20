@@ -1,0 +1,34 @@
+.boxUserPrincipal{
+    background-color: var(--branco);
+    width: 90vw;
+    height: 75px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 30% 50%;
+    border-radius: 5px;
+}
+
+.BoxImagePerfil{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.avatarUser{
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+}
+.BoxWelcomeEmail{
+    display: grid;
+    grid-template-columns: 1fr;
+    font-size: 15px;
+    max-height: 80px;
+    align-items: center;
+}
+.IconEmail{
+    width: 20px;
+    height: 20px;
+}
+.boxIconEmail{
+    display: flex;
+}
