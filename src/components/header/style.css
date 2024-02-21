@@ -1,4 +1,4 @@
-.boxHeaderPrincipal{
+.boxHeaderPrincipal {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -8,7 +8,19 @@
     width: 100vw;
     height: 70px;
 }
-.menuHamburquer{
+
+.menuHamburquer {
     width: 30px;
     height: 30px;
+}
+
+.menuHamburguer {
+    background-color: var(--verde-claro);
+    display: none;
+}
+.ImagensCloseLogoSamur{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 20px;
+    margin-left: 20px;
 }

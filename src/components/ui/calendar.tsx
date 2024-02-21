@@ -19,7 +19,7 @@ function Calendar({
     <DayPicker
       locale={ptBR}
       showOutsideDays={showOutsideDays}
-      className={cn("p-3 flex justify-center", className)}
+      className={cn("p-3 flex justify-center relative", className)}
       classNames={{
         months: "flex flex-col sm:flex-row space-y-4 sm:space-x-4 sm:space-y-0 ",
         month: "space-y-4",
