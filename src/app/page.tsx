@@ -22,7 +22,7 @@ export default function Home() {
       <Calendar
         mode="single"
         selected={date}
-        className="rounded-md border w-[90vw] mx-auto"
+        className="rounded-md border w-[90vw]  mx-auto"
         style={{ backgroundColor: "white" }} />
         <BotaoGoogleAgenda/>
     </main>

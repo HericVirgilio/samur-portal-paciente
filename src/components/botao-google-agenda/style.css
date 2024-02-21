@@ -5,7 +5,7 @@
     margin: auto;
     border-radius: 0 0 5px  5px;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 }
 .BoxLogoGoogleAgenda{
@@ -16,6 +16,8 @@
     justify-content: center;
     align-items: center;
     border-radius: 5px;
+    margin-left: 5vw;
+    margin-right: 5vw;
 }
 .TextoGoogleAgenda{
     color: var(--branco);
