@@ -1,11 +1,15 @@
 import './style.css'
 import Image from 'next/image'
+import { Avatar, AvatarFallback,AvatarImage} from "@/components/ui/avatar"
 export default function BoxUserPrincipal() {
     return (
         <div className='boxUserPrincipal'>
-            <div className='BoxImagePerfil'>
-                <Image className='avatarUser' src="/images/perfil-icon.png" alt='perfilUser' width={60} height={60} />
-            </div>
+           <div className='BoxImagePerfil' >
+               <Avatar>
+                    <AvatarImage src='/images/perfil-icon.png' alt=""/>
+                    <AvatarFallback>SM</AvatarFallback>
+               </Avatar>
+           </div>
             <div className='BoxWelcomeEmail'>
                 <h2>Bem-vindo, Eduarda Ferreira</h2>
                 <div className='boxIconEmail'>
