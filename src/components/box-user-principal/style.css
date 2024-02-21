@@ -6,6 +6,7 @@
     display: grid;
     grid-template-columns: 30% 50%;
     border-radius: 5px;
+    margin-top: 20px;
 }
 
 .BoxImagePerfil{
@@ -24,10 +25,6 @@
     font-size: 15px;
     max-height: 80px;
     align-items: center;
-}
-.IconEmail{
-    width: 20px;
-    height: 20px;
 }
 .boxIconEmail{
     display: flex;
