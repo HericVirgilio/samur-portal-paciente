@@ -1,0 +1,23 @@
+.BoxGoogleAgenda{
+    background-color: var(--azul-claro);
+    width: 90vw;
+    height: 40px;
+    margin: auto;
+    border-radius: 0 0 5px  5px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.BoxLogoGoogleAgenda{
+    background-color: var(--branco);
+    width: 30px;
+    height: 30px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+.TextoGoogleAgenda{
+    color: var(--branco);
+    font-size: 14px;
+}
