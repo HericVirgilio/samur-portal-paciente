@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import HeaderPrincipal from "@/components/header";
 import BoxUserPrincipal from "@/components/box-user-principal";
-import NovoAgendamentoPrincipal from "@/components/box-novo-agendamento";
+import NovoAgendamentoPrincipal from "@/components/novo-agendamento";
 import { Calendar } from "@/components/ui/calendar"
 import ProximoEvento from "@/components/proximo-evento";
 import Atalhos from "@/components/Atalhos";
