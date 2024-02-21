@@ -1,0 +1,32 @@
+.BoxProximoEvento{
+    width: 90vw;
+    margin: auto;  
+    margin-bottom: 20px; 
+}
+.BoxtituloProximoEvento{
+    background-color: var(--verde-escuro);
+    color: var(--branco);
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: 5px 5px 0px 0px;
+}
+.tituloEvento{
+    font-size: 14px;
+}
+.BoxProximoEventoDetalhes{
+    background-color: var(--verde-claro);
+    padding: 10px;
+    border-radius: 0 0 5px 5px;
+}
+.BoxDataHora{
+    display: grid;
+    grid-template-columns: 20% 1fr;
+    margin: 5px 0;
+}
+.BoxDataHora > p{
+    display: grid;
+    justify-content: end;
+    margin-top: 5px;
+}
