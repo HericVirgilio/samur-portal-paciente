@@ -13,14 +13,13 @@ export default function Home() {
   return (
     <main>
       <HeaderPrincipal />
-      <Link href={'/login'}>ir para login</Link>
       <BoxUserPrincipal />
       <NovoAgendamentoPrincipal />
       <Calendar
         mode="single"
         selected={date}
-        className="rounded-md border w-[90vw] mx-auto" 
-        style={{backgroundColor: "white"}}/>
+        className="rounded-md border w-[90vw] mx-auto"
+        style={{ backgroundColor: "white" }} />
     </main>
   );
 }
