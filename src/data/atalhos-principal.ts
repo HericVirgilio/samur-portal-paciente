@@ -1,4 +1,6 @@
-export const AtalhosPrincipal = [
+import { AtalhoInterface } from "@/interface/atalhos.interface";
+
+export const AtalhosPrincipal: AtalhoInterface [] = [
     {   
         key: 1,
         nome: "Atestado",

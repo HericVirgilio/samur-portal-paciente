@@ -1,11 +1,11 @@
 import "./style.css"
-import { AtalhosPrincipal } from "@/data/atalhos-principal"
 import Link from "next/link"
 import Image from "next/image"
-export default function Atalhos(){
+import { AtalhoInterface } from "@/interface/atalhos.interface"
+export default function Atalhos( props: { atalhos: AtalhoInterface []}){
     return(
         <div className="BoxAtalhos">
-            {AtalhosPrincipal.map((objeto) => (
+            {props.atalhos.map((objeto) => (
                 <Link key={objeto.key} href={`/${objeto.nomeUrl}`}>
                     <div className="BoxObjetoAtalho">
                         <h5>{objeto.nome}</h5>
