@@ -1,4 +1,6 @@
-export const menuHamburguerData = [
+import { MenuHamburguerInterface } from "@/interface/menuHamburguer.interface";
+
+export const menuHamburguerData:MenuHamburguerInterface [] = [
     {
         key: 2,
         nome: "Agendamento",

@@ -2,9 +2,10 @@ import './style.css'
 import Image from 'next/image'
 import { useState } from 'react'
 import Link from 'next/link';
-import { menuHamburguerData } from '@/data/menu-hamburguer';
-export default function HeaderPrincipal() {
-    const[menu, setMenu] = useState({});
+import { MenuHamburguerInterface } from '@/interface/menuHamburguer.interface';
+
+export default function HeaderPrincipal(props: {objeto: MenuHamburguerInterface[]}) {
+    const [menu, setMenu] = useState({});
     const menuHamburguer = () => {
         setMenu({
             position: "fixed",
@@ -22,23 +23,23 @@ export default function HeaderPrincipal() {
         })
     }
     return (
-        <div  className='boxHeaderPrincipal'>
+        <div className='boxHeaderPrincipal'>
 
             <Image src="/icons/menu.svg" alt='' height={30} width={30} onClick={menuHamburguer} />
             <div className='menuHamburguer' style={menu}>
                 <div className='ImagensCloseLogoSamur'>
-                    <Image src="/icons/close.svg" alt='close' height={25} width={25} onClick={fecharMenu}/>
-                    <Image src="/images/samur-secundaria.png" alt='samur logo' width={100} height={75}/>
+                    <Image src="/icons/close.svg" alt='close' height={25} width={25} onClick={fecharMenu} />
+                    <Image src="/images/samur-secundaria.png" alt='samur logo' width={100} height={75} />
                 </div>
 
                 <div className='BoxMapMenuHamburguer' onClick={fecharMenu}>
-                        <Image src="/icons/home.svg" alt="home" height={40} width={40}/>
-                        <p className='TextoMapMenuHamburguer'>Inicio</p>
-                    </div>
+                    <Image src="/icons/home.svg" alt="home" height={40} width={40} />
+                    <p className='TextoMapMenuHamburguer'>Inicio</p>
+                </div>
 
-                {menuHamburguerData.map((objeto) => 
+                {props.objeto.map((objeto) =>
                     <Link className='BoxMapMenuHamburguer' key={objeto.key} href={`${objeto.nomeUrl}`}>
-                        <Image src={objeto.url} alt={objeto.nomeUrl} height={40} width={40}/>
+                        <Image src={objeto.url} alt={objeto.nomeUrl} height={40} width={40} />
                         <p className='TextoMapMenuHamburguer'>{objeto.nome}</p>
                     </Link>
                 )}

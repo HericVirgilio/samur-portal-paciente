@@ -8,16 +8,19 @@ import ProximoEvento from "@/components/proximo-evento";
 import Atalhos from "@/components/Atalhos";
 import "./style.css";
 import BotaoGoogleAgenda from "@/components/botao-google-agenda";
+import { AtalhosPrincipal } from "@/data/atalhos-principal";
+import { menuHamburguerData } from "@/data/menu-hamburguer";
+
 export default function Home() {
 
   const [date, setDate] = useState<Date>(new Date())
 
   return (
     <main className="BoxPaginaPrincipal">
-      <HeaderPrincipal />
+      <HeaderPrincipal objeto={menuHamburguerData}/>
       <BoxUserPrincipal />
-      <NovoAgendamentoPrincipal />
-      <Atalhos/>
+      <NovoAgendamentoPrincipal/>
+      <Atalhos atalhos={AtalhosPrincipal}/>
       <ProximoEvento/>
       <Calendar
         mode="single"
