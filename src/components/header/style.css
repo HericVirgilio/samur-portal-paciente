@@ -18,6 +18,29 @@
     background-color: var(--verde-claro);
     display: none;
 }
+.BoxMapMenuHamburguer{
+    display: flex;
+    margin: 20px;
+    align-items: center;
+}
+.TextoMapMenuHamburguer{
+    margin-left: 20px;
+}
+.SairMenuHamburguer{
+    background-color: var(--verde-escuro);
+    color: var(--branco);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    height: 60px;
+    font-size: 25px;
+}
+.SairTexotMenuHamburguer{
+    margin-left: 20px;
+}
 .ImagensCloseLogoSamur{
     display: flex;
     justify-content: space-between;
