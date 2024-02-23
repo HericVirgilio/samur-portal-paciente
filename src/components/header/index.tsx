@@ -2,9 +2,8 @@ import './style.css'
 import Image from 'next/image'
 import { useState } from 'react'
 import Link from 'next/link';
-import { MenuHamburguerInterface } from '@/interface/menuHamburguer.interface';
-
-export default function HeaderPrincipal(props: {objeto: MenuHamburguerInterface[]}) {
+import { menuHamburguerData } from '@/data/menu-hamburguer';
+export default function HeaderPrincipal() {
     const [menu, setMenu] = useState({});
     const menuHamburguer = () => {
         setMenu({
@@ -32,7 +31,7 @@ export default function HeaderPrincipal(props: {objeto: MenuHamburguerInterface[
                     <Image src="/images/samur-secundaria.png" alt='samur logo' width={100} height={75} />
                 </div>
                 
-                {props.objeto.map((objeto) =>
+                {menuHamburguerData.map((objeto) =>
                     <Link className='BoxMapMenuHamburguer' key={objeto.key} href={`${objeto.nomeUrl}`}>
                         <Image src={objeto.url} alt={objeto.nomeUrl} height={40} width={40} />
                         <p className='TextoMapMenuHamburguer'>{objeto.nome}</p>

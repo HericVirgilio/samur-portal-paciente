@@ -5,19 +5,17 @@ import BoxUserPrincipal from "@/components/box-user-principal";
 import NovoAgendamentoPrincipal from "@/components/novo-agendamento";
 import { Calendar } from "@/components/ui/calendar"
 import ProximoEvento from "@/components/proximo-evento";
-import Atalhos from "@/components/Atalhos";
 import "./style.css";
 import BotaoGoogleAgenda from "@/components/botao-google-agenda";
 import { AtalhosPrincipal } from "@/data/atalhos-principal";
-import { menuHamburguerData } from "@/data/menu-hamburguer";
-
+import Atalhos from "@/components/atalhos";
 export default function Home() {
 
   const [date, setDate] = useState<Date>(new Date())
 
   return (
     <main className="BoxPaginaPrincipal">
-      <HeaderPrincipal objeto={menuHamburguerData}/>
+      <HeaderPrincipal/>
       <BoxUserPrincipal />
       <NovoAgendamentoPrincipal/>
       <Atalhos atalhos={AtalhosPrincipal}/>
