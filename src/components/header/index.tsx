@@ -32,7 +32,7 @@ export default function HeaderPrincipal() {
                 </div>
                 
                 {menuHamburguerData.map((objeto) =>
-                    <Link className='BoxMapMenuHamburguer' key={objeto.key} href={`${objeto.nomeUrl}`}>
+                    <Link onClick={fecharMenu} className='BoxMapMenuHamburguer' key={objeto.key} href={`${objeto.nomeUrl}`}>
                         <Image src={objeto.url} alt={objeto.nomeUrl} height={40} width={40} />
                         <p className='TextoMapMenuHamburguer'>{objeto.nome}</p>
                     </Link>
