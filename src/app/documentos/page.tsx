@@ -11,7 +11,7 @@ export default function Documentos() {
                 <h2 style={{ fontWeight: "bold", fontSize: "20px", marginLeft: "10px", marginBottom: "20px" }}>
                     Lista de Documentos
                 </h2>
-                <HeaderTable texto1="Paciente" texto2="Data"/>
+                <HeaderTable/>
                 {DocumentosData.map((objeto) => (
                     <Tabela key={objeto.key} objeto={objeto} texto1="Paciente" texto2="Data" />
                 ))}
