@@ -1,8 +1,8 @@
-import { GenericoInterfaceTabela } from "@/interface/generico.interface"
+import { GenericoInterfaceTabelaAgendamento } from "@/interface/Agendamento.interface";
 import Image from "next/image"
 import "./style.css"
 import { useState } from "react"
-export default function Tabela(props: { objeto: GenericoInterfaceTabela, texto1: string, texto2: string }) {
+export default function TabelaAgendamento(props: { objeto: GenericoInterfaceTabelaAgendamento, texto1: string, texto2: string }) {
 
     const [tabela, setTabela] = useState({});
     const [menuAberto, setMenu] = useState(false)
@@ -41,6 +41,8 @@ export default function Tabela(props: { objeto: GenericoInterfaceTabela, texto1:
                         <p>{props.objeto.primeiraColunaRes}</p>
                         <p>{props.objeto.segundaColuna}</p>
                         <p>{props.objeto.segundaColunaRes}</p>
+                        <p>{props.objeto.terceiraColuna}</p>
+                        <p>{props.objeto.terceiraColunaRes}</p>
                     </div>
                 </div>
             </div>

@@ -1,19 +1,19 @@
 "use client"
 import HeaderTable from "@/components/headerTable"
 import HeaderPrincipal from "@/components/header"
-import TabelaAgendamento from "@/components/tabelaAgendamento"
-import { AgendamentoData } from "@/data/agendamento.data"
-export default function Agendamento(){
+import Tabela from "@/components/tabela"
+import { ResultadosData } from "@/data/resultados.data"
+export default function Resultados(){
     return(
         <div>
             <HeaderPrincipal/>
             <div style={{ backgroundColor: "var(--branco)", width: "95vw", margin: "20px auto", padding: "20px 0" }}>
                 <h2 style={{ fontWeight: "bold", fontSize: "20px", marginLeft: "10px", marginBottom: "20px" }}>
-                    Meus Agendamentos
+                    Lista de Resultados
                 </h2>
                 <HeaderTable/>
-                {AgendamentoData.map((objeto) => (
-                    <TabelaAgendamento key={objeto.key} objeto={objeto} texto1="Paciente" texto2="Data" />
+                {ResultadosData.map((objeto) => (
+                    <Tabela key={objeto.key} objeto={objeto} texto1="Paciente" texto2="Data" />
                 ))}
             </div>
         </div>

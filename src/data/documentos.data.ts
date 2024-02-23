@@ -1,32 +1,49 @@
-import { DocumentosInterface } from "@/interface/documentos.interface";
+import { GenericoInterfaceTabela } from "@/interface/generico.interface";
 
-export const DocumentosData: DocumentosInterface [] = [
+export const DocumentosData: GenericoInterfaceTabela [] = [
     {
         key: 0,
         nome: "Stella Ferreira",
         data: new Date(1995,10,17),
-        finalidade: "Pedido de Exame",
-        status: "Agendado"
+        primeiraColuna: "Finalidade",
+        primeiraColunaRes: "Pedido de Exame",
+        segundaColuna: "Status",
+        segundaColunaRes: "Agendado"
     },
     {
         key: 1,
         nome: "João Silva",
-        data: new Date(1988, 5, 25),
-        finalidade: "Atestado Médico",
-        status: "Concluído"
+        data: new Date(1990,5,25),
+        primeiraColuna: "Finalidade",
+        primeiraColunaRes: "Consulta",
+        segundaColuna: "Status",
+        segundaColunaRes: "Confirmado"
     },
     {
         key: 2,
-        nome: "Maria Oliveira",
-        data: new Date(2000, 2, 12),
-        finalidade: "Receita Médica",
-        status: "Pendente"
+        nome: "Maria Souza",
+        data: new Date(1988,3,12),
+        primeiraColuna: "Finalidade",
+        primeiraColunaRes: "Exame de Sangue",
+        segundaColuna: "Status",
+        segundaColunaRes: "Pendente"
     },
     {
         key: 3,
-        nome: "Rafael Santos",
-        data: new Date(1979, 8, 7),
-        finalidade: "Pedido de Exame",
-        status: "Em espera"
+        nome: "Carlos Oliveira",
+        data: new Date(1975,8,30),
+        primeiraColuna: "Finalidade",
+        primeiraColunaRes: "Cirurgia",
+        segundaColuna: "Status",
+        segundaColunaRes: "Cancelado"
+    },
+    {
+        key: 4,
+        nome: "Ana Rodrigues",
+        data: new Date(1985,6,8),
+        primeiraColuna: "Finalidade",
+        primeiraColunaRes: "Consulta",
+        segundaColuna: "Status",
+        segundaColunaRes: "Agendado"
     }
 ]
