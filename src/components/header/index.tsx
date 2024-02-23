@@ -31,12 +31,7 @@ export default function HeaderPrincipal(props: {objeto: MenuHamburguerInterface[
                     <Image src="/icons/close.svg" alt='close' height={25} width={25} onClick={fecharMenu} />
                     <Image src="/images/samur-secundaria.png" alt='samur logo' width={100} height={75} />
                 </div>
-
-                <div className='BoxMapMenuHamburguer' onClick={fecharMenu}>
-                    <Image src="/icons/home.svg" alt="home" height={40} width={40} />
-                    <p className='TextoMapMenuHamburguer'>Inicio</p>
-                </div>
-
+                
                 {props.objeto.map((objeto) =>
                     <Link className='BoxMapMenuHamburguer' key={objeto.key} href={`${objeto.nomeUrl}`}>
                         <Image src={objeto.url} alt={objeto.nomeUrl} height={40} width={40} />

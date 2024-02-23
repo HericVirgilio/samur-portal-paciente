@@ -1,0 +1,11 @@
+.BoxHeaderTabela{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    border-bottom: 3px solid var(--verde-escuro);
+    font-weight: bold;
+    font-size: 16px;
+}
+.BoxPacienteTabelaPaciente{
+    display: flex;
+}

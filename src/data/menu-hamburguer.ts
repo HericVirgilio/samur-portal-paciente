@@ -2,6 +2,12 @@ import { MenuHamburguerInterface } from "@/interface/menuHamburguer.interface";
 
 export const menuHamburguerData:MenuHamburguerInterface [] = [
     {
+        key: 1,
+        nome: "Inicio",
+        nomeUrl: "/",
+        url: "/icons/home.svg"
+    },
+    {
         key: 2,
         nome: "Agendamento",
         nomeUrl: "/agendamento",
