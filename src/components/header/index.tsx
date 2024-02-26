@@ -44,7 +44,7 @@ export default function HeaderPrincipal() {
             </div>
             <Image src="/images/samur-principal.png" alt='logo samur' width={150} height={100} className='divIconLogo' />
 
-            <Image src="/icons/user.svg" alt='' height={30} width={30} className='divIconUser' />
+            <Image src="/icons/user.svg" alt='usuario' height={30} width={30} className='divIconUser' />
 
         </div>
     )

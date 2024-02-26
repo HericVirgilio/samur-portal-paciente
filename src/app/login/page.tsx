@@ -1,3 +1,4 @@
+"use client"
 import Header from "@/components/headerLoginCadastro"
 import InputText from "@/components/inputTextLogin"
 import './style.css'
