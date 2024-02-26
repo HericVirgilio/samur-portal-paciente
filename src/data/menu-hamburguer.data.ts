@@ -34,7 +34,7 @@ export const menuHamburguerData:MenuHamburguerInterface [] = [
     {
         key: 6,
         nome: "Prontuário",
-        nomeUrl: "prontuario",
+        nomeUrl: "http://localhost:3000/prontuario",
         url: "/icons/protuario.svg"
     },
     {

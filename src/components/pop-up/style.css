@@ -1,0 +1,18 @@
+.BoxPopUp{
+    background-image: url("/images/background-pop-up.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 80vw;
+    height: 400px;
+    margin: auto;
+    margin-top: 20px;
+}
+.FecharPopUp{
+    cursor: pointer;
+}
+.BoxFecharPopUp{
+    display: flex;
+    justify-content: end;
+    padding-top: 10px;
+    margin-right: 20px;
+}
