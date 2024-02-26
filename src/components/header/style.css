@@ -17,6 +17,7 @@
 .menuHamburguer {
     background-color: var(--verde-claro);
     display: none;
+    overflow-y: scroll;
 }
 .BoxMapMenuHamburguer{
     display: flex;
