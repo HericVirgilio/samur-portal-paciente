@@ -33,7 +33,7 @@ export default function Tabela(props: { objeto: GenericoInterfaceTabela, texto1:
                 <div id="BoxBodyTabela" >
                     <p>{props.objeto.nome}</p>
                     <p>{props.objeto.data.toLocaleDateString()}</p>
-                    <Image key={props.objeto.key} onClick={HandleDropDownClick} src="/icons/flecha-drop-down.svg" alt="drop down" height={20} width={20} />
+                    <Image className="setaParaBaixo" key={props.objeto.key} onClick={HandleDropDownClick} src="/icons/flecha-drop-down.svg" alt="drop down" height={20} width={20} />
                 </div>
                 <div style={tabela} className="DropDown">
                     <div className="BoxBodyTabelaDropDown">

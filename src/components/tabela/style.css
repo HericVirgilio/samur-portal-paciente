@@ -11,6 +11,9 @@
 .DropDown{
     display: none;
 }
+.setaParaBaixo{
+    cursor: pointer;
+}
 .BoxBodyTabelaDropDown{
     display: grid;
     grid-template-columns: 40% 60%;
