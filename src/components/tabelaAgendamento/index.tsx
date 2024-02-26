@@ -1,4 +1,4 @@
-import { GenericoInterfaceTabelaAgendamento } from "@/interface/Agendamento.interface";
+import { GenericoInterfaceTabelaAgendamento } from "@/interface/agendamento.interface";
 import Image from "next/image"
 import "./style.css"
 import { useState } from "react"

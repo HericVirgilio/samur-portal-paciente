@@ -1,4 +1,4 @@
-import { GenericoInterfaceTabelaAgendamento } from "@/interface/Agendamento.interface";
+import { GenericoInterfaceTabelaAgendamento } from "@/interface/agendamento.interface";
 
 export const AgendamentoData: GenericoInterfaceTabelaAgendamento [] = [
     {

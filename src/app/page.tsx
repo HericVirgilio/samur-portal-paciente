@@ -3,11 +3,11 @@ import React, { useState } from "react";
 import HeaderPrincipal from "@/components/header";
 import BoxUserPrincipal from "@/components/box-user-principal";
 import NovoAgendamentoPrincipal from "@/components/novo-agendamento";
-import { Calendar } from "@/components/ui/calendar"
+import { Calendar } from "@/components/shadcn/calendar"
 import ProximoEvento from "@/components/proximo-evento";
 import "./style.css";
 import BotaoGoogleAgenda from "@/components/botao-google-agenda";
-import { AtalhosPrincipal } from "@/data/atalhos-principal";
+import { AtalhosPrincipal } from "@/data/atalhos-principal.data";
 import Atalhos from "@/components/atalhos";
 export default function Home() {
 

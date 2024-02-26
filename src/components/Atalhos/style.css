@@ -5,12 +5,14 @@
     grid-template-columns: 1fr 1fr;
     gap: 10px;
 }
+.LinksAtalho{
+    cursor: pointer;
+}
 .BoxObjetoAtalho{
     background-color: var(--verde-claro);
     display: flex;
     align-items: center;
     justify-content:space-around;
-   
     height: 10vh;
     font-size: 14px;
     border-radius: 5px;

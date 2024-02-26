@@ -1,5 +1,5 @@
 import "./style.css"
-import { lista } from "@/data/proximo-evento"
+import { lista } from "@/data/proximo-evento.data"
 import Image from "next/image"
 export default function ProximoEvento(){
     return(
