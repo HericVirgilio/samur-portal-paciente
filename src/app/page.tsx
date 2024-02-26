@@ -18,7 +18,9 @@ export default function Home() {
       <HeaderPrincipal/>
       <BoxUserPrincipal />
       <NovoAgendamentoPrincipal/>
-      <Atalhos atalhos={AtalhosPrincipal}/>
+      <div style={{marginBottom:"20px"}}>
+        <Atalhos atalhos={AtalhosPrincipal}/>
+      </div>
       <ProximoEvento/>
       <Calendar
         mode="single"
