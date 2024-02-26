@@ -13,7 +13,8 @@ export default function BoxUserPrincipal() {
             <div className='BoxWelcomeEmail'>
                 <h2>Bem-vindo, Eduarda Ferreira</h2>
                 <div className='boxIconEmail'>
-                    <Image  src="/icons/envelope.svg" alt='perfilUser' width={20} height={20} />
+                    <Image  src="/icons/envelope.svg" alt='perfilUser' width={0} height={0} 
+                    style={{ width: '20px', height: "20px"}}/>
                     <p>duda.ferreira@gmail.com</p>
                 </div>
             </div>
