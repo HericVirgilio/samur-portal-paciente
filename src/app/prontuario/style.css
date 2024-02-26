@@ -1,0 +1,7 @@
+.tituloProntuario{
+    margin: 20px;
+    font-weight: 600;
+    font-size: 20px;
+    border-bottom: 2px solid var(--verde-escuro);
+    width: min-content;
+}
