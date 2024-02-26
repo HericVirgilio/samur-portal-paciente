@@ -1,6 +1,6 @@
 import './style.css'
 import Image from 'next/image'
-import { Avatar, AvatarFallback,AvatarImage} from "@/components/ui/avatar"
+import { Avatar, AvatarFallback,AvatarImage} from "@/components/shadcn/avatar"
 export default function BoxUserPrincipal() {
     return (
         <div className='boxUserPrincipal'>

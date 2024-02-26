@@ -2,7 +2,7 @@
 import HeaderPrincipal from "@/components/header"
 import Atalhos from "@/components/atalhos"
 import { AtalhosIncialProntuario } from "@/data/atalhosInicial-prontuario.data"
-import { AtalhosProntuarios } from "@/data/atalhos.prontuario"
+import { AtalhosProntuarios } from "@/data/atalhos.prontuario.data"
 import "./style.css"
 export default function Prontuario(){
     return(

@@ -20,6 +20,7 @@ input::placeholder{
     padding: 10px;
     height: 4vh;
     width: 80vw;
+    cursor: pointer;
 }
 .item-select{
     border: solid var(--preto);
@@ -41,4 +42,5 @@ input::placeholder{
     background-color: var(--azul-claro);
     border-radius: 20px;
     font-size: 16;
+    cursor: pointer;
 }

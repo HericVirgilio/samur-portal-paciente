@@ -2,7 +2,7 @@ import './style.css'
 import Image from 'next/image'
 import { useState } from 'react'
 import Link from 'next/link';
-import { menuHamburguerData } from '@/data/menu-hamburguer';
+import { menuHamburguerData } from '@/data/menu-hamburguer.data';
 export default function HeaderPrincipal() {
     const [menu, setMenu] = useState({});
     const menuHamburguer = () => {
@@ -42,9 +42,13 @@ export default function HeaderPrincipal() {
                     <p className='SairTexotMenuHamburguer'>Sair</p>
                 </div>
             </div>
-            <Image src="/images/samur-principal.png" alt='logo samur' width={150} height={100} className='divIconLogo' />
+            <Link href={"/"}>
+                <Image src="/images/samur-principal.png" alt='logo samur' width={150} height={100} className='divIconLogo' />
+            </Link>
 
-            <Image src="/icons/user.svg" alt='usuario' height={30} width={30} className='divIconUser' />
+            <Link href={"/usuario"}>
+                <Image src="/icons/user.svg" alt='usuario' height={30} width={30} className='divIconUser' />
+            </Link>
 
         </div>
     )
