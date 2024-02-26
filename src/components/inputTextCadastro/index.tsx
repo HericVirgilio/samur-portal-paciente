@@ -1,7 +1,6 @@
 import './style.css';
-import Link from 'next/link';
-import React, { use, useState } from 'react';
-import { CriaUsuario } from '@/interface/criaUsuario.entity';
+import React, { useState } from 'react';
+
 
 export default function InputTextCadastro() {
     const [cpf, setCpf] = useState('');
@@ -52,6 +51,8 @@ export default function InputTextCadastro() {
         const usuarios = [usuario];
 
         console.log(usuarios);
+  
+        
     };
 
     return (
