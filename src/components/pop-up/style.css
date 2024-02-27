@@ -4,8 +4,10 @@
     background-size: contain;
     width: 80vw;
     height: 400px;
+    position: absolute;
+    left: 0;
+    right: 0;
     margin: auto;
-    margin-top: 20px;
 }
 .FecharPopUp{
     cursor: pointer;
