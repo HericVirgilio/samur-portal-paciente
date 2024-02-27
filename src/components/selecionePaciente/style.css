@@ -1,0 +1,43 @@
+.BoxSelect {
+    background-color: var(--branco);
+    width: 90vw;
+    margin: 20px auto 0 auto;
+    padding: 10px;
+}
+
+.select-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.selected-titulo {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.ImagemSelectTitulo {
+    border-radius: 25px;
+    margin-right: 20px;
+    border: 2px solid black;
+}
+
+.BoxMapPaciente {
+    display: none;
+}
+.MapListaPacientes {
+    display: flex;
+    border: 1px solid black;
+    border-top: none;
+    padding: 5px;
+    align-items: center;
+}
+
+.ImagemBodySelect {
+    border-radius: 20px;
+    margin-right: 20px;
+    border: 2px solid black;
+}
