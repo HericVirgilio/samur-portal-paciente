@@ -9,6 +9,8 @@ import "./style.css";
 import BotaoGoogleAgenda from "@/components/botao-google-agenda";
 import { AtalhosPrincipal } from "@/data/atalhos-principal.data";
 import Atalhos from "@/components/atalhos";
+import { UsuarioData } from "@/data/UsuarioData";
+
 export default function Home() {
 
   const [date, setDate] = useState<Date>(new Date())
@@ -16,7 +18,7 @@ export default function Home() {
   return (
     <main className="BoxPaginaPrincipal">
       <HeaderPrincipal/>
-      <BoxUserPrincipal />
+      <BoxUserPrincipal style="#FFFFFF" objeto={UsuarioData[0]}/>
       <NovoAgendamentoPrincipal/>
       <div style={{marginBottom:"20px"}}>
         <Atalhos atalhos={AtalhosPrincipal}/>

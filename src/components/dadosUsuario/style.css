@@ -1,0 +1,24 @@
+.BoxDadosUsuario{
+    max-width: 95vw;
+    background-color: var(--branco);
+    margin: 10px auto 0 auto; 
+    padding: 10px;
+    font-weight: 700;
+}
+.ImgUser{
+    border-radius: 50%;
+    margin: 10px auto; 
+}
+.buttonCadastrarMais{
+    margin-top: 20px;
+    width: 100%;
+    background-color: var(--azul-claro);
+    color: white;
+    border-radius: 20px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    cursor: pointer;
+}

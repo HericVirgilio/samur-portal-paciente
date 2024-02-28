@@ -4,8 +4,6 @@ import { SelectPacienteData } from "@/data/selectPaciente.data";
 import { useState } from "react";
 import TabelaSimplificada from "@/components/tabelaSimplificada"
 import { VacinasData } from "@/data/vacina.data"
-import { AtalhoInterface } from "@/interface/atalhos.interface";
-
 
 export default function SelecionePaciente() {
 

@@ -1,0 +1,28 @@
+.FormularioUser{
+    width: 100%;
+    display: grid;
+}
+.FormularioUser > label {
+    color: #808080;
+}
+.InputBox{
+    margin: 10px auto 10px auto;
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 3px;
+}
+.DivBoxButton{
+    width: 100%;
+    margin-top: 15px;
+    background-color: var(--azul-claro);
+    border-radius: 20px;
+    color: var(--branco);
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.lapisDivButton{
+    margin-left: 10px;
+}
