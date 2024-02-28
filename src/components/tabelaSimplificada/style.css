@@ -1,0 +1,13 @@
+#DilplayColunaAll{
+    display: flex;
+    padding: 0 5px 0 5px;
+    justify-content: space-between;
+}
+.ColunaVerde{
+   background-color: var(--verde-claro);
+}
+.ObsTabela{
+    padding: 0 5px 0 5px;
+    display: none;
+    margin-top: 10px;
+}
