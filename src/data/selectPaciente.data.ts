@@ -1,12 +1,17 @@
 export const SelectPacienteData:any [] = [
     {
         key: 0,
-        nome:"Gregory House",
-        url: "/images/house.webp"
+        nome:"Pedro Ferreira",
+        url: "/images/pedro-ferreira.png"
     },
     {
         key: 1,
-        nome:"Stella Vermillion",
-        url: "/images/perfil-icon.png"
+        nome:"Eduarda Ferreira",
+        url: "/images/eduarda-ferreira.png"
+    },
+    {
+        key: 2,
+        nome: "Stella Ferreira",
+        url: "/images/stella-ferreira.png"
     }
 ];

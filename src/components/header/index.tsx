@@ -46,7 +46,7 @@ export default function HeaderPrincipal() {
                 <Image src="/images/samur-principal.png" alt='logo samur' width={150} height={100} className='divIconLogo' />
             </Link>
 
-            <Link href={"/usuario"}>
+            <Link href={"http://localhost:3000/usuario"}>
                 <Image src="/icons/user.svg" alt='usuario' height={30} width={30} className='divIconUser' />
             </Link>
 

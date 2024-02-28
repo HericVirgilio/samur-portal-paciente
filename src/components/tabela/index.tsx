@@ -2,7 +2,7 @@ import { GenericoInterfaceTabela } from "@/interface/generico.interface"
 import Image from "next/image"
 import "./style.css"
 import { useState } from "react"
-export default function Tabela(props: { objeto: GenericoInterfaceTabela, texto1: string, texto2: string }) {
+export default function Tabela(props: { objeto: GenericoInterfaceTabela }) {
 
     const [tabela, setTabela] = useState({});
     const [menuAberto, setMenu] = useState(false)
