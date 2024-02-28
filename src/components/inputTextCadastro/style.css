@@ -1,46 +1,52 @@
-input::placeholder{
-    color: var(--cinza-input);
-} input[type="text"]{
-    color: var(--preto);
-}
-.box-inputText{
-    width: 100vw;
+.FormularioUser{
+    width: 90VW;
+    margin: auto;
     display: grid;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 30px;
 }
-.titulo-cadastro-endereco{
-    margin-top: 20px;
-    font-size: 20px;
-    font-weight: 700;
+.FormularioUser > input {
+    padding: 5px;
+}
+.InputBox{
+    margin: 10px auto 10px auto;
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 3px;
+    background-color: var(--cinza-cor-de-fundo);
 }
 .item-inputText{
     margin-top: 30px;
     padding: 10px;
     height: 4vh;
-    width: 80vw;
     cursor: pointer;
+    margin-bottom: 30px;
 }
 .item-select{
-    border: solid var(--preto);
+    border: 1px solid var(--preto);
+    background-color: var(--cinza-cor-de-fundo);
     border-radius: 4px;
-    border-width: 1px;
     height: 30px;
     margin-top: 30px;
+    padding-left: 5px;
+    color: #afafb1;
 }
 .checkBoxText{
     margin: 10px;
     color: var(--azul-claro);
     font-weight: 700 ;
 }
-.botao-entrar-login{
-    color: var(--branco);
-    margin-top: 50px;
-    width: 80vw;
-    height: 30px;
+.DivBoxButton{
+    width: 100%;
+    margin-top: 30px;
     background-color: var(--azul-claro);
     border-radius: 20px;
-    font-size: 16;
+    color: var(--branco);
+    font-size: 20px;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.lapisDivButton{
+    margin-left: 10px;
 }
