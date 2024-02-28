@@ -10,25 +10,25 @@ export const menuHamburguerData:MenuHamburguerInterface [] = [
     {
         key: 2,
         nome: "Agendamento",
-        nomeUrl: "/agendamento",
+        nomeUrl: "http://localhost:3000/agendamento",
         url: "/icons/calendarioMenu.svg"
     },
     {
         key: 3,
         nome: "Documentos",
-        nomeUrl: "/documentos",
+        nomeUrl: "http://localhost:3000/documentos",
         url: "/icons/documentosHamburguer.svg"
     },
     {
         key: 4,
         nome: "Financeiro",
-        nomeUrl: "/financeiro",
+        nomeUrl: "http://localhost:3000/financeiro",
         url:"/icons/financeiroMenu.svg"
     },
     {
         key: 5,
         nome: "Orçamento",
-        nomeUrl: "orçamento",
+        nomeUrl: "http://localhost:3000/orçamento",
         url: "/icons/oraçamentoMenu.svg"
     },
     {
@@ -40,7 +40,7 @@ export const menuHamburguerData:MenuHamburguerInterface [] = [
     {
         key: 7,
         nome: "Resultados",
-        nomeUrl: "resultados",
+        nomeUrl: "http://localhost:3000/resultados",
         url: "/icons/resultados.svg"
     }
 ]
