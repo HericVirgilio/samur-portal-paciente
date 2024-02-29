@@ -1,8 +1,7 @@
 import "./style.css"
-import Image from "next/image"
 
 /*Colocar os id iqual pode gerar conflito no futuro lembre-se de verificar caso resulte erro*/
-export default function InputTextCadastro() {
+export default function FormCadastroUsuario() {
     return (
         <form className="FormularioUser">
 

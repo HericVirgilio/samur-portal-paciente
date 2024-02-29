@@ -2,7 +2,7 @@
 import HeaderPrincipal from "@/components/header-principal"
 import Atalhos from "@/components/atalhos"
 import { OpcoesNovoAgendamento } from "@/data/opcoesNovoAgendamento.data"
-import SelecionePaciente from "@/components/selecionePaciente"
+import SelecionePaciente from "@/components/selecione-paciente"
 import HeaderTable from "@/components/headerTable"
 import TabelaAgendamento from "@/components/tabelaAgendamento"
 import { AgendamentoData } from "@/data/agendamento.data"

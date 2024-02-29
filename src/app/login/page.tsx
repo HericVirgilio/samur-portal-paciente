@@ -15,7 +15,7 @@ export default function Login() {
             <EntrarGoogle />
             <div className="optionsLogin">
                 <Link className="nao-possui-senha" href={'/cadastro'}>Não possui conta? Cadastre-se!</Link>
-                <Link className="esqueceu-senha" href={'/**'}>Esqueci minha senha</Link>
+                <Link className="esqueceu-senha" href={'/criar-nova-senha'}>Esqueci minha senha</Link>
             </div>
         </main>
     )
