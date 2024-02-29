@@ -17,7 +17,7 @@ export const AtalhosPrincipal: AtalhoInterface [] = [
         key: 3,
         nome: "Receitas",
         nomeUrl: "prontuario/receitas",
-        url: "http://localhost:3000/icons/receita-simbolo.svg"
+        url: "http://localhost:3000/icons/receita-doc.svg"
     },
     {
         key: 4,

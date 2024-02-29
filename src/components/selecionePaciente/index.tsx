@@ -2,8 +2,6 @@ import "./style.css"
 import Image from "next/image";
 import { SelectPacienteData } from "@/data/selectPaciente.data";
 import { useState } from "react";
-import TabelaSimplificada from "@/components/tabelaSimplificada"
-import { VacinasData } from "@/data/vacina.data"
 
 export default function SelecionePaciente() {
 
@@ -12,7 +10,6 @@ export default function SelecionePaciente() {
     const [selectTitulo, setTituloSelect] = useState("Selecionar o paciente")
     const [selectImagem, setImagemSelect] = useState("")
     const [visibilidadeImagem, setVisibilidadeImagem] = useState({ display: "none" })
-    const [visibilidadeTabela,setVisibilidadeTabela] = useState({display: "none"})
 
     const AbrirMenu = () => {
         if (logico === false) {
@@ -27,19 +24,7 @@ export default function SelecionePaciente() {
             setLogico(false)
         }
     }
-
-    const tabela = () => {
-        if(logico){
-            setVisibilidadeTabela({
-                display:"block"
-            })
-        }else{
-            setVisibilidadeTabela({
-                display:"none"
-            })
-        }
-    }
-
+   
     const transformaTituloSelect = (key: number) => {
         const pacienteSelecionado = SelectPacienteData.find((paciente) => paciente.key === key)
         console.log(pacienteSelecionado)
@@ -48,7 +33,6 @@ export default function SelecionePaciente() {
         setVisibilidadeImagem({ display: "block" })
         setTituloSelect(pacienteSelecionado.nome)
         setImagemSelect(pacienteSelecionado.url)
-        tabela()
     }
 
     return (
@@ -56,7 +40,9 @@ export default function SelecionePaciente() {
             <div className="BoxSelect">
                 <div className="select-button" onClick={AbrirMenu}>
                     <div className="selected-titulo">
-                        <Image className="ImagemSelectTitulo" style={visibilidadeImagem} src={selectImagem} alt="foto-perfil" height={40} width={40} />
+                        <Image className="ImagemSelectTitulo" style={visibilidadeImagem} 
+                        src={selectImagem || "/icons/ profile-circle.svg"} 
+                        alt="foto-perfil" height={40} width={40} />
                         <p>{selectTitulo}</p>
                     </div>
                     <div className="Arrow">
@@ -74,14 +60,6 @@ export default function SelecionePaciente() {
                         </div>
                     ))}
                 </div>
-            </div>
-            <div style={visibilidadeTabela} className="ContainerTabela">
-                <h2 className="Titulo">Lista de</h2>
-                <h5>Nome</h5>
-                <div className="LinhaHeader"></div>
-                {VacinasData.map((objeto, index) => (
-                    <TabelaSimplificada key={index} objeto={objeto} index={index} />
-                ))}
             </div>
         </div>
     );
