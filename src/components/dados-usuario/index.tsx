@@ -1,6 +1,6 @@
 import Image from "next/image"
 import "./style.css"
-import FormularioDadosUsuario from "../formularioDadosUsuario"
+import FormularioDadosUsuario from "../form-dados-usuario"
 import BoxUserPrincipal from "../box-user-principal"
 import { UsuarioData } from "@/data/UsuarioData"
 

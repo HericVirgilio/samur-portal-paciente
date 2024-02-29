@@ -1,11 +1,11 @@
 "use client"
 import Header from "@/components/headerLoginCadastro"
-import InputTextCadastro from '@/components/inputTextCadastro'
+import FormCadastroUsuario from "@/components/form-cadastro-usuario"
 export default function Cadastro() {
     return (
         <div>
             <Header />
-            <InputTextCadastro />
+            <FormCadastroUsuario />
         </div>
     )
 }
