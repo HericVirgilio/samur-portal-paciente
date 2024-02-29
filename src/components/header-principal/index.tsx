@@ -43,7 +43,7 @@ export default function HeaderPrincipal() {
                 </div>
             </div>
             <Link href={"/"}>
-                <Image src="/images/samur-principal.png" alt='logo samur' width={150} height={100} className='divIconLogo' />
+                <Image src="/images/samur-principal.png" alt='logo samur' width={150} height={100} />
             </Link>
 
             <Link href={"http://localhost:3000/usuario"}>
