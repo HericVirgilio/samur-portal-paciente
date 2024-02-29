@@ -2,7 +2,7 @@ import { GenericoInterfaceTabelaAgendamento } from "@/interface/agendamento.inte
 import Image from "next/image"
 import "./style.css"
 import { useState } from "react"
-export default function TabelaAgendamento(props: { objeto: GenericoInterfaceTabelaAgendamento, texto1: string, texto2: string }) {
+export default function TabelaAgendamento(props: { objeto: GenericoInterfaceTabelaAgendamento}) {
 
     const [tabela, setTabela] = useState({});
     const [menuAberto, setMenu] = useState(false)

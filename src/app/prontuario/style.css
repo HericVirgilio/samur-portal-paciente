@@ -5,3 +5,7 @@
     border-bottom: 2px solid var(--verde-escuro);
     width: min-content;
 }
+.BoxAtalhosProntuario{
+    display: grid;
+    gap: 10px;
+}

@@ -3,7 +3,7 @@ import { GenericoTabelaSimples } from "@/interface/genericoTabelaSimples.interfa
 import Image from "next/image"
 import { lazy, useState } from "react"
 
-export default function TabelaSimplificada(props: { objeto: GenericoTabelaSimples, index: number }) {
+export default function TabelaColunaUnica(props: { objeto: GenericoTabelaSimples, index: number }) {
     const [dropDown, SetDropDown] = useState({})
     const [status, setStatus] = useState(false)
 

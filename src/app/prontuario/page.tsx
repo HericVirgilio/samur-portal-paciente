@@ -1,5 +1,5 @@
 "use client"
-import HeaderPrincipal from "@/components/header"
+import HeaderPrincipal from "@/components/header-principal"
 import Atalhos from "@/components/atalhos"
 import { AtalhosIncialProntuario } from "@/data/atalhosInicial-prontuario.data"
 import { AtalhosProntuarios } from "@/data/atalhos.prontuario.data"
@@ -9,10 +9,10 @@ export default function Prontuario(){
         <div>
             <HeaderPrincipal/>
             <h3 className="tituloProntuario">Prontuário</h3>
-            <div style={{marginBottom: "10px"}}>
+            <div className="BoxAtalhosProntuario">
                 <Atalhos atalhos={AtalhosIncialProntuario}/>
+                <Atalhos atalhos={AtalhosProntuarios}/>
             </div>
-            <Atalhos atalhos={AtalhosProntuarios}/>
         </div>
     )
 }

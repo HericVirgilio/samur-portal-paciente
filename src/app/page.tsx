@@ -1,6 +1,6 @@
 "use client"
 import React, { useState } from "react";
-import HeaderPrincipal from "@/components/header";
+import HeaderPrincipal from "@/components/header-principal";
 import BoxUserPrincipal from "@/components/box-user-principal";
 import NovoAgendamentoPrincipal from "@/components/novo-agendamento";
 import { Calendar } from "@/components/shadcn/calendar"

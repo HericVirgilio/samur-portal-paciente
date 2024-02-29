@@ -2,10 +2,11 @@ import './style.css'
 import Image from 'next/image'
 import { Avatar, AvatarFallback,AvatarImage} from "@/components/shadcn/avatar"
 import { UsuarioInterface } from '@/interface/user.interface';
+import Link from 'next/link';
 
 export default function BoxUserPrincipal(props: { style: string, objeto: UsuarioInterface }) {
     return (
-        <div className='boxUserPrincipal' style={{ backgroundColor: props.style }}>
+        <Link href={"/usuario"} className='boxUserPrincipal' style={{ backgroundColor: props.style }}>
            <div className='BoxImagePerfil' >
                <Avatar>
                     <AvatarImage src={props.objeto.urlImg} alt=""/>
@@ -20,6 +21,6 @@ export default function BoxUserPrincipal(props: { style: string, objeto: Usuario
                     <p>{props.objeto.email}</p>
                 </div>
             </div>
-        </div>
+        </Link>
     );
 }
