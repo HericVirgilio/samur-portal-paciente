@@ -1,9 +1,9 @@
 "use client"
-import HeaderTable from "@/components/headerTable"
+import HeaderTable from "@/components/header-table"
 import HeaderPrincipal from "@/components/header-principal"
-import TabelaAgendamento from "@/components/tabelaAgendamento"
+import TabelaAgendamento from "@/components/tabela-agendamento"
 import { AgendamentoData } from "@/data/agendamento.data"
-import BackgroundTabela from "@/components/backgroundTabela"
+import BackgroundTabela from "@/components/background-tabela"
 export default function Agendamento() {
     return (
         <div>
