@@ -1,5 +1,5 @@
 export interface GenericoTabelaSimples{
-    key:number,
+    id:number,
     nome:string,
     obs:string,
 }
