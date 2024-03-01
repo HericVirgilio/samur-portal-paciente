@@ -17,10 +17,9 @@ export default function TabelaColunaUnica(props: { objeto: GenericoTabelaSimples
         }
     }
 
-    const key = props.objeto.key || props.objeto.nome;
 
     return (
-        <div key={key} className={(props.objeto.key % 2) == 0 ? "ColunaVerde" : "ColunaBranca"}>
+        <div key={props.index} className={(props.index % 2) == 0 ? "ColunaVerde" : "ColunaBranca"}>
             <div id="DilplayColunaAll">
                 <p>{props.objeto.nome}</p>
                 <Image src="/icons/flecha-drop-down.svg" alt="Drop Down" height={20} width={20} onClick={abrirDropDown} loading="lazy"/>

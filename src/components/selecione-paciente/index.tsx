@@ -2,8 +2,11 @@ import "./style.css"
 import Image from "next/image";
 import { SelectPacienteData } from "@/data/selectPaciente.data";
 import { useState } from "react";
+import TabelaColunaUnica from "../tabela-uma-coluna";
+import BoxTabela from "../box-tabela";
+import { VacinasData } from "@/data/vacina.data";
 
-export default function SelecionePaciente() {
+export default function SelecionePaciente(props: {rota:string}) {
 
     const [select, setSelect] = useState({})
     const [logico, setLogico] = useState(false)
@@ -50,17 +53,15 @@ export default function SelecionePaciente() {
                     </div>
                 </div>
                 <div className="BoxMapPaciente" style={select}>
-                    {SelectPacienteData.map((objeto, index) => (
-                        <div className={index === SelecionePaciente.length - 1 ? "UltimoMapListaPacientes" : "MapListaPacientes"} key={objeto.key}
-                            onClick={() => transformaTituloSelect(objeto.key)}>
-                            <div>
-                                <Image className="ImagemBodySelect" src={objeto.url} alt="perfil" height={40} width={40} />
-                            </div>
-                            <p>{objeto.nome}</p>
-                        </div>
-                    ))}
+                   
                 </div>
             </div>
+
+            { props.rota === "Prontuario" &&
+                <BoxTabela titulo="Vacinas">
+                </BoxTabela>
+            }
+
         </div>
     );
 }
