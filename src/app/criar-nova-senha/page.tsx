@@ -1,4 +1,4 @@
-import Header from "@/components/headerLoginCadastro"
+import Header from "@/components/header-login-cadastro"
 
 export default function CriarNovaSenha(){
     return(

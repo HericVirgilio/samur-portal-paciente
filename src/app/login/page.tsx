@@ -1,6 +1,6 @@
 "use client"
-import Header from "@/components/headerLoginCadastro"
-import InputText from "@/components/inputTextLogin"
+import Header from "@/components/header-login-cadastro"
+import InputText from "@/components/input-text-login"
 import './style.css'
 import Ou from "@/components/ou"
 import EntrarGoogle from "@/components/entrar-google"

@@ -2,8 +2,8 @@
 import HeaderPrincipal from "@/components/header-principal"
 import { DocumentosData } from "@/data/documentos.data"
 import Tabela from "@/components/tabela"
-import HeaderTable from "@/components/headerTable"
-import BackgroundTabela from "@/components/backgroundTabela"
+import HeaderTable from "@/components/header-table"
+import BackgroundTabela from "@/components/background-tabela"
 export default function Documentos() {
     return (
         <div>

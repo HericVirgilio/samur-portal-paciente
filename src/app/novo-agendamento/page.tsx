@@ -3,10 +3,10 @@ import HeaderPrincipal from "@/components/header-principal"
 import Atalhos from "@/components/atalhos"
 import { OpcoesNovoAgendamento } from "@/data/opcoesNovoAgendamento.data"
 import SelecionePaciente from "@/components/selecione-paciente"
-import HeaderTable from "@/components/headerTable"
-import TabelaAgendamento from "@/components/tabelaAgendamento"
+import HeaderTable from "@/components/header-table"
+import TabelaAgendamento from "@/components/tabela-agendamento"
 import { AgendamentoData } from "@/data/agendamento.data"
-import BackgroundTabela from '@/components/backgroundTabela'
+import BackgroundTabela from '@/components/background-tabela'
 
 export default function NovoAgendamento(){
     return(
