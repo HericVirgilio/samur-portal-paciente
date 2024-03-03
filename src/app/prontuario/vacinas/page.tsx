@@ -9,7 +9,7 @@ export default function Vacinas(){
     return(
         <div>
             <HeaderPrincipal/>
-            <SelecionePaciente  rota="Prontuario"/>
+            <SelecionePaciente />
         </div>
     )
 }
