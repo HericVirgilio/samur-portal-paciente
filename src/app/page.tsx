@@ -8,11 +8,10 @@ import ProximoEvento from "@/components/proximo-evento";
 import "./style.css";
 import BotaoGoogleAgenda from "@/components/botao-google-agenda";
 import { AtalhosPrincipal } from "@/data/atalhos-principal.data";
-import Atalhos from "@/components/atalhos";
 import { UsuarioData } from "@/data/UsuarioData";
+import Atalhos from "@/components/atalhos"
 
 export default function Home() {
-
   const [date, setDate] = useState<Date>(new Date())
 
   return (
