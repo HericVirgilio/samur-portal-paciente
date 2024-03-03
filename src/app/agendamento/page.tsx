@@ -11,7 +11,7 @@ export default function Agendamento() {
             <BackgroundTabela tituloTabela={"Meus Agendamentos"}>
                 <HeaderTable />
                 {AgendamentoData.map((objeto) => (
-                    <TabelaAgendamento key={objeto.key} objeto={objeto} texto1="Paciente" texto2="Data" />
+                    <TabelaAgendamento key={objeto.key} objeto={objeto}/>
                 ))}
             </BackgroundTabela>
         </div>
