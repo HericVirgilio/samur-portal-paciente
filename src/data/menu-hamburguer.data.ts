@@ -10,37 +10,37 @@ export const menuHamburguerData:MenuHamburguerInterface [] = [
     {
         key: 2,
         nome: "Agendamento",
-        nomeUrl: "http://localhost:3000/agendamento",
+        nomeUrl: "/agendamento",
         url: "/icons/calendarioMenu.svg"
     },
     {
         key: 3,
         nome: "Documentos",
-        nomeUrl: "http://localhost:3000/documentos",
+        nomeUrl: "/documentos",
         url: "/icons/documentosHamburguer.svg"
     },
     {
         key: 4,
         nome: "Financeiro",
-        nomeUrl: "http://localhost:3000/financeiro",
+        nomeUrl: "/financeiro",
         url:"/icons/financeiroMenu.svg"
     },
     {
         key: 5,
         nome: "Orçamento",
-        nomeUrl: "http://localhost:3000/orçamento",
+        nomeUrl: "/orçamento",
         url: "/icons/oraçamentoMenu.svg"
     },
     {
         key: 6,
         nome: "Prontuário",
-        nomeUrl: "http://localhost:3000/prontuario",
+        nomeUrl: "/prontuario",
         url: "/icons/protuario.svg"
     },
     {
         key: 7,
         nome: "Resultados",
-        nomeUrl: "http://localhost:3000/resultados",
+        nomeUrl: "/resultados",
         url: "/icons/resultados.svg"
     }
 ]
