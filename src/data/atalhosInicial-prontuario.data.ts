@@ -11,18 +11,18 @@ export const AtalhosIncialProntuario: AtalhoInterface [] = [
         key: 2,
         nome: "Troca de documentos",
         nomeUrl: "/prontuario/troca-de-documentos",
-        url: "http://localhost:3000/icons/troca-de-documentos.svg"
+        url: "/icons/troca-de-documentos.svg"
     },
     {
         key: 3,
         nome: "Receitas",
         nomeUrl: "prontuario/receitas",
-        url: "http://localhost:3000/icons/receita-doc.svg"
+        url: "/icons/receita-doc.svg"
     },
     {
         key: 4,
         nome: "Procedimentos externos",
         nomeUrl: "prontuario/procedimentos-externos",
-        url: "http://localhost:3000/icons/procedimentos-externos.svg"
+        url: "/icons/procedimentos-externos.svg"
     }
 ]
