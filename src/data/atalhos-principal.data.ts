@@ -11,18 +11,18 @@ export const AtalhosPrincipal: AtalhoInterface [] = [
         key: 2,
         nome: "TeleConsulta",
         nomeUrl: "prontuario/teleconsulta",
-        url: "icons/computer.svg"
+        url: "/icons/computer.svg"
     },
     {
         key: 3,
         nome: "Receitas",
         nomeUrl: "prontuario/receitas",
-        url: "icons/receita-doc.svg"
+        url: "/icons/receita-doc.svg"
     },
     {
         key: 4,
         nome: "Financeiro",
         nomeUrl: "financeiro",
-        url: "icons/financeiro.svg"
+        url: "/icons/financeiro.svg"
     }
 ]
