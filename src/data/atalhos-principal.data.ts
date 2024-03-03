@@ -10,13 +10,13 @@ export const AtalhosPrincipal: AtalhoInterface [] = [
     {
         key: 2,
         nome: "TeleConsulta",
-        nomeUrl: "prontuario/teleconsulta",
+        nomeUrl: "/prontuario/teleconsulta",
         url: "/icons/computer.svg"
     },
     {
         key: 3,
         nome: "Receitas",
-        nomeUrl: "prontuario/receitas",
+        nomeUrl: "/prontuario/receitas",
         url: "/icons/receita-doc.svg"
     },
     {
