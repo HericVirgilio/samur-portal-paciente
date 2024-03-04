@@ -22,11 +22,8 @@
 }
 .BoxDataHora{
     display: grid;
-    grid-template-columns: 20% 1fr;
+    grid-template-columns: 10% 1fr;
     margin: 5px 0;
-}
-.BoxDataHora > p{
-    display: grid;
-    justify-content: end;
-    margin-top: 5px;
+    justify-content: left;
+    align-items: center;
 }
