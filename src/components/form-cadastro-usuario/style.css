@@ -37,18 +37,24 @@
     color: var(--azul-claro);
     font-weight: 700 ;
 }
+.BoxButtonPai{
+    width: 90vw;
+    justify-content: center;
+    display: flex;
+}
 .DivBoxButton{
-    width: 100%;
+    width: 70%;
     margin-top: 30px;
     background-color: var(--azul-claro);
     border-radius: 20px;
     color: var(--branco);
-    font-size: 20px;
+    font-size: 18px;
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 50px;
+    height: 35px;
 }
 .lapisDivButton{
     margin-left: 10px;

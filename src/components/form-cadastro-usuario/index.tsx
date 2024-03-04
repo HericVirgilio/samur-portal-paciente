@@ -141,8 +141,8 @@ export default function FormCadastroUsuario() {
                 <span className='checkBoxText'>Aceito compartilhar os meus dados pessoais!</span>
             </label>
 
-            <div className="DivBoxButton">
-                <p>Cadastrar Usuario</p>
+            <div className="BoxButtonPai">
+                <p className="DivBoxButton">Finalizar cadastro</p>
             </div>
         </form>
     )
