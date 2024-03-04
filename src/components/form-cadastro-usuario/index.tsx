@@ -90,7 +90,7 @@ export default function FormCadastroUsuario() {
             <input className="InputBox" type="text" name="nacionalidade" id="nacionalidade"
                 placeholder="Nacionalidade" />
 
-            <select className='item-select' name="sexo" id="sexo">
+            <select className='item-select'  name="sexo" id="sexo">
                 <option value="invalido" disabled={true}>Selecione o sexo</option>
                 <option value="masculino">Masculino</option>
                 <option value="feminino">Feminino</option>
