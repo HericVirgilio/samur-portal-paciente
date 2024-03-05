@@ -9,7 +9,7 @@ interface Props {
     sendDataToParent: (data: FormData) => void;
 }
 
-export default function CadastroFormulario({ sendDataToParent }: Props) {
+export default function CadastroFormulario({ sendDataToParent }: Props, style: string) {
 
     const [email, setEmail] = useState<string>("")
     const [senha, setSenha] = useState<string>("")

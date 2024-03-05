@@ -6,16 +6,21 @@ import CadastroFormulario from "@/components/cadastro"
 export default function Cadastro() {
 
     const [formData, setFormData] = useState({ email: "", senha: "" });
+    const [display1, setDisplay1] = useState("block")
 
-    const receiveFromChild = (data:any) => {
+    const receiveFromChild = (data: any) => {
         setFormData(data);
-        console.log("dados: " , data.email, "senha:" , data.senha)
+        setDisplay1("none")
+        console.log(formData.email, formData.senha)
     }
-
     return (
         <div>
-            <Header/> 
-            <CadastroFormulario sendDataToParent={receiveFromChild}/>
+            <Header />
+
+                <span style={{ display: display1 }} >
+                    <CadastroFormulario sendDataToParent={receiveFromChild} />
+                </span>
+        
         </div>
     )
 }
