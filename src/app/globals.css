@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body{
-  background-color: var(--cinza-cor-de-fundo);
+  background-color: var(--branco);
   overflow-x: hidden;
 }
 @layer base {
