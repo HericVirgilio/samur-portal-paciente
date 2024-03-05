@@ -2,6 +2,7 @@
     display: grid;
     justify-content: center;
     align-items: center;
+    gap: 18px;
     width: 100vw;
 }
 .DivCadastroTitle{
@@ -9,9 +10,10 @@
     justify-content: space-between;
     color: var(--verde-escuro);
     margin-top: 18px;
-    margin-bottom: 18px;
     font-size: 20px;
     font-weight: 500 ;
+    width: 80vw;
+    margin: auto;
 }
 .DivCadastroForm{
     display: grid;
@@ -19,7 +21,7 @@
     grid-template-columns: 1fr;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
 }
 .InputCadastro{
     height: 40px;
@@ -32,7 +34,7 @@
 #InputSenha{
     width: 170px;
     margin: auto;
-    margin-top: 30px;
+    margin-top: 10px;
     background-color: var(--verde-escuro);
     color: white;
     justify-content: center;
@@ -44,5 +46,10 @@
 }
 .DivErro{
     color: red;
-    position: absolute;
+    margin: auto;
+}
+.RequisitosSenha{
+    font-size: 14px;
+    margin-top: 10px;
+    margin: auto;
 }
