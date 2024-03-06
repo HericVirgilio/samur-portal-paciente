@@ -1,0 +1,23 @@
+.agrupamentoInputEndereco{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.InputEndereco{
+    height: 40px;
+    border: 1px solid rgba(0, 0, 0, 0.63);
+    border-radius: 10px;
+}
+#InputEndereco{
+    width: 170px;
+    margin: auto;
+    margin-top: 10px;
+    background-color: var(--verde-escuro);
+    color: white;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}

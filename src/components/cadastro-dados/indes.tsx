@@ -55,10 +55,6 @@ export default function Dados({ sendDataToParent }: Props) {
 
     return (
         <div className="BoxFormDados">
-            <div className="DivDadosTitle">
-                <h2>Cadastro</h2>
-                <p>2/3</p>
-            </div>
             <form className="DivDadosForm" onSubmit={EnviarFormulario}>
                 <FormControl sx={{ m: 1, width: '80vw' }} variant="outlined">
                     <InputLabel htmlFor="outlined-adornment-password">Nome Completo</InputLabel>

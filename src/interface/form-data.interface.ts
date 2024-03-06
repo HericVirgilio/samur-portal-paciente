@@ -11,3 +11,12 @@ export interface FormDataDados{
     escolaridade: string;
     nacionalidade: string;
 }
+export interface FormDataEndereco{
+    cep: string;
+    bairro: string;
+    logradouro: string;
+    numero: number;
+    complemento: string;
+    cidade: string;
+    estado: string;
+}

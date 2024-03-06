@@ -42,10 +42,6 @@ export default function CadastroFormulario({ sendDataToParent }: Props) {
 
     return (
         <div className="BoxForm">
-            <div className="DivCadastroTitle">
-                <h2>Cadastro</h2>
-                <p>1/3</p>
-            </div>
             <form className="DivCadastroForm" onSubmit={EnviarFormulario} >
                 <FormControl sx={{ m: 1, width: '80vw' }} variant="outlined">
                     <InputLabel htmlFor="outlined-adornment-password">Email</InputLabel>
