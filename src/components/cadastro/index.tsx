@@ -9,7 +9,7 @@ interface Props {
     sendDataToParent: (data: FormData) => void;
 }
 
-export default function CadastroFormulario({ sendDataToParent }: Props, style: string) {
+export default function CadastroFormulario({ sendDataToParent }: Props) {
 
     const [email, setEmail] = useState<string>("")
     const [senha, setSenha] = useState<string>("")
@@ -47,17 +47,16 @@ export default function CadastroFormulario({ sendDataToParent }: Props, style: s
                 <p>1/3</p>
             </div>
             <form className="DivCadastroForm" onSubmit={EnviarFormulario} >
-            <FormControl sx={{ m: 1, width: '80vw'}} variant="outlined">
-                    <InputLabel  htmlFor="outlined-adornment-password">Email</InputLabel>
+                <FormControl sx={{ m: 1, width: '80vw' }} variant="outlined">
+                    <InputLabel htmlFor="outlined-adornment-password">Email</InputLabel>
                     <OutlinedInput value={email} onChange={(e) => setEmail(e.target.value)}
-                        id="outlined-adornment-password"
                         type={'email'}
                         label="Email" />
                 </FormControl>
-                <FormControl sx={{ m: 1, width: '80vw'}} variant="outlined">
-                    <InputLabel  htmlFor="outlined-adornment-password">Senha</InputLabel>
+                <FormControl sx={{ m: 1, width: '80vw' }} variant="outlined">
+                    <InputLabel htmlFor="outlined-adornment-password">Senha</InputLabel>
                     <OutlinedInput value={senha} onChange={(e) => setSenha(e.target.value)}
-                        id="outlined-adornment-password"
+
                         type={showPassword ? 'text' : 'password'}
                         endAdornment={
                             <InputAdornment position="end">
@@ -65,8 +64,7 @@ export default function CadastroFormulario({ sendDataToParent }: Props, style: s
                                     aria-label="toggle password visibility"
                                     onClick={handleClickShowPassword}
                                     onMouseDown={handleMouseDownPassword}
-                                    edge="end"
-                                >
+                                    edge="end">
                                     {showPassword ? <VisibilityOff /> : <Visibility />}
                                 </IconButton>
                             </InputAdornment>
@@ -75,7 +73,7 @@ export default function CadastroFormulario({ sendDataToParent }: Props, style: s
                 <FormControl sx={{ m: 1, width: '80vw' }} variant="outlined">
                     <InputLabel htmlFor="outlined-adornment-password">Digite a senha novamente</InputLabel>
                     <OutlinedInput value={senha2} onChange={(e) => setSenha2(e.target.value)}
-                        id="outlined-adornment-password"
+
                         type={showPassword ? 'text' : 'password'}
                         endAdornment={
                             <InputAdornment position="end">
@@ -94,11 +92,11 @@ export default function CadastroFormulario({ sendDataToParent }: Props, style: s
                 <input type="submit" value="Continuar" className="InputCadastro" id="InputSenha" />
             </form>
             <div className="RequisitosSenha">
-                    <h5>A senha deve conter:</h5>
-                    
-                    <p>Letras e números</p>
-                    <p>No minimo 5 caracteres</p>
-                </div>
+                <h5>A senha deve conter:</h5>
+
+                <p>Letras e números</p>
+                <p>No minimo 5 caracteres</p>
+            </div>
         </div>
     )
 }
