@@ -1,16 +1,12 @@
 "use client"
 import "./style.css"
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import CadastroFormulario from "@/components/cadastro"
 import Dados from "@/components/cadastro-dados/indes";
 import Endereco from "@/components/endereco";
-import { useEffect } from 'react';
-import { useRouter } from "next/router";
 
 export default function Cadastro() {
-
-    const router = useRouter()
 
     const [formDataCadastro, setFormDataCadastro] = useState({ email: "", senha: "" });
     const [formDataDados, setFormDataDados] = useState({
@@ -21,6 +17,7 @@ export default function Cadastro() {
     const [visibilidadeCadastro, setVisibilidadeCadastro] = useState({ int: 1, visib: "block" })
     const [visibilidadeDados, setVisibilidadeDados] = useState({ int: 2, visib: "block" })
     const [visibilidadeEndereco, setVisibilidadeEndereco] = useState({ int: 3, visib: "block" })
+    const [link, setLink] = useState("http://localhost:3000/login")
 
     const FormularioCadastro = (data: any) => {
         try {
@@ -53,9 +50,11 @@ export default function Cadastro() {
     }, [controle]);
 
     const Voltar = () => {
-        if (controle > 1) {
+        if (controle != 0) {
             setControle(controle - 1)
-        } 
+        } else {
+            setLink("/login");
+        }
     }
 
     return (
