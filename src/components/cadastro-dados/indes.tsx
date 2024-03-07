@@ -4,20 +4,13 @@ import { FormEvent, useState } from "react";
 import { FormDataDados } from "@/interface/form-data.interface";
 import * as React from 'react';
 import MenuItem from '@mui/material/MenuItem';
-import FormHelperText from '@mui/material/FormHelperText';
-import Select, { SelectChangeEvent } from '@mui/material/Select';
+import Select from '@mui/material/Select';
 
 interface Props {
     sendDataToParent: (data: FormDataDados) => void;
 }
 
 export default function Dados({ sendDataToParent }: Props) {
-
-    const [age, setAge] = useState('');
-
-    const handleChange = (event: SelectChangeEvent) => {
-        setAge(event.target.value);
-    };
 
     const [nome, setNome] = useState<string>("")
     const [cpf, setCpf] = useState<string>("")
