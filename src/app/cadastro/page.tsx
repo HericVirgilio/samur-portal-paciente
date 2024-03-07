@@ -5,10 +5,12 @@ import Image from "next/image";
 import CadastroFormulario from "@/components/cadastro"
 import Dados from "@/components/cadastro-dados/indes";
 import Endereco from "@/components/endereco";
+import { FormData } from "@/interface/form-data.interface";
 
 export default function Cadastro() {
 
-    const [formDataCadastro, setFormDataCadastro] = useState({ email: "", senha: "" });
+    const [email,setEmail] = useState<string>("")
+    const [senha,setSenha] = useState<string>("")
     const [formDataDados, setFormDataDados] = useState({
         nome: "", cpf: "", rg: "", genero: "", data: "",
         escolaridade: "", nacionalidade: ""
@@ -19,10 +21,11 @@ export default function Cadastro() {
     const [visibilidadeEndereco, setVisibilidadeEndereco] = useState({ int: 3, visib: "block" })
     const [link, setLink] = useState("http://localhost:3000/login")
 
-    const FormularioCadastro = (data: any) => {
+    const FormularioCadastro = (data: FormData) => {
+        console.log(data.email, data.senha)
         try {
-            setFormDataCadastro(data);
-            console.log(formDataCadastro.email, formDataCadastro.senha)
+            setEmail(data.email)
+            setSenha(data.senha)
             setControle(2)
         } catch (error) {
             console.log(`algo deu errado ${error}`)

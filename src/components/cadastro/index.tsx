@@ -22,7 +22,6 @@ export default function CadastroFormulario({ sendDataToParent }: Props) {
         event.preventDefault();
         if (senha === senha2 && validarSenha(senha)) {
             sendDataToParent({ email, senha });
-            console.log("Formulario enviado")
         } else if (senha != senha2) {
             setErroSenha("As senhas são diferentes")
         } else {
