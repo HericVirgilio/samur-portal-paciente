@@ -1,8 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Roboto } from 'next/font/google';
-
-const roboto = Roboto({ subsets: ["latin"], weight:['300','400','500','700'] });
 
 export const metadata: Metadata = {
   title: "samur-portal-paciente",
@@ -16,7 +13,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={roboto.className}>{children}</body>
+      <body style={{ fontFamily: 'Montserrat, sans-serif' }}>{children}</body>
     </html>
   );
 }
