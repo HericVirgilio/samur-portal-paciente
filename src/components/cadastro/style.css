@@ -1,21 +1,12 @@
-.BoxForm{
+.BoxForm {
     display: grid;
     justify-content: center;
     align-items: center;
     gap: 18px;
     width: 100vw;
 }
-.DivCadastroTitle{
-    display: flex;
-    justify-content: space-between;
-    color: var(--verde-escuro);
-    margin-top: 18px;
-    font-size: 20px;
-    font-weight: 500 ;
-    width: 80vw;
-    margin: auto;
-}
-.DivCadastroForm{
+
+.DivCadastroForm {
     display: grid;
     width: 80vw;
     grid-template-columns: 1fr;
@@ -23,33 +14,20 @@
     align-items: center;
     gap: 5px;
 }
-.InputCadastro{
-    height: 40px;
-    border: 1px solid rgba(0, 0, 0, 0.63);
-    border-radius: 10px;
-}
-#InputPlaceholders{
+
+#InputPlaceholders {
     padding: 10px;
 }
-#InputSenha{
-    width: 170px;
-    margin: auto;
-    margin-top: 10px;
-    background-color: var(--verde-escuro);
-    color: white;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    border: none;
-    font-size: 18px;
-    font-weight: bold;
-}
-.DivErro{
+
+.DivErro {
     color: red;
     margin: auto;
 }
-.RequisitosSenha{
+
+.RequisitosSenha {
     font-size: 14px;
-    margin-top: 10px;
     margin: auto;
+    color: var(--verde-escuro);
+    font-weight: 600;
+    margin-top: 20px;
 }

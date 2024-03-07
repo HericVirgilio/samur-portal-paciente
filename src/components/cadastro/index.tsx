@@ -4,6 +4,7 @@ import { FormData } from "@/interface/form-data.interface";
 import { FormControl, IconButton, InputAdornment, InputLabel, OutlinedInput } from "@mui/material";
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
+import BotaoEnviarFormulario from "../botao-login-cadastro";
 
 interface Props {
     sendDataToParent: (data: FormData) => void;
@@ -85,7 +86,7 @@ export default function CadastroFormulario({ sendDataToParent }: Props) {
                         } label="Digite a senha novamente" />
                 </FormControl>
                 {erroSenha && <div className="DivErro" >{erroSenha}</div>}
-                <input type="submit" value="Continuar" className="InputCadastro" id="InputSenha" />
+                <BotaoEnviarFormulario text="Continuar"/>
             </form>
             <div className="RequisitosSenha">
                 <h5>A senha deve conter:</h5>
