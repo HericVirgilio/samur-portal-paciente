@@ -3,7 +3,7 @@ import "./style.css"
 import { FormDataEndereco } from "@/interface/form-data.interface";
 import { FormEvent } from "react";
 import { useState } from "react";
-
+import BotaoEnviarFormulario from "../botao-login-cadastro";
 
 interface Props {
     sendDataToParent: (data: FormDataEndereco) => void;
@@ -26,7 +26,7 @@ export default function Endereco({ sendDataToParent }: Props) {
     const FormataCep = (event: React.ChangeEvent<HTMLInputElement>) => {
         let value = event.target.value.replace(/\D/g, ""); 
         if (value.length <= 11) {
-            value = value.replace(/(\d{5})(\d{1,2})$/, "$1-$2");
+            value = value.replace(/^(\d{5})(\d{3})$/, "$1-$2");
         }
         setCep(value);
     };
@@ -82,7 +82,7 @@ export default function Endereco({ sendDataToParent }: Props) {
                         label="Estado" />
                 </FormControl>
 
-                <input type="submit" value="Continuar" className="InputEndereco" id="InputEndereco"  />
+                <BotaoEnviarFormulario text="Cadastrar"/>
 
             </form>
         </div>
