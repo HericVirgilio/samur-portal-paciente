@@ -43,16 +43,17 @@ export default function CadastroFormulario({ sendDataToParent }: Props) {
     return (
         <div className="BoxForm">
             <form className="DivCadastroForm" onSubmit={EnviarFormulario} >
-                <FormControl sx={{ m: 1, width: '80vw' }} variant="outlined">
-                    <InputLabel htmlFor="outlined-adornment-password">Email</InputLabel>
+                <FormControl sx={{ m: 1, width: '80vw'}} variant="outlined">
+                    <InputLabel htmlFor="outlined-adornment-password" size="small">Email</InputLabel>
                     <OutlinedInput value={email} onChange={(e) => setEmail(e.target.value)}
                         type={'email'}
-                        label="Email" />
+                        label="Email" 
+                        size="small"/>
                 </FormControl>
                 <FormControl sx={{ m: 1, width: '80vw' }} variant="outlined">
-                    <InputLabel htmlFor="outlined-adornment-password">Senha</InputLabel>
+                    <InputLabel htmlFor="outlined-adornment-password" size="small" >Senha</InputLabel>
                     <OutlinedInput value={senha} onChange={(e) => setSenha(e.target.value)}
-
+                        size="small"
                         type={showPassword ? 'text' : 'password'}
                         endAdornment={
                             <InputAdornment position="end">
@@ -67,9 +68,9 @@ export default function CadastroFormulario({ sendDataToParent }: Props) {
                         } label="Senha" />
                 </FormControl>
                 <FormControl sx={{ m: 1, width: '80vw' }} variant="outlined">
-                    <InputLabel htmlFor="outlined-adornment-password">Digite a senha novamente</InputLabel>
+                    <InputLabel htmlFor="outlined-adornment-password"  size="small">Digite a senha novamente</InputLabel>
                     <OutlinedInput value={senha2} onChange={(e) => setSenha2(e.target.value)}
-
+                         size="small"
                         type={showPassword ? 'text' : 'password'}
                         endAdornment={
                             <InputAdornment position="end">

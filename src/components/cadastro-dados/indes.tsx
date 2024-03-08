@@ -50,24 +50,27 @@ export default function Dados({ sendDataToParent }: Props) {
         <div className="BoxFormDados">
             <form className="DivDadosForm" onSubmit={EnviarFormulario}>
                 <FormControl sx={{ m: 1, width: '80vw' }} variant="outlined">
-                    <InputLabel htmlFor="outlined-adornment-password">Nome Completo</InputLabel>
+                    <InputLabel htmlFor="outlined-adornment-password"  size="small">Nome Completo</InputLabel>
                     <OutlinedInput value={nome} onChange={(e) => setNome(e.target.value)}
                         type={'text'}
+                        size="small"
                         label="Nome Completo" />
                 </FormControl>
                 <FormControl sx={{ m: 1, width: '80vw' }} variant="outlined" onChange={FormataCpf}>
-                    <InputLabel htmlFor="outlined-adornment-password">CPF</InputLabel>
+                    <InputLabel htmlFor="outlined-adornment-password"  size="small">CPF</InputLabel>
                     <OutlinedInput value={cpf} onChange={(e) => setCpf(e.target.value)}
                         type={'text'}
+                        size="small"
                         inputProps={{
                             maxLength: 14,
                         }}
                         label="CPF" />
                 </FormControl>
                 <FormControl sx={{ m: 1, width: '80vw' }} variant="outlined" onChange={FormataRg}>
-                    <InputLabel htmlFor="outlined-adornment-password">RG</InputLabel>
+                    <InputLabel htmlFor="outlined-adornment-password"  size="small">RG</InputLabel>
                     <OutlinedInput value={rg} onChange={(e) => setRg(e.target.value)}
                         type={'text'}
+                        size="small"
                         inputProps={{
                             maxLength: 13,
                         }}
@@ -75,8 +78,9 @@ export default function Dados({ sendDataToParent }: Props) {
                 </FormControl>
                 <div className="agrupamentoInput">
                 <FormControl sx={{ m: 1, minWidth: 120 }}>
-                    <InputLabel id="escolaridade-label">Genero</InputLabel>
+                    <InputLabel id="escolaridade-label"  size="small">Genero</InputLabel>
                     <Select
+                        size="small"
                         labelId="escolaridade-label"
                         id="escolaridade-select"
                         value={genero}
@@ -91,14 +95,16 @@ export default function Dados({ sendDataToParent }: Props) {
                     </Select>
                 </FormControl>
                     <FormControl sx={{ m: 1 }} variant="outlined">
-                        <InputLabel htmlFor="outlined-adornment-password"></InputLabel>
+                        <InputLabel htmlFor="outlined-adornment-password"  size="small"></InputLabel>
                         <OutlinedInput value={data} onChange={(e) => setData(e.target.value)}
+                         size="small"
                             type={'date'} />
                     </FormControl>
                 </div>
                 <FormControl sx={{ m: 1, minWidth: 120 }}>
-                    <InputLabel id="escolaridade-label">Escolaridade</InputLabel>
+                    <InputLabel id="escolaridade-label"  size="small">Escolaridade</InputLabel>
                     <Select
+                        size="small"
                         labelId="escolaridade-label"
                         id="escolaridade-select"
                         value={escolaridade}
@@ -121,8 +127,9 @@ export default function Dados({ sendDataToParent }: Props) {
 
 
                 <FormControl sx={{ m: 1, minWidth: 120 }}>
-                    <InputLabel id="escolaridade-label">Nacionalidade</InputLabel>
+                    <InputLabel id="escolaridade-label"  size="small">Nacionalidade</InputLabel>
                     <Select
+                        size="small"
                         labelId="escolaridade-label"
                         id="escolaridade-select"
                         value={nacionalidade}

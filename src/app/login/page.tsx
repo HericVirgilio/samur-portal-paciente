@@ -47,8 +47,9 @@ export default function Login() {
             <form className="BoxHeaderLogin" onSubmit={Logar}>
                 <p className='TextLogin'>Login</p>
                 <FormControl sx={{ m: 1, width: '80vw' }} variant="outlined" onChange={FormataCpf}>
-                    <InputLabel htmlFor="outlined-adornment-password">CPF</InputLabel>
+                    <InputLabel htmlFor="outlined-adornment-password"  size="small">CPF</InputLabel>
                     <OutlinedInput value={cpf} onChange={(e) => setCpf(e.target.value)}
+                        size="small"
                         type={'text'}
                         inputProps={{
                             maxLength: 14,
@@ -56,9 +57,9 @@ export default function Login() {
                         label="CPF" />
                 </FormControl>
                 <FormControl sx={{ m: 1, width: '80vw' }} variant="outlined">
-                    <InputLabel htmlFor="outlined-adornment-password">Senha</InputLabel>
+                    <InputLabel htmlFor="outlined-adornment-password"  size="small">Senha</InputLabel>
                     <OutlinedInput value={senha} onChange={(e) => setSenha(e.target.value)}
-
+                         size="small"
                         type={showPassword ? 'text' : 'password'}
                         endAdornment={
                             <InputAdornment position="end">

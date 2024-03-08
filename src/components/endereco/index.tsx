@@ -35,8 +35,9 @@ export default function Endereco({ sendDataToParent }: Props) {
         <div className="BoxForm">
             <form className="DivCadastroForm" onSubmit={EnviarFormulario}>
                 <FormControl sx={{ m: 1, width: '80vw' }} variant="outlined" onChange={FormataCep} >
-                    <InputLabel htmlFor="outlined-adornment-password">CEP</InputLabel>
+                    <InputLabel htmlFor="outlined-adornment-password"  size="small">CEP</InputLabel>
                     <OutlinedInput value={cep} onChange={(e) => setCep(e.target.value)}
+                        size="small"
                         type={'text'}
                         label="CEP"
                         inputProps={{
@@ -44,40 +45,46 @@ export default function Endereco({ sendDataToParent }: Props) {
                         }}/>
                 </FormControl>
                 <FormControl sx={{ m: 1, width: '80vw' }} variant="outlined">
-                    <InputLabel htmlFor="outlined-adornment-password">Bairro</InputLabel>
+                    <InputLabel htmlFor="outlined-adornment-password"  size="small">Bairro</InputLabel>
                     <OutlinedInput value={bairro} onChange={(e) => setBairro(e.target.value)}
+                        size="small"
                         type={'text'}
                         label="Bairro" />
                 </FormControl>
                 <div className="agrupamentoInputEndereco">
                     <FormControl sx={{ m: 1, width: '40vw' }} variant="outlined">
-                        <InputLabel htmlFor="outlined-adornment-password">Logradouro</InputLabel>
+                        <InputLabel htmlFor="outlined-adornment-password"  size="small">Logradouro</InputLabel>
                         <OutlinedInput value={logradouro} onChange={(e) => setLogradouro(e.target.value)}
+                            size="small"
                             type={'text'}
                             label="Logradouro" />
                     </FormControl>
                     <FormControl sx={{ m: 1 }} variant="outlined">
-                        <InputLabel htmlFor="outlined-adornment-password">Número</InputLabel>
+                        <InputLabel htmlFor="outlined-adornment-password"  size="small">Número</InputLabel>
                         <OutlinedInput value={numero} onChange={(e) => setNumero(e.target.value)}
+                            size="small"
                             type={'text'}
                             label="Número" />
                     </FormControl>
                 </div>
                 <FormControl sx={{ m: 1, width: '80vw' }} variant="outlined">
-                    <InputLabel htmlFor="outlined-adornment-password">Complemento</InputLabel>
+                    <InputLabel htmlFor="outlined-adornment-password"  size="small">Complemento</InputLabel>
                     <OutlinedInput value={complemento} onChange={(e) => setComplemento(e.target.value)}
+                        size="small"
                         type={'text'}
                         label="Complemento" />
                 </FormControl>
                 <FormControl sx={{ m: 1, width: '80vw' }} variant="outlined">
-                    <InputLabel htmlFor="outlined-adornment-password">Cidade</InputLabel>
+                    <InputLabel htmlFor="outlined-adornment-password"  size="small">Cidade</InputLabel>
                     <OutlinedInput value={cidade} onChange={(e) => setCidade(e.target.value)}
+                        size="small"
                         type={'text'}
                         label="Cidade" />
                 </FormControl>
                 <FormControl sx={{ m: 1, width: '80vw' }} variant="outlined">
-                    <InputLabel htmlFor="outlined-adornment-password">Estado</InputLabel>
+                    <InputLabel htmlFor="outlined-adornment-password"  size="small">Estado</InputLabel>
                     <OutlinedInput value={estado} onChange={(e) => setEstado(e.target.value)}
+                        size="small"
                         type={'text'}
                         label="Estado" />
                 </FormControl>
