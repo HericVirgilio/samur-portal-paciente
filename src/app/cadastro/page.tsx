@@ -63,9 +63,13 @@ export default function Cadastro() {
     return (
         <div>
             <div className='DivBoxHeaderPrincipal' >
-            <Image src={"/icons/voltarHeaderCadastro.svg"} alt='Voltar' width={35} height={35}
-                className='imgVoltar' onClick={Voltar} />
-            <Image src="/images/samur-principal.png" alt="" width={250} height={150} priority />
+            <div className="BoxVoltar">
+                <Image src={"/icons/voltarHeaderCadastro.svg"} alt='Voltar' width={35} height={35}
+                    className='imgVoltar' onClick={Voltar} />
+            </div>
+            <div className="BoxLogo">
+                <Image src="/images/samur-principal.png" alt="" width={250} height={150} priority />
+            </div>
             </div>
 
             <div className="DivCadastroTitle">
