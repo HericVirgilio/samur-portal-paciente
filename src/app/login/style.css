@@ -26,6 +26,7 @@
     font-weight: 500;
     color: var(--cinza-input);
     margin-left: 8px;
+    cursor: pointer;
 }
 .InputDados{
     height: 40px;
