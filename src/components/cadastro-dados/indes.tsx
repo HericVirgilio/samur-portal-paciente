@@ -21,14 +21,52 @@ export default function Dados({ sendDataToParent }: Props) {
     const [nacionalidade, setNacionalide] = useState<string>("")
 
     const FormataCpf = (event: React.ChangeEvent<HTMLInputElement>) => {
-        let value = event.target.value.replace(/\D/g, "");
+        let value = event.target.value.replace(/\D/g, '');
         if (value.length <= 11) {
-
-            value = value.replace(/(\d{3})(\d)/, "$1.$2");
-            value = value.replace(/(\d{3})(\d)/, "$1.$2");
-            value = value.replace(/(\d{3})(\d{1,2})$/, "$1-$2");
+            value = value.replace(/(\d{3})(\d)/, '$1.$2');
+            value = value.replace(/(\d{3})(\d)/, '$1.$2');
+            value = value.replace(/(\d{3})(\d{1,2})$/, '$1-$2');
         }
         setCpf(value);
+    };
+    
+    const validarCpf = (cpf: string) => {
+        const cpfNumeros = cpf.replace(/\D/g, '');
+        if (cpfNumeros.length !== 11) {
+            return false;
+        }
+        let soma = 0;
+        for (let i = 0; i < 9; i++) {
+            soma += parseInt(cpfNumeros.charAt(i)) * (10 - i);
+        }
+        let digito1 = 11 - (soma % 11);
+        if (digito1 > 9) {
+            digito1 = 0;
+        }
+    
+        soma = 0;
+        for (let i = 0; i < 10; i++) {
+            soma += parseInt(cpfNumeros.charAt(i)) * (11 - i);
+        }
+        let digito2 = 11 - (soma % 11);
+        if (digito2 > 9) {
+            digito2 = 0;
+        }
+        if (parseInt(cpfNumeros.charAt(9)) === digito1 && parseInt(cpfNumeros.charAt(10)) === digito2) {
+            return true;
+        } else {
+            return false;
+        }
+    };
+    
+    const ProcessaCpf = (event: React.ChangeEvent<HTMLInputElement>) => {
+        FormataCpf(event);
+        const cpfValue = event.target.value;
+        if (validarCpf(cpfValue)) {
+            console.log('CPF válido');
+        } else {
+            console.log('CPF inválido');
+        }
     };
     const FormataRg = (event: React.ChangeEvent<HTMLInputElement>) => {
         let value = event.target.value.replace(/\D/g, "");
@@ -56,7 +94,7 @@ export default function Dados({ sendDataToParent }: Props) {
                         size="small"
                         label="Nome Completo" />
                 </FormControl>
-                <FormControl sx={{ m: 1, width: '80vw' }} variant="outlined" onChange={FormataCpf}>
+                <FormControl sx={{ m: 1, width: '80vw' }} variant="outlined" onChange={ProcessaCpf}>
                     <InputLabel htmlFor="outlined-adornment-password"  size="small">CPF</InputLabel>
                     <OutlinedInput value={cpf} onChange={(e) => setCpf(e.target.value)}
                         type={'text'}
