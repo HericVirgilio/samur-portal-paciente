@@ -9,7 +9,7 @@ export default function Atalhos(props: { atalhos: AtalhoInterface[] }) {
                 <Link className="LinksAtalho" key={objeto.key} href={`/${objeto.nomeUrl}`}>
                     <div className="BoxObjetoAtalho">
                         <Image src={objeto.url} alt={objeto.nomeUrl} width={0} height={0}
-                            style={{ width: '40px', height: "40px" }} />
+                            style={{ width: '30px', height: "30px" }}  className="Img"/>
                                <h5>{objeto.nome}</h5>
                     </div>
                 </Link>

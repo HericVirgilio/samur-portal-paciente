@@ -36,7 +36,7 @@ export default function Login() {
     };
 
     return (
-        <div>
+        <div style={{backgroundColor: "var(--branco)"}}>
             <div className="BoxHeaderLogin">
                 <Image src={"/images/samur-principal.png"} alt="" width={250} height={150} />
                 <div>

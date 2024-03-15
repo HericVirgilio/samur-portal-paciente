@@ -13,7 +13,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body style={{ fontFamily: 'Montserrat, sans-serif' }}>{children}</body>
+      <body style={{ fontFamily: 'Montserrat, sans-serif', backgroundColor:" var(--cinza-cor-de-fundo)" }}>{children}</body>
     </html>
   );
 }

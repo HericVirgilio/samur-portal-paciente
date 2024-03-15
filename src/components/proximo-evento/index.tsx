@@ -9,6 +9,7 @@ export default function ProximoEvento(){
             </div>
             <div className="BoxProximoEventoDetalhes">
                 <p className="tituloEvento">{lista.exameNome}</p>
+                <p>{lista.descricao}</p>
                 <div className="BoxDataHora">
                     <Image src="/icons/calendario.svg" alt="" width={20} height={20}/>
                     <p>{lista.data}</p>

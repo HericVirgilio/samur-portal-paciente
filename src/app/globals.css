@@ -13,9 +13,10 @@ body{
     --branco: white;
     --preto: black;
     --cinza-input: #808080;
-    --cinza-cor-de-fundo: #F5F2F2;
+    --cinza-cor-de-fundo: #F0F4F4;
     --verde-escuro: #2F6969;
     --verde-claro: #B1D7C6;
+    --cor-border: #676767;
 
     --background: 0 0% 100%;
     --foreground: 0 0% 5%;

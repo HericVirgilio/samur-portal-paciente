@@ -33,9 +33,9 @@
 }
 .TextoMapMenuHamburguer{
     margin-left: 20px;
-    color: var(--verde-escuro);
+    color: var(--preto);
     font-weight: 500;
-    font-size: 20;
+    font-size: 20px;
 }
 .SairMenuHamburguer{
     background-color: var(--verde-escuro);
@@ -60,7 +60,7 @@
     display: grid;
     grid-template-columns: 20% 1fr;
     align-items: center;
-    color: var(--verde-escuro);
+    color: var(--preto);
     font-weight: 500;
     gap: 20px;
     font-size: 20px;
@@ -69,7 +69,7 @@
     height: 1px;
     width: 90vw;
     margin: 20px auto;
-    background-color: var(--verde-escuro);
+    background-color: var(--preto);
 }
 .ImagemPerfilMenu{
     border-radius: 50px ;

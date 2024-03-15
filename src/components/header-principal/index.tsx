@@ -31,7 +31,7 @@ export default function HeaderPrincipal() {
                 </div>
                 <div className='ImagensCloseLogoSamurEncapsulamento'>
                     <div className='ImagensCloseLogoSamur'>
-                        <Image src="/images/eduarda-ferreira.png" alt='close' height={60} width={60} className='ImagemPerfilMenu'/>
+                        <Image src="/images/eduarda-ferreira.png" alt='' height={60} width={60} className='ImagemPerfilMenu'/>
                         <h2>Eduarda Ferreira</h2>
                     </div>
                 </div>
@@ -42,7 +42,7 @@ export default function HeaderPrincipal() {
 
                 {menuHamburguerData.map((objeto) =>
                     <Link onClick={fecharMenu} className='BoxMapMenuHamburguer' key={objeto.key} href={`${objeto.nomeUrl}`}>
-                        <Image src={objeto.url} alt={objeto.nomeUrl} height={40} width={40} />
+                        <Image src={objeto.url} alt={objeto.nomeUrl} height={25} width={25} />
                         <p className='TextoMapMenuHamburguer'>{objeto.nome}</p>
                     </Link>
                 )}

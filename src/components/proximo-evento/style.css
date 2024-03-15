@@ -11,9 +11,13 @@
     align-items: center;
     display: flex;
     border-radius: 5px 5px 0px 0px;
+    font-size: 16px;
+    font-weight: 700;
 }
 .tituloEvento{
     font-size: 14px;
+    font-weight: 700;
+    text-align: center;
 }
 .BoxProximoEventoDetalhes{
     background-color: var(--verde-claro);
