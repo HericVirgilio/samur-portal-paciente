@@ -2,7 +2,7 @@ import { GenericoInterfaceTabelaAgendamento } from "@/interface/Agendamento.inte
 import Image from "next/image"
 import "./style.css"
 import { useState } from "react"
-export default function TabelaAgendamento(props: { objeto: GenericoInterfaceTabelaAgendamento}) {
+export default function Tabela(props: { objeto: GenericoInterfaceTabelaAgendamento}) {
 
     const [tabela, setTabela] = useState({});
     const [menuAberto, setMenu] = useState(false)
@@ -29,7 +29,7 @@ export default function TabelaAgendamento(props: { objeto: GenericoInterfaceTabe
     return (
         <div>
 
-            <div className={props.objeto.key % 2 === 0 ? "linhaPar" : "linhaImpar"} key={props.objeto.key}>
+            <div className={"boxLinahasDaTabela"} key={props.objeto.key}>
                 <div id="BoxBodyTabela" >
                     <p>{props.objeto.nome}</p>
                     <p>{props.objeto.data.toLocaleDateString()}</p>

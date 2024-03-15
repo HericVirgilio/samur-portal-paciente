@@ -1,5 +1,5 @@
 "use client"
-import HeaderTable from "@/components/header-table"
+import HeaderTable from "@/components/cabecalho-tabela"
 import HeaderPrincipal from "@/components/header-principal"
 import Tabela from "@/components/tabela"
 import { ResultadosData } from "@/data/resultados.data"

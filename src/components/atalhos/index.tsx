@@ -8,8 +8,8 @@ export default function Atalhos(props: { atalhos: AtalhoInterface[] }) {
             {props.atalhos.map((objeto) => (
                 <Link className="LinksAtalho" key={objeto.key} href={`/${objeto.nomeUrl}`}>
                     <div className="BoxObjetoAtalho">
-                        <Image src={objeto.url} alt={objeto.nomeUrl} width={0} height={0}
-                            style={{ width: '30px', height: "30px" }}  className="Img"/>
+                        <Image src={objeto.url} alt={objeto.nomeUrl} width={30} height={30}
+                             className="Img"/>
                                <h5>{objeto.nome}</h5>
                     </div>
                 </Link>
