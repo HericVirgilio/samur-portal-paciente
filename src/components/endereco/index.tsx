@@ -4,6 +4,8 @@ import { FormDataEndereco } from "@/interface/form-data.interface";
 import { FormEvent } from "react";
 import { useState } from "react";
 import BotaoEnviarFormulario from "../botao-login-cadastro";
+import axios from 'axios';
+
 
 interface Props {
     sendDataToParent: (data: FormDataEndereco) => void;
@@ -19,6 +21,19 @@ export default function Endereco({ sendDataToParent }: Props) {
     const [cidade, setCidade] = useState("")
     const [estado, setEstado] = useState("")
 
+    const buscarEnderecoPorCep = async (cep: string) => {
+        try {
+            const response = await axios.get(`https://viacep.com.br/ws/${cep}/json/`);
+            const enderecoData: FormDataEndereco = response.data;
+            setBairro(enderecoData.bairro);
+            setLogradouro(enderecoData.logradouro);
+            setCidade(enderecoData.localidade)
+            setEstado(enderecoData.uf);
+        } catch (error) {
+            console.error('Erro ao buscar endereço:', error);
+        }
+    };
+
     const EnviarFormulario = (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
     }
@@ -29,6 +44,9 @@ export default function Endereco({ sendDataToParent }: Props) {
             value = value.replace(/^(\d{5})(\d{3})$/, "$1-$2");
         }
         setCep(value);
+        if (value.length === 9) {
+            buscarEnderecoPorCep(value);
+        }
     };
 
     return (

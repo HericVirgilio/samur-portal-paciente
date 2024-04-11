@@ -17,6 +17,6 @@ export interface FormDataEndereco{
     logradouro: string;
     numero: number;
     complemento: string;
-    cidade: string;
-    estado: string;
+    localidade: string;
+    uf: string;
 }
