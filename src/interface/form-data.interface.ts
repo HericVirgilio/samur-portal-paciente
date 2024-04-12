@@ -2,7 +2,7 @@ export interface FormData {
     email: string;
     senha: string;
 }
-export interface FormDataDados{
+export interface FormDataDados {
     nome: string;
     cpf: string;
     rg: string;
@@ -11,12 +11,14 @@ export interface FormDataDados{
     escolaridade: string;
     nacionalidade: string;
 }
-export interface FormDataEndereco{
+export interface FormDataEndereco {
     cep: string;
     bairro: string;
     logradouro: string;
     numero: number;
     complemento: string;
+    telefone1: string;
+    telefone2: string;
     localidade: string;
     uf: string;
 }

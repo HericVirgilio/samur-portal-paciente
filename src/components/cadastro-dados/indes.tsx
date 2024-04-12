@@ -25,7 +25,7 @@ export default function Dados({ sendDataToParent }: Props) {
     const [ textCpf , setTextCpf ] = useState<string>("CPF")
 
     useEffect(() => {
-        if (cpf !== "") {
+        if (cpf !== "" && validadeCpf === false) {
             mudarCorInput()
         }
     },[cpf])
@@ -136,7 +136,7 @@ export default function Dados({ sendDataToParent }: Props) {
                             },
                         },
                         '& .MuiInputLabel-outlined.MuiInputLabel-shrink': {
-                            color: corInputCpf, // cor do label quando o campo está preenchido
+                            color: corInputCpf, 
                           },
                     }}
                     variant="outlined"
@@ -151,7 +151,6 @@ export default function Dados({ sendDataToParent }: Props) {
                         }}
                         label={textCpf} />
                 </FormControl>
-                <p className="mensagemErroCpf" style={{ display: validadeCpf === false && cpf.length > 11 ? "block" : "none" }}>cpf invalido</p>
                 <FormControl sx={{ m: 1, width: '80vw' }} variant="outlined" onChange={FormataRg}>
                     <InputLabel htmlFor="outlined-adornment-password" size="small">RG</InputLabel>
                     <OutlinedInput value={rg} onChange={(e) => setRg(e.target.value)}

@@ -40,7 +40,7 @@ export default function Cadastro() {
     }
     const FormularioEndereco = (data: any) => {
         setFormDataDados(data);
-        console.log(`nome: ${formDataDados.nome}, cpf: ${formDataDados.cpf}, rf: ${formDataDados.rg}
+        console.log(`nome: ${formDataDados.nome}, cpf: ${formDataDados.cpf}, rg: ${formDataDados.rg}
         , genero: ${formDataDados.genero}, data: ${formDataDados.data}, escolariada: ${formDataDados.escolaridade},
         nacionalidade: ${formDataDados.nacionalidade}`);
         setControle(3)
