@@ -49,3 +49,7 @@
     font-size: 18px;
     font-weight: bold;
 }
+.mensagemErroCpf{
+    color: red;
+    margin-left: 10px;
+}

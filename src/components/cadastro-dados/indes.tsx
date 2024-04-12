@@ -1,6 +1,6 @@
 import "./style.css"
 import { FormControl, InputLabel, OutlinedInput } from "@mui/material";
-import { FormEvent, useState } from "react";
+import { FormEvent, useState, useEffect } from "react";
 import { FormDataDados } from "@/interface/form-data.interface";
 import * as React from 'react';
 import MenuItem from '@mui/material/MenuItem';
@@ -12,14 +12,23 @@ interface Props {
 
 export default function Dados({ sendDataToParent }: Props) {
 
-    const [nome, setNome] = useState<string>("")
-    const [cpf, setCpf] = useState<string>("")
-    const [rg, setRg] = useState<string>("")
-    const [genero, setGenero] = useState<string>("")
-    const [data, setData] = useState<string>("")
-    const [escolaridade, setEscolaridade] = useState<string>("")
-    const [nacionalidade, setNacionalide] = useState<string>("")
-    const [sequencia, setSequencia] = useState<string>("")
+    const [nome, setNome ] = useState<string>("")
+    const [cpf, setCpf ] = useState<string>("")
+    const [rg, setRg ] = useState<string>("")
+    const [genero, setGenero ] = useState<string>("")
+    const [data, setData ] = useState<string>("")
+    const [escolaridade, setEscolaridade ] = useState<string>("")
+    const [nacionalidade, setNacionalide ] = useState<string>("")
+    const [sequencia, setSequencia ] = useState<string>("")
+    const [validadeCpf, setValidadeCpf ] = useState<boolean | null>(null)
+    const [ corInputCpf, setCorInputCpf ] = useState<string>("")
+    const [ textCpf , setTextCpf ] = useState<string>("CPF")
+
+    useEffect(() => {
+        if (cpf !== "") {
+            mudarCorInput()
+        }
+    },[cpf])
 
     const FormataCpf = (event: React.ChangeEvent<HTMLInputElement>) => {
         let value = event.target.value.replace(/\D/g, '');
@@ -58,11 +67,11 @@ export default function Dados({ sendDataToParent }: Props) {
         return true;
     };
 
-    const validarCpfSequenciasNumercas = (value:string):boolean => {
+    const validarCpfSequenciasNumercas = (value: string): boolean => {
         if (/^(\d)\1+$/.test(value)) {
             console.log("cpf invalidado por numeros sequenciais")
             return false
-        } else{
+        } else {
             setSequencia(value)
             console.log("cpf valido os numeros nao sao sequenciais")
             return true
@@ -73,13 +82,24 @@ export default function Dados({ sendDataToParent }: Props) {
         const cpfValue = event.target.value;
         if (validarCpf(cpfValue)) {
             console.log('CPF válido pela soma');
-            if(validarCpfSequenciasNumercas(cpfValue)){
+            if (validarCpfSequenciasNumercas(cpfValue)) {
                 FormataCpf(event)
+                setValidadeCpf(true)
+                setCorInputCpf("")
             }
         } else {
             console.log('CPF inválido pela soma');
+            setValidadeCpf(false)
         }
     };
+
+    const mudarCorInput = () => {
+        if(cpf.length >= 11){
+            setCorInputCpf("red")
+            setTextCpf("CPF INVALIDO")
+        }
+    } 
+
     const FormataRg = (event: React.ChangeEvent<HTMLInputElement>) => {
         let value = event.target.value.replace(/\D/g, "");
         if (value.length <= 11) {
@@ -106,16 +126,32 @@ export default function Dados({ sendDataToParent }: Props) {
                         size="small"
                         label="Nome Completo" />
                 </FormControl>
-                <FormControl sx={{ m: 1, width: '80vw' }} variant="outlined" onChange={ProcessaCpf}>
-                    <InputLabel htmlFor="outlined-adornment-password" size="small">CPF</InputLabel>
+                <FormControl
+                    sx={{
+                        m: 1,
+                        width: '80vw',
+                        '& .MuiOutlinedInput-root': {
+                            '&.Mui-focused fieldset': {
+                                borderColor: corInputCpf, 
+                            },
+                        },
+                        '& .MuiInputLabel-outlined.MuiInputLabel-shrink': {
+                            color: corInputCpf, // cor do label quando o campo está preenchido
+                          },
+                    }}
+                    variant="outlined"
+                    onChange={ProcessaCpf}
+                >
+                    <InputLabel htmlFor="outlined-adornment-password" size="small">{textCpf}</InputLabel>
                     <OutlinedInput value={cpf} onChange={(e) => setCpf(e.target.value)}
                         type={'text'}
                         size="small"
                         inputProps={{
                             maxLength: 14,
                         }}
-                        label="CPF" />
+                        label={textCpf} />
                 </FormControl>
+                <p className="mensagemErroCpf" style={{ display: validadeCpf === false && cpf.length > 11 ? "block" : "none" }}>cpf invalido</p>
                 <FormControl sx={{ m: 1, width: '80vw' }} variant="outlined" onChange={FormataRg}>
                     <InputLabel htmlFor="outlined-adornment-password" size="small">RG</InputLabel>
                     <OutlinedInput value={rg} onChange={(e) => setRg(e.target.value)}
