@@ -31,3 +31,15 @@
     font-weight: 600;
     margin-top: 20px;
 }
+.ContainerVeridicadoresDeSenha{
+    display: flex;
+    gap: 5px;
+    margin-bottom: 5px;
+    width: 70vw;
+}
+.RequisitosSenha h5 {
+    margin-bottom: 10px;
+}
+.ContainerVeridicadoresDeSenha p{
+    color: red;
+}
