@@ -27,9 +27,9 @@ export default function CadastroFormulario({ sendDataToParent }: Props) {
         if (senha === senha2 && validarSenha()) {
             sendDataToParent({ email, senha });
         } else if (senha != senha2) {
-            setErroSenha("As senhas são diferentes")
+            setErroSenha("As senhas são diferentes !")
         } else {
-            setErroSenha("A senha deve conter letra e numero")
+            setErroSenha("Senha informada não atende aos requisitos de segurança !")
         }
     }
 
@@ -138,7 +138,7 @@ export default function CadastroFormulario({ sendDataToParent }: Props) {
             </form>
             <div className="RequisitosSenha">
                 <h5>A senha deve conter:</h5>
-                <div className="ContainerVeridicadoresDeSenha">No minimo 8 caracteres
+                <div className="ContainerVeridicadoresDeSenha">No mínimo 8 caracteres
                     <Image src={"/icons/check.svg"} alt="" width={20} height={20}
                         style={{ display: senha.length >= 8 ? "block" : "none" }} />
                     <p style={{ display: senha.length < 8 && senha !== "" ? "block" : "none" }}>X</p>

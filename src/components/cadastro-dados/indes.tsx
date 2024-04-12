@@ -23,12 +23,22 @@ export default function Dados({ sendDataToParent }: Props) {
     const [validadeCpf, setValidadeCpf ] = useState<boolean | null>(null)
     const [ corInputCpf, setCorInputCpf ] = useState<string>("")
     const [ textCpf , setTextCpf ] = useState<string>("CPF")
+    const [ erroDados, setErroDados ] = useState<string>("")
 
     useEffect(() => {
         if (cpf !== "" && validadeCpf === false) {
             mudarCorInput()
         }
     },[cpf])
+
+    const EnviarFormulario = (event: FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
+        if(validadeCpf === true){
+            sendDataToParent({nome,cpf,rg,genero,data,escolaridade,nacionalidade})
+        }else{
+            setErroDados("Existem campos incorretos, é necessário fazer as correções antes de enviar !")
+        }
+    }
 
     const FormataCpf = (event: React.ChangeEvent<HTMLInputElement>) => {
         let value = event.target.value.replace(/\D/g, '');
@@ -97,6 +107,9 @@ export default function Dados({ sendDataToParent }: Props) {
         if(cpf.length >= 11){
             setCorInputCpf("red")
             setTextCpf("CPF INVALIDO")
+        }else{
+            setTextCpf("CPF")
+            setCorInputCpf("")
         }
     } 
 
@@ -111,15 +124,10 @@ export default function Dados({ sendDataToParent }: Props) {
         setRg(value);
     };
 
-    const EnviarFormulario = (event: FormEvent<HTMLFormElement>) => {
-        event.preventDefault();
-        sendDataToParent({ nome, cpf, rg, genero, data, escolaridade, nacionalidade })
-    }
-
     return (
         <div className="BoxFormDados">
             <form className="DivDadosForm" onSubmit={EnviarFormulario}>
-                <FormControl sx={{ m: 1, width: '80vw' }} variant="outlined">
+                <FormControl sx={{ m: 1, width: '80vw' }} variant="outlined" required>
                     <InputLabel htmlFor="outlined-adornment-password" size="small">Nome Completo</InputLabel>
                     <OutlinedInput value={nome} onChange={(e) => setNome(e.target.value)}
                         type={'text'}
@@ -141,6 +149,7 @@ export default function Dados({ sendDataToParent }: Props) {
                     }}
                     variant="outlined"
                     onChange={ProcessaCpf}
+                    required
                 >
                     <InputLabel htmlFor="outlined-adornment-password" size="small">{textCpf}</InputLabel>
                     <OutlinedInput value={cpf} onChange={(e) => setCpf(e.target.value)}
@@ -151,7 +160,7 @@ export default function Dados({ sendDataToParent }: Props) {
                         }}
                         label={textCpf} />
                 </FormControl>
-                <FormControl sx={{ m: 1, width: '80vw' }} variant="outlined" onChange={FormataRg}>
+                <FormControl sx={{ m: 1, width: '80vw' }} variant="outlined" onChange={FormataRg} required>
                     <InputLabel htmlFor="outlined-adornment-password" size="small">RG</InputLabel>
                     <OutlinedInput value={rg} onChange={(e) => setRg(e.target.value)}
                         type={'text'}
@@ -162,7 +171,7 @@ export default function Dados({ sendDataToParent }: Props) {
                         label="RG" />
                 </FormControl>
                 <div className="agrupamentoInput">
-                    <FormControl sx={{ m: 1, minWidth: 120 }}>
+                    <FormControl sx={{ m: 1, minWidth: 120 }} required>
                         <InputLabel id="escolaridade-label" size="small">Genero</InputLabel>
                         <Select
                             size="small"
@@ -179,14 +188,16 @@ export default function Dados({ sendDataToParent }: Props) {
                             <MenuItem value="indeterminado">Indeterminado</MenuItem>
                         </Select>
                     </FormControl>
-                    <FormControl sx={{ m: 1 }} variant="outlined">
-                        <InputLabel htmlFor="outlined-adornment-password" size="small"></InputLabel>
+                    <FormControl sx={{ m: 1 }} variant="outlined" >
+                        <InputLabel htmlFor="outlined-adornment-password" size="small" 
+                        ></InputLabel>
                         <OutlinedInput value={data} onChange={(e) => setData(e.target.value)}
                             size="small"
-                            type={'date'} />
+                            type={'date'}
+                            style={{ color: '#6A6B6B' }} />
                     </FormControl>
                 </div>
-                <FormControl sx={{ m: 1, minWidth: 120 }}>
+                <FormControl sx={{ m: 1, minWidth: 120 }} required>
                     <InputLabel id="escolaridade-label" size="small">Escolaridade</InputLabel>
                     <Select
                         size="small"
@@ -250,6 +261,7 @@ export default function Dados({ sendDataToParent }: Props) {
                 </FormControl>
 
                 <input type="submit" value="Continuar" className="InputDados" id="InputDados" />
+    
             </form>
         </div>
     )

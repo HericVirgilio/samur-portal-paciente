@@ -1,7 +1,7 @@
 import { FormControl, InputLabel, OutlinedInput } from "@mui/material";
 import "./style.css"
 import { FormDataEndereco } from "@/interface/form-data.interface";
-import { FormEvent } from "react";
+import { FormEvent, useEffect } from "react";
 import { useState } from "react";
 import BotaoEnviarFormulario from "../botao-login-cadastro";
 import axios from 'axios';
@@ -36,6 +36,10 @@ export default function Endereco({ sendDataToParent }: Props) {
         }
     };
 
+    useEffect(() => {
+        FormataTelefone()
+    },[telefone1,telefone2])
+
     const EnviarFormulario = (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
     }
@@ -50,6 +54,14 @@ export default function Endereco({ sendDataToParent }: Props) {
             buscarEnderecoPorCep(value);
         }
     };
+    const FormataTelefone = () => {
+        if(telefone1.length <= 11){
+            setTelefone1(telefone1.replace(/(\d{2})(\d{5,6})(\d{4})/, '($1) $2-$3'))
+        }
+        if(telefone2.length <= 11){
+            setTelefone2(telefone2.replace(/(\d{2})(\d{5,6})(\d{4})/, '($1) $2-$3'))
+        }
+    }
 
     return (
         <div className="BoxForm">
@@ -88,20 +100,6 @@ export default function Endereco({ sendDataToParent }: Props) {
                     </FormControl>
                 </div>
                 <FormControl sx={{ m: 1, width: '80vw' }} variant="outlined">
-                    <InputLabel htmlFor="outlined-adornment-password" size="small">Telefone1</InputLabel>
-                    <OutlinedInput value={telefone1} onChange={(e) => setTelefone1(e.target.value)}
-                        size="small"
-                        type={'text'}
-                        label="Telefone1" />
-                </FormControl>
-                <FormControl sx={{ m: 1, width: '80vw' }} variant="outlined">
-                    <InputLabel htmlFor="outlined-adornment-password" size="small">Telefone2</InputLabel>
-                    <OutlinedInput value={telefone2} onChange={(e) => setTelefone2(e.target.value)}
-                        size="small"
-                        type={'text'}
-                        label="Telefone2" />
-                </FormControl>
-                <FormControl sx={{ m: 1, width: '80vw' }} variant="outlined">
                     <InputLabel htmlFor="outlined-adornment-password" size="small">Complemento</InputLabel>
                     <OutlinedInput value={complemento} onChange={(e) => setComplemento(e.target.value)}
                         size="small"
@@ -121,6 +119,26 @@ export default function Endereco({ sendDataToParent }: Props) {
                         size="small"
                         type={'text'}
                         label="Estado" />
+                </FormControl>
+                <FormControl sx={{ m: 1, width: '80vw' }} variant="outlined">
+                    <InputLabel htmlFor="outlined-adornment-password" size="small">Telefone1</InputLabel>
+                    <OutlinedInput value={telefone1} onChange={(e) => setTelefone1(e.target.value)}
+                        size="small"
+                        inputProps={{
+                            maxLength: 14,
+                        }}
+                        type={'text'}
+                        label="Telefone1" />
+                </FormControl>
+                <FormControl sx={{ m: 1, width: '80vw' }} variant="outlined">
+                    <InputLabel htmlFor="outlined-adornment-password" size="small">Telefone2</InputLabel>
+                    <OutlinedInput value={telefone2} onChange={(e) => setTelefone2(e.target.value)}
+                        size="small"
+                        inputProps={{
+                            maxLength: 16,
+                        }}
+                        type={'text'}
+                        label="Telefone2" />
                 </FormControl>
 
                 <BotaoEnviarFormulario text="Cadastrar" />
