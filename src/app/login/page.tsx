@@ -36,9 +36,9 @@ export default function Login() {
     };
 
     return (
-        <div style={{backgroundColor: "var(--branco)"}}>
+        <div className='ContainerLogin' style={{backgroundColor: "var(--branco)"}}>
             <div className="BoxHeaderLogin">
-                <Image src={"/images/samur-principal.png"} alt="" width={250} height={150} />
+                <Image style={{marginTop: "30px"}} src={"/images/samur-principal.png"} alt="" width={250} height={150} />
                 <div>
                     <h2 className="TituloHeader">Bem-vindo ao</h2>
                     <h2 className="TituloHeader">Portal do paciente</h2>
