@@ -24,7 +24,6 @@ export default function Dados({ sendDataToParent }: Props) {
     const [corInputCpf, setCorInputCpf] = useState<string>("")
     const [textCpf, setTextCpf] = useState<string>("CPF")
     const [erroDados, setErroDados] = useState<string>("")
-    const [styleCpf, setStyleCpf] = useState<string>("block")
 
     useEffect(() => {
         if (cpf !== "" && validadeCpf === false) {
@@ -33,17 +32,26 @@ export default function Dados({ sendDataToParent }: Props) {
         if(nacionalidade !== "Brasileiro" && nacionalidade !== ""){
             setTextCpf("Número do Passaporte")
         }else{
-            setStyleCpf("block")
+            setTextCpf("CPF")
         }
     }, [cpf, nacionalidade])
 
     const EnviarFormulario = (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        if (validadeCpf === true) {
-            sendDataToParent({ nome, cpf, rg, genero, data, escolaridade, nacionalidade })
-        } else {
-            setErroDados("Existem campos incorretos, é necessário fazer as correções antes de enviar !")
+        if(nacionalidade === "Brasileiro"){
+            if (validadeCpf === true) {
+                sendDataToParent({ nome, cpf, rg, genero, data, escolaridade, nacionalidade })
+            } else {
+                setErroDados("Existem campos incorretos, é necessário fazer as correções antes de enviar !")
+            }
+        }else{
+            if(cpf !== ""){
+                sendDataToParent({ nome, cpf, rg, genero, data, escolaridade, nacionalidade })
+            }else{
+                setErroDados("Existem campos que não foram preenchidos !")
+            }
         }
+        
     }
 
     const FormataCpf = (event: React.ChangeEvent<HTMLInputElement>) => {

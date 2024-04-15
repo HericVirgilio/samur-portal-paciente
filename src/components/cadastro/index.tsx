@@ -56,12 +56,10 @@ export default function CadastroFormulario({ sendDataToParent }: Props) {
             verificaNumero()
             verificaCaracteres()
             verificaLetras()
-            console.log("numero:", regexNumero, "caracteres: ", regexCaracterEspecial, "letras: ", regexLetras)
             if(regexNumero && regexLetras && regexCaracterEspecial){
                 return true
             }
         } else {
-            console.log("senha menor que  8 seu tamanho é " + senha.length)
             return false
         }
     }
