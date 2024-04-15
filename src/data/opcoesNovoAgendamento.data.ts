@@ -15,14 +15,15 @@ export const OpcoesNovoAgendamento: AtalhoInterface [] = [
     },
     {
         key: 3,
-        nome: "Marcar Exame",
-        nomeUrl: "novo-agendamento/marcar-exame",
-        url: "/icons/marcar-exames.svg"
+        nome: "Cirurgia",
+        nomeUrl: "novo-agendamento/marcar-cirurgia",
+        url: "/icons/marcar-cirurgia.svg"
+        
     },
     {
         key: 4,
-        nome: "Marcar Cirurgia",
-        nomeUrl: "novo-agendamento/marcar-cirurgia",
-        url: "/icons/marcar-cirurgia.svg"
+        nome: "Exame",
+        nomeUrl: "novo-agendamento/marcar-exame",
+        url: "/icons/marcar-exames.svg"
     }
 ]

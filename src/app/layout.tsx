@@ -1,8 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Roboto } from 'next/font/google';
-
-const roboto = Roboto({ subsets: ["latin"], weight:['300','400','500','700'] });
 
 export const metadata: Metadata = {
   title: "samur-portal-paciente",
@@ -15,8 +12,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-br">
-      <body className={roboto.className}>{children}</body>
+    <html lang="pt-BR">
+      <body style={{ fontFamily: 'Montserrat, sans-serif', backgroundColor:" var(--cinza-cor-de-fundo)" }}>{children}</body>
     </html>
   );
 }

@@ -2,24 +2,21 @@
 import HeaderPrincipal from "@/components/header-principal"
 import Atalhos from "@/components/atalhos"
 import { OpcoesNovoAgendamento } from "@/data/opcoesNovoAgendamento.data"
-import SelecionePaciente from "@/components/selecione-paciente"
-import HeaderTable from "@/components/header-table"
-import TabelaAgendamento from "@/components/tabela-agendamento"
 import { AgendamentoData } from "@/data/agendamento.data"
-import BackgroundTabela from '@/components/background-tabela'
+import SelecionePaciente from "@/components/selecione-paciente"
+import Tabela from "@/components/tabela"
+import "./style.css"
 
 export default function NovoAgendamento(){
     return(
         <div style={{display: "grid", gap: "20px"}}>
             <HeaderPrincipal/>
-            <SelecionePaciente/>
+            <h2 className="tituloPaginaNovoAgendamento">Novo Agendamento</h2>
+            <h3 className="subtituloNovoAgendamento">Para quem é o agendamento?</h3>
+            <SelecionePaciente/> 
+            <h3 className="tituloAtalhos">Qual serviço você gostaria de agendar?</h3>
             <Atalhos atalhos={OpcoesNovoAgendamento}/>
-            <BackgroundTabela tituloTabela=''>
-            <HeaderTable/> 
-                {AgendamentoData.map((objeto,index) => (
-                    <TabelaAgendamento objeto={objeto} key={index}/>
-                ))}
-            </BackgroundTabela>
+            <Tabela titulo="Meus Agendamentos" objeto={AgendamentoData}/>
         </div>
     )
 }

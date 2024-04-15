@@ -5,9 +5,12 @@ export default function HeaderTable() {
         <div className="BoxHeaderTabela">
             <div className="BoxPacienteTabelaPaciente">
                 <Image src="/icons/profile-circle.svg" alt="img user" height={20} width={20} />
-                <h5>Paciente</h5>
+                <h5 className="tituloheader">Paciente</h5>
             </div>
-            <h5>Data</h5>
+            <div className="BoxHeaderTabelaData">
+                <Image src="/icons/calendario.svg" alt="img user" height={20} width={20}/>
+                <h5 className="tituloheader">Data</h5>
+            </div>
         </div>
     )
 }

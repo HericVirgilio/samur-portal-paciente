@@ -26,14 +26,23 @@ export default function HeaderPrincipal() {
 
             <Image src="/icons/menu.svg" alt='' height={30} width={30} onClick={menuHamburguer} />
             <div className='menuHamburguer' style={menu}>
-                <div className='ImagensCloseLogoSamur'>
-                    <Image src="/icons/close.svg" alt='close' height={25} width={25} onClick={fecharMenu} />
-                    <Image src="/images/samur-secundaria.png" alt='samur logo' width={100} height={75} />
+                <div className='BoxClose'>
+                    <Image src="/icons/close.svg" alt='close' height={26} width={26} onClick={fecharMenu} />
                 </div>
-                
+                <div className='ImagensCloseLogoSamurEncapsulamento'>
+                    <div className='ImagensCloseLogoSamur'>
+                        <Image src="/images/eduarda-ferreira.png" alt='' height={60} width={60} className='ImagemPerfilMenu'/>
+                        <h2>Eduarda Ferreira</h2>
+                    </div>
+                </div>
+
+                <div className='DivisoriaMenuBox'>
+
+                </div>
+
                 {menuHamburguerData.map((objeto) =>
                     <Link onClick={fecharMenu} className='BoxMapMenuHamburguer' key={objeto.key} href={`${objeto.nomeUrl}`}>
-                        <Image src={objeto.url} alt={objeto.nomeUrl} height={40} width={40} />
+                        <Image src={objeto.url} alt={objeto.nomeUrl} height={25} width={25} />
                         <p className='TextoMapMenuHamburguer'>{objeto.nome}</p>
                     </Link>
                 )}

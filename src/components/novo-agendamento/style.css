@@ -4,12 +4,16 @@
     background-color: var(--branco);
     margin: 20px auto;
     border-radius: 5px;
-    display: grid;
-    grid-template-columns: 30% 70%;
+    display: flex;
     align-items: center;
+    justify-content: center;
     padding-left: 20px;
     padding-right: 20px;
     cursor: pointer;
+    border: 1px solid var(--cor-border);
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 500;
 }
 .imagemNovoAgendamento{
     margin-right: 5%;

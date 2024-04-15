@@ -1,32 +1,15 @@
 .boxUserPrincipal{
-    background-color: var(--branco);
-    width: 90vw;
-    height: 75px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: 30% 50%;
-    border-radius: 5px;
-    margin-top: 20px;
-    cursor: pointer;
-}
-
-.BoxImagePerfil{
+    max-width: 90vw;
+    margin: 20px auto 0 auto;
     display: flex;
-    justify-content: center;
     align-items: center;
+    padding: 10px;
 }
-.avatarUser{
-    width: 60px;
-    height: 60px;
-    border-radius: 50px;
+.ImagemPerfil{
+    border-radius: 50%;
 }
 .BoxWelcomeEmail{
-    display: grid;
-    grid-template-columns: 1fr;
-    font-size: 15px;
-    max-height: 80px;
-    align-items: center;
-}
-.boxIconEmail{
-    display: flex;
+    margin-left: 15px;
+    font-size: 17px;
+    font-weight: 500;
 }

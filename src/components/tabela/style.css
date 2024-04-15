@@ -1,23 +1,15 @@
-#BoxBodyTabela{
-    display: grid;
-    grid-template-columns: 40%  30% 20%;
-    align-items: center;
-    gap: 20px;
-    height: 30px;
+.BackGroundTabela{
+    max-width: 90vw;
+    margin: auto;
 }
-.linhaPar{
-    background-color: var(--verde-claro);
+.TituloDaTabela{
+    color: white;
+    text-align: center;
+    background-color: var(--verde-escuro);
+    border-radius: 10px 10px 0 0;
+    padding: 5px;
+    font-weight: 600;
 }
-.DropDown{
-    display: none;
-}
-.setaParaBaixo{
-    cursor: pointer;
-}
-.BoxBodyTabelaDropDown{
-    display: grid;
-    grid-template-columns: 40% 60%;
-    gap: 20px;
-    margin-top: 10px;
-    padding-bottom: 10px;
+.ContainerConteudoTabela{
+    border: 1px solid #676767;
 }

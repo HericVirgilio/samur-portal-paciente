@@ -1,0 +1,46 @@
+.BoxForm {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    width: 100vw;
+}
+
+.DivCadastroForm {
+    display: grid;
+    width: 80vw;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+#InputPlaceholders {
+    padding: 10px;
+}
+
+.DivErro {
+    color: red;
+    margin: auto;
+    text-align: center;
+}
+
+.RequisitosSenha {
+    font-size: 14px;
+    margin: auto;
+    color: var(--verde-escuro);
+    font-weight: 600;
+    margin-top: 20px;
+}
+.ContainerVeridicadoresDeSenha{
+    display: flex;
+    gap: 5px;
+    margin-bottom: 5px;
+    width: 70vw;
+}
+.RequisitosSenha h5 {
+    margin-bottom: 10px;
+}
+.ContainerVeridicadoresDeSenha p{
+    color: red;
+}

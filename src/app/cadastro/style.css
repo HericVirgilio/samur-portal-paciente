@@ -1,0 +1,27 @@
+.DivBoxHeaderPrincipal{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.BoxVoltar{
+    position: absolute;
+    left: 5%;
+}
+.imgVoltar{
+    margin-right: 30px;
+    cursor: pointer;
+}
+.DivCadastroTitle {
+    display: flex;
+    justify-content: space-between;
+    color: var(--verde-escuro);
+    font-size: 20px;
+    font-weight: 500;
+    width: 80vw;
+    margin: auto;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}

@@ -1,8 +1,9 @@
 .BoxSelect {
     background-color: var(--branco);
     width: 90vw;
-    margin: 20px auto 0 auto;
     padding: 10px;
+    background-color: var(--verde-claro);
+    margin: auto;
 }
 
 .select-button {

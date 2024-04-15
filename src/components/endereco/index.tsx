@@ -1,0 +1,149 @@
+import { FormControl, InputLabel, OutlinedInput } from "@mui/material";
+import "./style.css"
+import { FormDataEndereco } from "@/interface/form-data.interface";
+import { FormEvent, useEffect } from "react";
+import { useState } from "react";
+import BotaoEnviarFormulario from "../botao-login-cadastro";
+import axios from 'axios';
+
+
+interface Props {
+    sendDataToParent: (data: FormDataEndereco) => void;
+}
+
+export default function Endereco({ sendDataToParent }: Props) {
+
+    const [cep, setCep] = useState("")
+    const [bairro, setBairro] = useState("")
+    const [logradouro, setLogradouro] = useState("")
+    const [numero, setNumero] = useState("")
+    const [complemento, setComplemento] = useState("")
+    const [telefone1, setTelefone1] = useState("")
+    const [telefone2, setTelefone2] = useState("")
+    const [cidade, setCidade] = useState("")
+    const [estado, setEstado] = useState("")
+
+    const buscarEnderecoPorCep = async (cep: string) => {
+        try {
+            const response = await axios.get(`https://viacep.com.br/ws/${cep}/json/`);
+            const enderecoData: FormDataEndereco = response.data;
+            setBairro(enderecoData.bairro);
+            setLogradouro(enderecoData.logradouro);
+            setCidade(enderecoData.localidade)
+            setEstado(enderecoData.uf);
+        } catch (error) {
+            console.error('Erro ao buscar endereço:', error);
+        }
+    };
+
+    useEffect(() => {
+        FormataTelefone()
+    },[telefone1,telefone2])
+
+    const EnviarFormulario = (event: FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
+    }
+
+    const FormataCep = (event: React.ChangeEvent<HTMLInputElement>) => {
+        let value = event.target.value.replace(/\D/g, "");
+        if (value.length <= 11) {
+            value = value.replace(/^(\d{5})(\d{3})$/, "$1-$2");
+        }
+        setCep(value);
+        if (value.length === 9) {
+            buscarEnderecoPorCep(value);
+        }
+    };
+    const FormataTelefone = () => {
+        if(telefone1.length <= 11){
+            setTelefone1(telefone1.replace(/(\d{2})(\d{5,6})(\d{4})/, '($1) $2-$3'))
+        }
+        if(telefone2.length <= 11){
+            setTelefone2(telefone2.replace(/(\d{2})(\d{5,6})(\d{4})/, '($1) $2-$3'))
+        }
+    }
+
+    return (
+        <div className="BoxForm">
+            <form className="DivCadastroForm" onSubmit={EnviarFormulario}>
+                <FormControl sx={{ m: 1, width: '80vw' }} variant="outlined" onChange={FormataCep} >
+                    <InputLabel htmlFor="outlined-adornment-password" size="small">CEP</InputLabel>
+                    <OutlinedInput value={cep} onChange={(e) => setCep(e.target.value)}
+                        size="small"
+                        type={'text'}
+                        label="CEP"
+                        inputProps={{
+                            maxLength: 9,
+                        }} />
+                </FormControl>
+                <FormControl sx={{ m: 1, width: '80vw' }} variant="outlined">
+                    <InputLabel htmlFor="outlined-adornment-password" size="small">Bairro</InputLabel>
+                    <OutlinedInput value={bairro} onChange={(e) => setBairro(e.target.value)}
+                        size="small"
+                        type={'text'}
+                        label="Bairro" />
+                </FormControl>
+                <div className="agrupamentoInputEndereco">
+                    <FormControl sx={{ m: 1, width: '40vw' }} variant="outlined">
+                        <InputLabel htmlFor="outlined-adornment-password" size="small">Logradouro</InputLabel>
+                        <OutlinedInput value={logradouro} onChange={(e) => setLogradouro(e.target.value)}
+                            size="small"
+                            type={'text'}
+                            label="Logradouro" />
+                    </FormControl>
+                    <FormControl sx={{ m: 1 }} variant="outlined">
+                        <InputLabel htmlFor="outlined-adornment-password" size="small">Número</InputLabel>
+                        <OutlinedInput value={numero} onChange={(e) => setNumero(e.target.value)}
+                            size="small"
+                            type={'text'}
+                            label="Número" />
+                    </FormControl>
+                </div>
+                <FormControl sx={{ m: 1, width: '80vw' }} variant="outlined">
+                    <InputLabel htmlFor="outlined-adornment-password" size="small">Complemento</InputLabel>
+                    <OutlinedInput value={complemento} onChange={(e) => setComplemento(e.target.value)}
+                        size="small"
+                        type={'text'}
+                        label="Complemento" />
+                </FormControl>
+                <FormControl sx={{ m: 1, width: '80vw' }} variant="outlined">
+                    <InputLabel htmlFor="outlined-adornment-password" size="small">Cidade</InputLabel>
+                    <OutlinedInput value={cidade} onChange={(e) => setCidade(e.target.value)}
+                        size="small"
+                        type={'text'}
+                        label="Cidade" />
+                </FormControl>
+                <FormControl sx={{ m: 1, width: '80vw' }} variant="outlined">
+                    <InputLabel htmlFor="outlined-adornment-password" size="small">Estado</InputLabel>
+                    <OutlinedInput value={estado} onChange={(e) => setEstado(e.target.value)}
+                        size="small"
+                        type={'text'}
+                        label="Estado" />
+                </FormControl>
+                <FormControl sx={{ m: 1, width: '80vw' }} variant="outlined">
+                    <InputLabel htmlFor="outlined-adornment-password" size="small">Telefone1</InputLabel>
+                    <OutlinedInput value={telefone1} onChange={(e) => setTelefone1(e.target.value)}
+                        size="small"
+                        inputProps={{
+                            maxLength: 14,
+                        }}
+                        type={'text'}
+                        label="Telefone1" />
+                </FormControl>
+                <FormControl sx={{ m: 1, width: '80vw' }} variant="outlined">
+                    <InputLabel htmlFor="outlined-adornment-password" size="small">Telefone2</InputLabel>
+                    <OutlinedInput value={telefone2} onChange={(e) => setTelefone2(e.target.value)}
+                        size="small"
+                        inputProps={{
+                            maxLength: 16,
+                        }}
+                        type={'text'}
+                        label="Telefone2" />
+                </FormControl>
+
+                <BotaoEnviarFormulario text="Cadastrar" />
+
+            </form>
+        </div>
+    )
+}

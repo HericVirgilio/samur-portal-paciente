@@ -2,5 +2,7 @@ export interface MenuHamburguerInterface{
     key: number,
     nome: string,
     nomeUrl: string,
-    url: string
+    url: string,
+    width: number,
+    height: number
 }

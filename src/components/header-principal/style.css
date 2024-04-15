@@ -13,19 +13,29 @@
     width: 30px;
     height: 30px;
 }
-
+.BoxClose{
+    width: 100vw;
+    display: grid;
+    align-items: center;
+    justify-content: end;
+    padding: 20px;
+}
 .menuHamburguer {
-    background-color: var(--verde-claro);
+    background-color: var(--branco);
     display: none;
     overflow-y: scroll;
 }
 .BoxMapMenuHamburguer{
     display: flex;
-    margin: 20px;
+    margin-top: 28px;
+    margin-left: 40px;
     align-items: center;
 }
 .TextoMapMenuHamburguer{
     margin-left: 20px;
+    color: var(--preto);
+    font-weight: 500;
+    font-size: 20px;
 }
 .SairMenuHamburguer{
     background-color: var(--verde-escuro);
@@ -42,9 +52,25 @@
 .SairTexotMenuHamburguer{
     margin-left: 20px;
 }
+.ImagensCloseLogoSamurEncapsulamento{
+    width: 80vw;
+    margin: auto;
+}
 .ImagensCloseLogoSamur{
-    display: flex;
-    justify-content: space-between;
-    margin-right: 20px;
-    margin-left: 20px;
+    display: grid;
+    grid-template-columns: 20% 1fr;
+    align-items: center;
+    color: var(--preto);
+    font-weight: 500;
+    gap: 20px;
+    font-size: 20px;
+}
+.DivisoriaMenuBox{
+    height: 1px;
+    width: 90vw;
+    margin: 20px auto;
+    background-color: var(--preto);
+}
+.ImagemPerfilMenu{
+    border-radius: 50px ;
 }

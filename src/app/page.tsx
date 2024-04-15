@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <main className="BoxPaginaPrincipal">
       <HeaderPrincipal/>
-      <BoxUserPrincipal style="#FFFFFF" objeto={UsuarioData[0]}/>
+      <BoxUserPrincipal objeto={UsuarioData[0]}/>
       <NovoAgendamentoPrincipal/>
       <div style={{marginBottom:"20px"}}>
         <Atalhos atalhos={AtalhosPrincipal}/>

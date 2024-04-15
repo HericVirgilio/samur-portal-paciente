@@ -5,42 +5,56 @@ export const menuHamburguerData:MenuHamburguerInterface [] = [
         key: 1,
         nome: "Inicio",
         nomeUrl: "/",
-        url: "/icons/home.svg"
+        url: "/icons/home.svg",
+        width: 22,
+        height: 18
     },
     {
         key: 2,
         nome: "Agendamento",
         nomeUrl: "/agendamento",
-        url: "/icons/calendarioMenu.svg"
+        url: "/icons/calendarioMenu.svg",
+        width: 24,
+        height: 24
     },
     {
         key: 3,
         nome: "Documentos",
         nomeUrl: "/documentos",
-        url: "/icons/documentosHamburguer.svg"
+        url: "/icons/documentosHamburguer.svg",
+        width: 19,
+        height: 19
     },
     {
         key: 4,
         nome: "Financeiro",
         nomeUrl: "/financeiro",
-        url:"/icons/financeiroMenu.svg"
+        url:"/icons/financeiroMenu.svg",
+        width: 24,
+        height: 24
     },
     {
         key: 5,
         nome: "Orçamento",
         nomeUrl: "/orçamento",
-        url: "/icons/oraçamentoMenu.svg"
+        url: "/icons/oracamentoMenu.svg",
+        width: 24,
+        height: 24
     },
     {
         key: 6,
         nome: "Prontuário",
         nomeUrl: "/prontuario",
-        url: "/icons/protuario.svg"
+        url: "/icons/protuario.svg",
+        width: 24,
+        height: 24
     },
     {
         key: 7,
         nome: "Resultados",
         nomeUrl: "/resultados",
-        url: "/icons/resultados.svg"
+        url: "/icons/resultados.svg",
+        width: 24,
+        height: 24
     }
 ]
