@@ -12,30 +12,36 @@ interface Props {
 
 export default function Dados({ sendDataToParent }: Props) {
 
-    const [nome, setNome ] = useState<string>("")
-    const [cpf, setCpf ] = useState<string>("")
-    const [rg, setRg ] = useState<string>("")
-    const [genero, setGenero ] = useState<string>("")
-    const [data, setData ] = useState<string>("")
-    const [escolaridade, setEscolaridade ] = useState<string>("")
-    const [nacionalidade, setNacionalide ] = useState<string>("")
-    const [sequencia, setSequencia ] = useState<string>("")
-    const [validadeCpf, setValidadeCpf ] = useState<boolean | null>(null)
-    const [ corInputCpf, setCorInputCpf ] = useState<string>("")
-    const [ textCpf , setTextCpf ] = useState<string>("CPF")
-    const [ erroDados, setErroDados ] = useState<string>("")
+    const [nome, setNome] = useState<string>("")
+    const [cpf, setCpf] = useState<string>("")
+    const [rg, setRg] = useState<string>("")
+    const [genero, setGenero] = useState<string>("")
+    const [data, setData] = useState<string>("")
+    const [escolaridade, setEscolaridade] = useState<string>("")
+    const [nacionalidade, setNacionalide] = useState<string>("")
+    const [sequencia, setSequencia] = useState<string>("")
+    const [validadeCpf, setValidadeCpf] = useState<boolean | null>(null)
+    const [corInputCpf, setCorInputCpf] = useState<string>("")
+    const [textCpf, setTextCpf] = useState<string>("CPF")
+    const [erroDados, setErroDados] = useState<string>("")
+    const [styleCpf, setStyleCpf] = useState<string>("block")
 
     useEffect(() => {
         if (cpf !== "" && validadeCpf === false) {
             mudarCorInput()
         }
-    },[cpf])
+        if(nacionalidade !== "Brasileiro" && nacionalidade !== ""){
+            setTextCpf("Número do Passaporte")
+        }else{
+            setStyleCpf("block")
+        }
+    }, [cpf, nacionalidade])
 
     const EnviarFormulario = (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        if(validadeCpf === true){
-            sendDataToParent({nome,cpf,rg,genero,data,escolaridade,nacionalidade})
-        }else{
+        if (validadeCpf === true) {
+            sendDataToParent({ nome, cpf, rg, genero, data, escolaridade, nacionalidade })
+        } else {
             setErroDados("Existem campos incorretos, é necessário fazer as correções antes de enviar !")
         }
     }
@@ -104,14 +110,14 @@ export default function Dados({ sendDataToParent }: Props) {
     };
 
     const mudarCorInput = () => {
-        if(cpf.length >= 11){
+        if (cpf.length >= 11) {
             setCorInputCpf("red")
             setTextCpf("CPF INVALIDO")
-        }else{
+        } else {
             setTextCpf("CPF")
             setCorInputCpf("")
         }
-    } 
+    }
 
     const FormataRg = (event: React.ChangeEvent<HTMLInputElement>) => {
         let value = event.target.value.replace(/\D/g, "");
@@ -134,18 +140,57 @@ export default function Dados({ sendDataToParent }: Props) {
                         size="small"
                         label="Nome Completo" />
                 </FormControl>
-                <FormControl
+                <FormControl sx={{ m: 1, minWidth: 120 }}>
+                    <InputLabel id="escolaridade-label" size="small">Nacionalidade</InputLabel>
+                    <Select
+                        size="small"
+                        labelId="nacionalidade-label"
+                        id="nacionalidade-select"
+                        value={nacionalidade}
+                        label="Nacionalidade"
+                        onChange={(e) => {
+                            setNacionalide(e.target.value as string);
+                        }}
+                        sx={{ width: '80vw' }}
+                    >
+                        <MenuItem value="" disabled>
+                            Escolha uma opção
+                        </MenuItem>
+                        <MenuItem value="Alemao">Alemão</MenuItem>
+                        <MenuItem value="Argentino">Argentino</MenuItem>
+                        <MenuItem value="Belga">Belga</MenuItem>
+                        <MenuItem value="Boliviano">Boliviano</MenuItem>
+                        <MenuItem value="Brasileiro">Brasileiro</MenuItem>
+                        <MenuItem value="Britanico">Britanico</MenuItem>
+                        <MenuItem value="Chines">Chines</MenuItem>
+                        <MenuItem value="Colombiano">Colombiano</MenuItem>
+                        <MenuItem value="Costa Rica">Costa Rica</MenuItem>
+                        <MenuItem value="Equatoriano">Equatoriano</MenuItem>
+                        <MenuItem value="Espanhol">Espanhol</MenuItem>
+                        <MenuItem value="Frances">Frances</MenuItem>
+                        <MenuItem value="Italiano">Italiano</MenuItem>
+                        <MenuItem value="Japones">Japones</MenuItem>
+                        <MenuItem value="Mexicano">Mexicano</MenuItem>
+                        <MenuItem value="Naturalizado Brasileiro">Naturalizado Brasileiro</MenuItem>
+                        <MenuItem value="Outros">Outros</MenuItem>
+                        <MenuItem value="Peruano">Peruano</MenuItem>
+                        <MenuItem value="Portugues">Português</MenuItem>
+                        <MenuItem value="Uruquaio">Uruquaio</MenuItem>
+                        <MenuItem value="Venezuelano">Venezuelano</MenuItem>
+                    </Select>
+                </FormControl>
+                <FormControl 
                     sx={{
-                        m: 1,
+                        m:1,
                         width: '80vw',
                         '& .MuiOutlinedInput-root': {
                             '&.Mui-focused fieldset': {
-                                borderColor: corInputCpf, 
+                                borderColor: corInputCpf,
                             },
                         },
                         '& .MuiInputLabel-outlined.MuiInputLabel-shrink': {
-                            color: corInputCpf, 
-                          },
+                            color: corInputCpf,
+                        },
                     }}
                     variant="outlined"
                     onChange={ProcessaCpf}
@@ -189,7 +234,7 @@ export default function Dados({ sendDataToParent }: Props) {
                         </Select>
                     </FormControl>
                     <FormControl sx={{ m: 1 }} variant="outlined" >
-                        <InputLabel htmlFor="outlined-adornment-password" size="small" 
+                        <InputLabel htmlFor="outlined-adornment-password" size="small"
                         ></InputLabel>
                         <OutlinedInput value={data} onChange={(e) => setData(e.target.value)}
                             size="small"
@@ -221,47 +266,8 @@ export default function Dados({ sendDataToParent }: Props) {
                     </Select>
                 </FormControl>
 
-
-                <FormControl sx={{ m: 1, minWidth: 120 }}>
-                    <InputLabel id="escolaridade-label" size="small">Nacionalidade</InputLabel>
-                    <Select
-                        size="small"
-                        labelId="escolaridade-label"
-                        id="escolaridade-select"
-                        value={nacionalidade}
-                        label="Escolaridade"
-                        onChange={(e) => setNacionalide(e.target.value as string)}
-                        sx={{ width: '80vw' }}
-                    >
-                        <MenuItem value="" disabled>
-                            Escolha uma opção
-                        </MenuItem>
-                        <MenuItem value="Alemao">Alemão</MenuItem>
-                        <MenuItem value="Argentino">Argentino</MenuItem>
-                        <MenuItem value="Belga">Belga</MenuItem>
-                        <MenuItem value="Boliviano">Boliviano</MenuItem>
-                        <MenuItem value="Brasileiro">Brasileiro</MenuItem>
-                        <MenuItem value="Britanico">Britanico</MenuItem>
-                        <MenuItem value="Chines">Chines</MenuItem>
-                        <MenuItem value="Colombiano">Colombiano</MenuItem>
-                        <MenuItem value="Costa Rica">Costa Rica</MenuItem>
-                        <MenuItem value="Equatoriano">Equatoriano</MenuItem>
-                        <MenuItem value="Espanhol">Espanhol</MenuItem>
-                        <MenuItem value="Frances">Frances</MenuItem>
-                        <MenuItem value="Italiano">Italiano</MenuItem>
-                        <MenuItem value="Japones">Japones</MenuItem>
-                        <MenuItem value="Mexicano">Mexicano</MenuItem>
-                        <MenuItem value="Naturalizado Brasileiro">Naturalizado Brasileiro</MenuItem>
-                        <MenuItem value="Outros">Outros</MenuItem>
-                        <MenuItem value="Peruano">Peruano</MenuItem>
-                        <MenuItem value="Portugues">Português</MenuItem>
-                        <MenuItem value="Uruquaio">Uruquaio</MenuItem>
-                        <MenuItem value="Venezuelano">Venezuelano</MenuItem>
-                    </Select>
-                </FormControl>
-
                 <input type="submit" value="Continuar" className="InputDados" id="InputDados" />
-    
+
             </form>
         </div>
     )

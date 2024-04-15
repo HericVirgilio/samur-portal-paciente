@@ -21,14 +21,17 @@ export default function CadastroFormulario({ sendDataToParent }: Props) {
     const [regexNumero, setRegexNumero] = useState<boolean | null>(null)
     const [regexCaracterEspecial, setRegesCaracterEspecial] = useState<boolean | null>(null)
     const [regexLetras, setRegexLetras] = useState<boolean | null>(null)
+    const [regexEmail,setRegexEmail] = useState<boolean | null> (null)
 
     const EnviarFormulario = (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        if (senha === senha2 && validarSenha()) {
+        if (senha === senha2 && validarSenha() && verificaEmail()) {
             sendDataToParent({ email, senha });
         } else if (senha != senha2) {
             setErroSenha("As senhas são diferentes !")
-        } else {
+        } else if (regexEmail !== true) {
+            setErroSenha("Seu email não pode ser validado verifique os campos acima!")
+        }else{
             setErroSenha("Senha informada não atende aos requisitos de segurança !")
         }
     }
@@ -39,6 +42,12 @@ export default function CadastroFormulario({ sendDataToParent }: Props) {
             verificaNumero()
             verificaCaracteres()
             verificaLetras()
+            verificaEmail()
+        }else{
+            setRegexNumero(null),
+            setRegesCaracterEspecial(null),
+            setRegexLetras(null)
+            setRegexEmail(null)
         }
     }, [senha])
 
@@ -71,6 +80,16 @@ export default function CadastroFormulario({ sendDataToParent }: Props) {
             setRegesCaracterEspecial(true)
         } else {
             setRegesCaracterEspecial(false)
+        }
+    }
+    const verificaEmail = () => {
+        const regexParaEmail = /[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/gm
+        if(regexParaEmail.test(email)){
+            setRegexEmail(true)
+            return true
+        }else{
+            setRegexEmail(false)
+            return false
         }
     }
     const verificaLetras = () => {
