@@ -37,21 +37,7 @@
     font-weight: 500;
     font-size: 20px;
 }
-.SairMenuHamburguer{
-    background-color: var(--verde-escuro);
-    color: var(--branco);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    bottom: 0;
-    width: 100vw;
-    height: 60px;
-    font-size: 25px;
-}
-.SairTexotMenuHamburguer{
-    margin-left: 20px;
-}
+
 .ImagensCloseLogoSamurEncapsulamento{
     width: 80vw;
     margin: auto;

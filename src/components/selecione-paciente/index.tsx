@@ -8,7 +8,7 @@ export default function SelecionePaciente() {
 
     const [select, setSelect] = useState({})
     const [logico,setLogico] = useState(false)
-    const [selectTitulo, setTituloSelect] = useState("Selecionar o paciente")
+    const [selectTitulo, setTituloSelect] = useState("Familiares cadastrados")
     const [selectImagem, setImagemSelect] = useState("")
     const [visibilidadeImagem, setVisibilidadeImagem] = useState({display: "none"})
 
@@ -38,19 +38,20 @@ export default function SelecionePaciente() {
 
     return (
         <div className="BoxSelect">
+            <h3 className="subtituloNovoAgendamento">Para quem é o agendamento?</h3>
             <div className="select-button" onClick={AbrirMenu}>
                 <div className="selected-titulo">
                     <Image className="ImagemSelectTitulo" style={visibilidadeImagem} src={selectImagem} alt="foto-perfil" height={40} width={40} />
                     <p>{selectTitulo}</p>
                 </div>
                 <div className="Arrow">
-                    <Image src={"/icons/flecha-drop-down.svg"} alt="drop down" height={30} width={30} />
+                    <Image src={"/icons/flecha-drop-down.svg"} alt="drop down" height={25} width={25} />
                 </div>
             </div>
 
             <div className="BoxMapPaciente" style={select}>
                 {SelectPacienteData.map((objeto,index) => (
-                    <div className={ index === SelecionePaciente.length - 1 ? "UltimoMapListaPacientes" : "MapListaPacientes" } key={objeto.key} 
+                    <div className={ index === SelectPacienteData.length - 1 ? "UltimoItemMap" : "MapListaPacientes" } key={objeto.key} 
                         onClick={() => transformaTituloSelect(objeto.key)}>
                         <div>
                             <Image className="ImagemBodySelect" src={objeto.url} alt="perfil" height={40} width={40} />

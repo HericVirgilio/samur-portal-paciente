@@ -8,11 +8,8 @@ export default function Documentos() {
     return (
         <div>
             <HeaderPrincipal />
-            <BackgroundTabela tituloTabela="Lista de documentos">
-                <HeaderTable />
-                {DocumentosData.map((objeto) => (
-                    <Tabela key={objeto.key} objeto={objeto} />
-                ))}
+            <BackgroundTabela tituloTabela="Lista de documentos" children={undefined}>
+            
             </BackgroundTabela>
         </div>
     )

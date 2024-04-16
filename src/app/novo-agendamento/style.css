@@ -3,8 +3,12 @@
     font-size: 18px;
     font-weight: 600;
 }
-.subtituloNovoAgendamento{
-    margin-left: 5vw;
+.BoxSelecaoPacienete{
+    width: 90vw;
+    background-color: var(--branco);
+    margin: auto;
+    padding: 5px;
+    border-radius: 5px;
 }
 .tituloAtalhos{
     text-align: center;
