@@ -8,12 +8,7 @@ export default function Resultados() {
     return (
         <div>
             <HeaderPrincipal />
-            <BackgroundTabela tituloTabela="Lista de Resultados">
-                <HeaderTable />
-                {ResultadosData.map((objeto) => (
-                    <Tabela key={objeto.key} objeto={objeto} />
-                ))}
-            </BackgroundTabela>
+            <h3>Resultados</h3>
         </div>
     )
 }

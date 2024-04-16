@@ -9,13 +9,7 @@ export default function Receitas() {
     return (
         <div>
             <HeaderPrincipal />
-            <BackgroundTabela tituloTabela="Lista de Receitas">
-                <HeaderTable />
-                {AtestadoData.map((objeto) => (
-                    <Tabela key={objeto.key}
-                        objeto={objeto} />
-                ))}
-            </BackgroundTabela>
+            <h3>Receitas</h3>
         </div>
     )
 }

@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import CadastroFormulario from "@/components/cadastro"
 import Dados from "@/components/cadastro-dados/indes";
-import Endereco from "@/components/endereco";
+import Endereco from "@/components/cadastro-endereco";
 import { FormData, FormDataDados, FormDataEndereco } from "@/interface/form-data.interface";
 
 export default function Cadastro() {
