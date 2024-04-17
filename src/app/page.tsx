@@ -77,7 +77,7 @@ export default function Login() {
                 <BotaoEnviarFormulario text="Entrar"/>
             </form>
             <div className='LinhaDivisoria'></div>
-            <Link href="http://localhost:3000/cadastro">
+            <Link href="/cadastro">
                 <p className='TextCadastrar-se'>Não possui conta? Clique aqui para <br /> fazer o cadastro </p>
             </Link>
         </div>
