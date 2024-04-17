@@ -1,0 +1,24 @@
+.BoxUser{
+    margin: 20px;
+    text-align: center;
+}
+.ImagemUser{
+    border-radius: 50%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+.BoxUser h3{
+    font-size: 22px;
+    font-weight: 500;
+}
+.ContainerIcons{
+    display: flex;
+    width: 80vw;
+    margin: auto;
+    padding: 20px;
+    background-color: white;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    align-items: center;
+    justify-content: space-between;
+}

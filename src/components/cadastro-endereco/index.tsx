@@ -5,7 +5,8 @@ import { FormEvent, useEffect } from "react";
 import { useState } from "react";
 import BotaoEnviarFormulario from "../botao-login-cadastro";
 import axios from 'axios';
-
+import { useRouter } from 'next/navigation';
+import { AlertDialogDemo } from "../shadcn/AlertDialog";
 
 interface Props {
     sendDataToParent: (data: FormDataEndereco) => void;
@@ -22,6 +23,7 @@ export default function Endereco({ sendDataToParent }: Props) {
     const [telefone2, setTelefone2] = useState("")
     const [localidade, setLocalidade] = useState("")
     const [uf, setUf] = useState("")
+    const router = useRouter();
 
     const buscarEnderecoPorCep = async (cep: string) => {
         try {
@@ -46,6 +48,7 @@ export default function Endereco({ sendDataToParent }: Props) {
             sendDataToParent({
                 cep, bairro, logradouro, numero, complemento, localidade, uf, telefone1, telefone2,
             })
+            router.push('/');
         } else {
             console.log("Erro ao enviar formulario revise os dados")
         }
@@ -147,9 +150,10 @@ export default function Endereco({ sendDataToParent }: Props) {
                         type={'text'}
                         label="Telefone2" />
                 </FormControl>
+                <AlertDialogDemo objeto="Li e aceito a política de privacidade !"/>
+                <AlertDialogDemo objeto="Aceito compartilhar os meus dados pessoais !"/>
 
                 <BotaoEnviarFormulario text="Cadastrar" />
-
             </form>
         </div>
     )

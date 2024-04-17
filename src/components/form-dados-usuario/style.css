@@ -3,13 +3,14 @@
     display: grid;
 }
 .FormularioUser > label {
-    color: #808080;
+    color: #000;
 }
 .InputBox{
     margin: 10px auto 10px auto;
     width: 100%;
-    border: 1px solid black;
+    border: 1px solid #6A6B6B;
     border-radius: 3px;
+    padding: 3px;
 }
 .DivBoxButton{
     width: 100%;

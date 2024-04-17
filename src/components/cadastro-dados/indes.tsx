@@ -18,7 +18,7 @@ export default function Dados({ sendDataToParent }: Props) {
     const [genero, setGenero] = useState<string>("")
     const [data, setData] = useState<string>("")
     const [escolaridade, setEscolaridade] = useState<string>("")
-    const [nacionalidade, setNacionalide] = useState<string>("")
+    const [nacionalidade, setNacionalide] = useState<string>("Brasileiro")
     const [sequencia, setSequencia] = useState<string>("")
     const [validadeCpf, setValidadeCpf] = useState<boolean | null>(null)
     const [corInputCpf, setCorInputCpf] = useState<string>("")
@@ -161,14 +161,11 @@ export default function Dados({ sendDataToParent }: Props) {
                         }}
                         sx={{ width: '80vw' }}
                     >
-                        <MenuItem value="" disabled>
-                            Escolha uma opção
-                        </MenuItem>
                         <MenuItem value="Alemao">Alemão</MenuItem>
                         <MenuItem value="Argentino">Argentino</MenuItem>
                         <MenuItem value="Belga">Belga</MenuItem>
                         <MenuItem value="Boliviano">Boliviano</MenuItem>
-                        <MenuItem value="Brasileiro">Brasileiro</MenuItem>
+                        <MenuItem value="Brasileiro" selected>Brasileiro</MenuItem>
                         <MenuItem value="Britanico">Britanico</MenuItem>
                         <MenuItem value="Chines">Chines</MenuItem>
                         <MenuItem value="Colombiano">Colombiano</MenuItem>

@@ -1,3 +1,7 @@
+.TituloMinhaConta{
+    font-size: 24px;
+    margin: 5px;
+}
 .BoxDadosUsuario{
     max-width: 95vw;
     background-color: var(--branco);
@@ -6,7 +10,6 @@
     font-weight: 700;
 }
 .ImgUser{
-    border-radius: 50%;
     margin: 10px auto; 
 }
 .buttonCadastrarMais{

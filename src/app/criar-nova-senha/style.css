@@ -1,0 +1,63 @@
+.ContainerLogin{
+    height: 100vh;
+}
+.BoxHeaderLogin{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    width: 100vw;
+}
+.BoxHeaderLogin > div{
+    margin-top: 20px;
+}
+.TituloHeader{
+    color: var(--verde-escuro);
+    font-size: 21px;
+    font-weight: 600;
+    text-align: center;
+}
+.TextLogin{
+    color: var(--verde-escuro);
+    font-weight: 600;
+    margin-left: 8px;
+    font-size: 20px;
+}
+.textEsqueciSenha{
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--cinza-input);
+    margin-left: 8px;
+    cursor: pointer;
+}
+.InputDados{
+    height: 40px;
+    border: 1px solid rgba(0, 0, 0, 0.63);
+    border-radius: 10px;
+}
+#InputDados{
+    width: 170px;
+    margin: auto;
+    margin-top: 10px;
+    background-color: var(--verde-escuro);
+    color: white;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+.LinhaDivisoria{
+    width: 90vw;
+    margin: auto;
+    background-color: var(--verde-escuro);
+    height: 1px;
+}
+.TextCadastrar-se{
+    color: var(--verde-escuro);
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 30px;
+}
