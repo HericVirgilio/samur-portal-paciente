@@ -1,9 +1,14 @@
+.ContainerCadastro{
+    background-color: var(--branco);
+    width: 100vw;
+    height: 100vh;
+    padding-top: 30px;
+}
 .DivBoxHeaderPrincipal{
     width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 30px;
     margin-bottom: 30px;
 }
 .BoxVoltar{

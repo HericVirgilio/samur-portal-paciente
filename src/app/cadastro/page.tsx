@@ -93,7 +93,7 @@ export default function Cadastro() {
     }
 
     return (
-        <div>
+        <div className="ContainerCadastro">
             <div className='DivBoxHeaderPrincipal' >
                 <div className="BoxVoltar">
                     <Image src={"/icons/voltarHeaderCadastro.svg"} alt='Voltar' width={35} height={35}
