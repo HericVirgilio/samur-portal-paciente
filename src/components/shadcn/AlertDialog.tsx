@@ -35,15 +35,14 @@ export function AlertDialogDemo(props: {objeto: string}) {
             </div>
             <AlertDialogContent>
                 <AlertDialogHeader>
-                    <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
+                    <AlertDialogTitle>Leu e aceita a política de privacidade?</AlertDialogTitle>
                     <AlertDialogDescription>
-                        This action cannot be undone. This will permanently delete your
-                        account and remove your data from our servers.
+                        Aceito compartilhar dados
                     </AlertDialogDescription>
                 </AlertDialogHeader>
                 <AlertDialogFooter>
-                    <AlertDialogCancel onClick={DesabilitarCheckBox}>Cancel</AlertDialogCancel>
-                    <AlertDialogAction onClick={HabilitarCheckbox}>Continue</AlertDialogAction>
+                    <AlertDialogCancel onClick={DesabilitarCheckBox}>Cancelar</AlertDialogCancel>
+                    <AlertDialogAction onClick={HabilitarCheckbox}>Continuar</AlertDialogAction>
                 </AlertDialogFooter>
             </AlertDialogContent>
         </AlertDialog>
