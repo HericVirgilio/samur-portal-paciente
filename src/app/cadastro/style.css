@@ -1,7 +1,7 @@
 .ContainerCadastro{
     background-color: var(--branco);
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     padding-top: 30px;
 }
 .DivBoxHeaderPrincipal{

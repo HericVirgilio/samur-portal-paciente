@@ -6,6 +6,7 @@ import { useState } from "react";
 import BotaoEnviarFormulario from "../botao-login-cadastro";
 import axios from 'axios';
 import { useRouter } from 'next/navigation';
+import { AlertDialogDemo } from "../shadcn/AlertDialog";
 
 interface Props {
     sendDataToParent: (data: FormDataEndereco) => void;
@@ -149,9 +150,10 @@ export default function Endereco({ sendDataToParent }: Props) {
                         type={'text'}
                         label="Telefone2" />
                 </FormControl>
+                <AlertDialogDemo objeto="Li e aceito a política de privacidade !"/>
+                <AlertDialogDemo objeto="Aceito compartilhar os meus dados pessoais !"/>
 
                 <BotaoEnviarFormulario text="Cadastrar" />
-
             </form>
         </div>
     )
