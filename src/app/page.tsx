@@ -6,12 +6,14 @@ import { FormEvent, useState } from "react";
 import { Visibility, VisibilityOff } from '@mui/icons-material'
 import BotaoEnviarFormulario from '@/components/botao-login-cadastro'
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 export default function Login() {
 
     const [cpf, setCpf] = useState("")
     const [senha, setSenha] = useState("")
     const [showPassword, setShowPassword] = useState(false);
+    const router = useRouter();
 
     const handleClickShowPassword = () => setShowPassword((show) => !show);
 
@@ -22,6 +24,7 @@ export default function Login() {
     const Logar = (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         console.log(`cpf: ${cpf} senha: ${senha}`)
+        router.push('/home');
     }
 
     const FormataCpf = (event: React.ChangeEvent<HTMLInputElement>) => {

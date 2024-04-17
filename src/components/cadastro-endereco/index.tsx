@@ -5,7 +5,7 @@ import { FormEvent, useEffect } from "react";
 import { useState } from "react";
 import BotaoEnviarFormulario from "../botao-login-cadastro";
 import axios from 'axios';
-
+import { useRouter } from 'next/navigation';
 
 interface Props {
     sendDataToParent: (data: FormDataEndereco) => void;
@@ -22,6 +22,7 @@ export default function Endereco({ sendDataToParent }: Props) {
     const [telefone2, setTelefone2] = useState("")
     const [localidade, setLocalidade] = useState("")
     const [uf, setUf] = useState("")
+    const router = useRouter();
 
     const buscarEnderecoPorCep = async (cep: string) => {
         try {
@@ -46,6 +47,7 @@ export default function Endereco({ sendDataToParent }: Props) {
             sendDataToParent({
                 cep, bairro, logradouro, numero, complemento, localidade, uf, telefone1, telefone2,
             })
+            router.push('/');
         } else {
             console.log("Erro ao enviar formulario revise os dados")
         }
