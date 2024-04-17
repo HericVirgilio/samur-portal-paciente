@@ -88,7 +88,7 @@ export default function Cadastro() {
         if (controle != 0) {
             setControle(controle - 1)
         } else {
-            setLink("/login");
+            setLink("/");
         }
     }
 
