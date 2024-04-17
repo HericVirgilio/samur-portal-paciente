@@ -10,7 +10,7 @@ import { useRouter } from 'next/navigation';
 
 export default function Login() {
 
-    const [cpf, setCpf] = useState("")
+    const [email, setEmail] = useState("")
     const [senha, setSenha] = useState("")
     const [showPassword, setShowPassword] = useState(false);
     const router = useRouter();
@@ -23,20 +23,9 @@ export default function Login() {
 
     const Logar = (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        console.log(`cpf: ${cpf} senha: ${senha}`)
+        console.log(`email: ${email} senha: ${senha}`)
         router.push('/home');
     }
-
-    const FormataCpf = (event: React.ChangeEvent<HTMLInputElement>) => {
-        let value = event.target.value.replace(/\D/g, "");
-        if (value.length <= 11) {
-
-            value = value.replace(/(\d{3})(\d)/, "$1.$2");
-            value = value.replace(/(\d{3})(\d)/, "$1.$2");
-            value = value.replace(/(\d{3})(\d{1,2})$/, "$1-$2");
-        }
-        setCpf(value);
-    };
 
     return (
         <div className='ContainerLogin' style={{backgroundColor: "var(--branco)"}}>
@@ -49,15 +38,12 @@ export default function Login() {
             </div>
             <form className="BoxHeaderLogin" onSubmit={Logar}>
                 <p className='TextLogin'>Login</p>
-                <FormControl sx={{ m: 1, width: '80vw' }} variant="outlined" onChange={FormataCpf}>
-                    <InputLabel htmlFor="outlined-adornment-password"  size="small">CPF</InputLabel>
-                    <OutlinedInput value={cpf} onChange={(e) => setCpf(e.target.value)}
+                <FormControl sx={{ m: 1, width: '80vw' }} variant="outlined">
+                    <InputLabel htmlFor="outlined-adornment-password"  size="small">Email</InputLabel>
+                    <OutlinedInput value={email} onChange={(e) => setEmail(e.target.value)}
                         size="small"
-                        type={'text'}
-                        inputProps={{
-                            maxLength: 14,
-                        }}
-                        label="CPF" />
+                        type={'email'}
+                        label="Email" />
                 </FormControl>
                 <FormControl sx={{ m: 1, width: '80vw' }} variant="outlined">
                     <InputLabel htmlFor="outlined-adornment-password"  size="small">Senha</InputLabel>
