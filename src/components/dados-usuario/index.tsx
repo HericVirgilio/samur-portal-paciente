@@ -11,15 +11,6 @@ export default function DadosUsuario() {
             <Image className="ImgUser" src="/icons/generico-avatar.svg" alt="foto usuario" width={100} height={100} />
             
             <FormularioDadosUsuario />
-
-            {UsuarioData.map((objeto) => (
-                <BoxUserPrincipal key={objeto.key}  objeto={objeto} />
-            ))}
-
-
-            <div className="buttonCadastrarMais">
-                <p>Cadastrar dependente</p>
-            </div>
         </div>
     )
 }
