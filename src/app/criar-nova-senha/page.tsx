@@ -1,3 +1,4 @@
+
 "use client"
 import './style.css'
 import Image from "next/image"
@@ -46,6 +47,3 @@ export default function CriarNovaSenha() {
             <Link href="/cadastro">
                 <p className='TextCadastrar-se'>Não possui conta? Clique aqui para <br /> fazer o cadastro </p>
             </Link>
-        </div>
-    )
-} 
