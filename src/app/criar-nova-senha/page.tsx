@@ -24,9 +24,9 @@ export default function CriarNovaSenha() {
     }
 
     return (
-        <div className='ContainerLogin' style={{backgroundColor: "var(--branco)"}}>
+        <div className='ContainerLogin' style={{ backgroundColor: "var(--branco)" }}>
             <div className="BoxHeaderLogin">
-                <Image style={{marginTop: "30px"}} src={"/images/samur-principal.png"} alt="" width={250} height={150} />
+                <Image style={{ marginTop: "30px" }} src={"/images/samur-principal.png"} alt="" width={250} height={150} />
                 <div>
                     <h2 className="TituloHeader">Bem-vindo ao</h2>
                     <h2 className="TituloHeader">Portal do paciente</h2>
@@ -35,15 +35,18 @@ export default function CriarNovaSenha() {
             <form className="BoxHeaderLogin" onSubmit={Logar}>
                 <p className='TextLogin'>Criar nova senha</p>
                 <FormControl sx={{ m: 1, width: '80vw' }} variant="outlined">
-                    <InputLabel htmlFor="outlined-adornment-password"  size="small">Email</InputLabel>
+                    <InputLabel htmlFor="outlined-adornment-password" size="small">Email</InputLabel>
                     <OutlinedInput value={email} onChange={(e) => setEmail(e.target.value)}
                         size="small"
                         type={'email'}
                         label="Email" />
                 </FormControl>
-                <BotaoEnviarFormulario text="Entrar"/>
+                <BotaoEnviarFormulario text="Entrar" />
             </form>
             <div className='LinhaDivisoria'></div>
             <Link href="/cadastro">
                 <p className='TextCadastrar-se'>Não possui conta? Clique aqui para <br /> fazer o cadastro </p>
             </Link>
+        </div>
+    )
+}

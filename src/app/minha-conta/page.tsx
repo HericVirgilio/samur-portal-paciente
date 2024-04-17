@@ -13,7 +13,7 @@ export default function MinhaConta (){
                 <h3>Eduarda Ferreira</h3>
             </div>
             {ComponentesMinhaConta.map((objeto) => 
-                <Link href={objeto.url} className="ContainerIcons">
+                <Link href={objeto.url} className="ContainerIcons" key={objeto.id}>
                     <div style={{display: "flex", alignItems: "center", gap: "10px"}}>
                         <Image src={objeto.img} alt={objeto.titulo} width={40} height={40}/>
                         <h4>{objeto.titulo}</h4>

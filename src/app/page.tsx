@@ -62,7 +62,9 @@ export default function Login() {
                             </InputAdornment>
                         } label="Senha" />
                 </FormControl>
-                <p className='textEsqueciSenha'>Esqueci minha senha</p>
+                <Link href={"/criar-nova-senha"}>
+                    <p className='textEsqueciSenha'>Esqueci minha senha</p>
+                </Link>
                 <BotaoEnviarFormulario text="Entrar"/>
             </form>
             <div className='LinhaDivisoria'></div>
