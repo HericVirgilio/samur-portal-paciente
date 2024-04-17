@@ -12,8 +12,9 @@ export default function NovoAgendamento(){
         <div style={{display: "grid", gap: "20px"}}>
             <HeaderPrincipal/>
             <h2 className="tituloPaginaNovoAgendamento">Novo Agendamento</h2>
-            <h3 className="subtituloNovoAgendamento">Para quem é o agendamento?</h3>
-            <SelecionePaciente/> 
+            <div className="BoxSelecaoPacienete">
+                <SelecionePaciente/>
+            </div>
             <h3 className="tituloAtalhos">Qual serviço você gostaria de agendar?</h3>
             <Atalhos atalhos={OpcoesNovoAgendamento}/>
             <Tabela titulo="Meus Agendamentos" objeto={AgendamentoData}/>

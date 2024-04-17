@@ -1,8 +1,7 @@
 .BoxSelect {
-    background-color: var(--branco);
+    background-color: transparent;
     width: 90vw;
     padding: 10px;
-    background-color: var(--verde-claro);
     margin: auto;
 }
 
@@ -10,35 +9,60 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 2.5px;
+    background-color: var(--branco);
+    cursor: pointer;
+    border-radius: 5px 5px 5px 5px;
     border: 1px solid black;
-    padding: 5px;
 }
 
 .selected-titulo {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    color: black;
+    padding: 0.3rem;
+}
+.subtituloNovoAgendamento{
+    font-weight: 700;
+    margin-bottom: 15px;
 }
 
 .ImagemSelectTitulo {
     border-radius: 25px;
     margin-right: 20px;
-    border: 2px solid black;
+}
+
+.Arrow{
+    margin-right: 10px;
 }
 
 .BoxMapPaciente {
     display: none;
 }
+
 .MapListaPacientes {
     display: flex;
     border: 1px solid black;
     border-top: none;
     padding: 5px;
     align-items: center;
+    background-color: var(--branco);
+    cursor: pointer;
+}
+
+.UltimoItemMap {
+    display: flex;
+    border: 1px solid black;
+    border-top: none;
+    padding: 5px;
+    align-items: center;
+    background-color: var(--branco);
+    cursor: pointer;
+    border-radius: 0 0 5px 5px;
 }
 
 .ImagemBodySelect {
     border-radius: 20px;
     margin-right: 20px;
-    border: 2px solid black;
 }

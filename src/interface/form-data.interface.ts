@@ -4,21 +4,21 @@ export interface FormData {
 }
 export interface FormDataDados {
     nome: string;
+    nacionalidade: string;
     cpf: string;
     rg: string;
     genero: string;
     data: string;
     escolaridade: string;
-    nacionalidade: string;
 }
 export interface FormDataEndereco {
     cep: string;
     bairro: string;
     logradouro: string;
-    numero: number;
+    numero: string;
     complemento: string;
-    telefone1: string;
-    telefone2: string;
     localidade: string;
     uf: string;
+    telefone1: string;
+    telefone2: string;
 }

@@ -37,7 +37,7 @@ export const menuHamburguerData:MenuHamburguerInterface [] = [
         key: 5,
         nome: "Orçamento",
         nomeUrl: "/orçamento",
-        url: "/icons/oracamentoMenu.svg",
+        url: "/icons/orcamento.svg",
         width: 24,
         height: 24
     },
@@ -54,6 +54,14 @@ export const menuHamburguerData:MenuHamburguerInterface [] = [
         nome: "Resultados",
         nomeUrl: "/resultados",
         url: "/icons/resultados.svg",
+        width: 24,
+        height: 24
+    },
+    {
+        key: 8,
+        nome: "Sair",
+        nomeUrl: "/Sair",
+        url: "/icons/sair.svg",
         width: 24,
         height: 24
     }

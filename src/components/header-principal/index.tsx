@@ -46,12 +46,8 @@ export default function HeaderPrincipal() {
                         <p className='TextoMapMenuHamburguer'>{objeto.nome}</p>
                     </Link>
                 )}
-                <div className='SairMenuHamburguer'>
-                    <Image src="/icons/sair.svg" alt='sair' width={40} height={40} />
-                    <p className='SairTexotMenuHamburguer'>Sair</p>
-                </div>
             </div>
-            <Link href={"/"}>
+            <Link href={"/home"}>
                 <Image src="/images/samur-principal.png" alt='logo samur' width={150} height={100} />
             </Link>
 

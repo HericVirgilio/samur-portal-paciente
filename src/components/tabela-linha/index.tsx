@@ -6,6 +6,7 @@ export default function Tabela(props: { objeto: GenericoInterfaceTabelaAgendamen
 
     const [tabela, setTabela] = useState({});
     const [menuAberto, setMenu] = useState(false)
+    const [transition, setTrasition ] = useState("rotate(0deg)")
 
     const DropDown = () => {
         setTabela({
@@ -22,8 +23,10 @@ export default function Tabela(props: { objeto: GenericoInterfaceTabelaAgendamen
     const HandleDropDownClick = () => {
         if (menuAberto == true) {
             FecharDropDown();
+            setTrasition("rotate(0deg)")
         } else {
             DropDown();
+            setTrasition("rotate(180deg)")
         }
     }
     return (
@@ -33,7 +36,7 @@ export default function Tabela(props: { objeto: GenericoInterfaceTabelaAgendamen
                 <div id="BoxBodyTabela" >
                     <p>{props.objeto.nome}</p>
                     <p>{props.objeto.data.toLocaleDateString()}</p>
-                    <Image key={props.objeto.key} onClick={HandleDropDownClick} src="/icons/flecha-drop-down.svg" alt="drop down" height={20} width={20} />
+                    <Image key={props.objeto.key} onClick={HandleDropDownClick} src="/icons/flecha-drop-down.svg" alt="drop down" height={20} width={20} style={{transform: transition, transition:"0.5s", cursor: "pointer"}}/>
                 </div>
                 <div style={tabela} className="DropDown">
                     <div className="BoxBodyTabelaDropDown">

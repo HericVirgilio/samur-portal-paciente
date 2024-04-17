@@ -4,17 +4,23 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import CadastroFormulario from "@/components/cadastro"
 import Dados from "@/components/cadastro-dados/indes";
-import Endereco from "@/components/endereco";
-import { FormData } from "@/interface/form-data.interface";
+import Endereco from "@/components/cadastro-endereco";
+import { FormData, FormDataDados, FormDataEndereco } from "@/interface/form-data.interface";
 
 export default function Cadastro() {
 
-    const [email,setEmail] = useState<string>("")
-    const [senha,setSenha] = useState<string>("")
+    const [email, setEmail] = useState<string>("")
+    const [senha, setSenha] = useState<string>("")
+
     const [formDataDados, setFormDataDados] = useState({
         nome: "", cpf: "", rg: "", genero: "", data: "",
         escolaridade: "", nacionalidade: ""
     });
+
+    const [formDataEndereco, setFormDataEndereco] = useState({
+        cep: "", bairro: "", logradouro: "", numero: "", complemento: "", cidade: "",
+        estado: "", telefone1: "", telefone2: ""
+    })
     const [controle, setControle] = useState(1)
     const [visibilidadeCadastro, setVisibilidadeCadastro] = useState({ int: 1, visib: "block" })
     const [visibilidadeDados, setVisibilidadeDados] = useState({ int: 2, visib: "block" })
@@ -31,18 +37,44 @@ export default function Cadastro() {
             console.log(`algo deu errado ${error}`)
         }
     }
-    const FormularioDados = (data: any) => {
-        setFormDataDados(data);
-        console.log(`nome: ${formDataDados.nome}, cpf: ${formDataDados.cpf}, rf: ${formDataDados.rg}
-        , genero: ${formDataDados.genero}, data: ${formDataDados.data}, escolariada: ${formDataDados.escolaridade},
-        nacionalidade: ${formDataDados.nacionalidade}`);
+    const FormularioDados = (data: FormDataDados) => {
+        console.log(`nome: ${data.nome}, cpf: ${data.cpf}, rf: ${data.rg}
+        , genero: ${data.genero}, data: ${data.data}, escolariada: ${data.escolaridade},
+        nacionalidade: ${data.nacionalidade}`);
+        try {
+            setFormDataDados({
+                ...formDataDados,
+                nome: data.nome,
+                nacionalidade: data.nacionalidade,
+                cpf: data.nacionalidade,
+                rg: data.rg,
+                genero: data.genero,
+                data: data.data,
+                escolaridade: data.escolaridade
+            })
+        } catch (error) {
+            console.log(`algo deu errado ${error}`)
+        }
         setControle(3)
     }
-    const FormularioEndereco = (data: any) => {
-        setFormDataDados(data);
-        console.log(`nome: ${formDataDados.nome}, cpf: ${formDataDados.cpf}, rg: ${formDataDados.rg}
-        , genero: ${formDataDados.genero}, data: ${formDataDados.data}, escolariada: ${formDataDados.escolaridade},
-        nacionalidade: ${formDataDados.nacionalidade}`);
+    const FormularioEndereco = (data: FormDataEndereco) => {
+
+        console.log(`cep: ${data.cep}, bairro: ${data.bairro}, logradouro: ${data.logradouro}
+        , numero: ${data.numero}, complemento: ${data.complemento}, cidade: ${data.localidade},
+        estado: ${data.uf}, telefone1: ${data.telefone1}, telefone2: ${data.telefone2}`);
+        setFormDataEndereco({
+            ...formDataEndereco,
+            cep: data.cep,
+            bairro: data.bairro,
+            logradouro: data.logradouro,
+            numero: data.numero,
+            complemento: data.complemento,
+            cidade: data.localidade,
+            estado: data.uf,
+            telefone1: data.telefone1,
+            telefone2: data.telefone2
+        })
+
         setControle(3)
     }
 
@@ -63,13 +95,13 @@ export default function Cadastro() {
     return (
         <div>
             <div className='DivBoxHeaderPrincipal' >
-            <div className="BoxVoltar">
-                <Image src={"/icons/voltarHeaderCadastro.svg"} alt='Voltar' width={35} height={35}
-                    className='imgVoltar' onClick={Voltar} />
-            </div>
-            <div className="BoxLogo">
-                <Image src="/images/samur-principal.png" alt="" width={250} height={150} priority />
-            </div>
+                <div className="BoxVoltar">
+                    <Image src={"/icons/voltarHeaderCadastro.svg"} alt='Voltar' width={35} height={35}
+                        className='imgVoltar' onClick={Voltar} />
+                </div>
+                <div className="BoxLogo">
+                    <Image src="/images/samur-principal.png" alt="" width={250} height={150} priority />
+                </div>
             </div>
 
             <div className="DivCadastroTitle">

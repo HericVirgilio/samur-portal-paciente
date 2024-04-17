@@ -1,19 +1,13 @@
 "use client"
-import HeaderTable from "@/components/cabecalho-tabela"
 import HeaderPrincipal from "@/components/header-principal"
-import Tabela from "@/components/tabela"
-import { ResultadosData } from "@/data/resultados.data"
-import BackgroundTabela from "@/components/background-tabela"
+import TituloFormatado from "@/components/titulo-componentes-menu"
+import Mui3Colunas from "@/components/mui-3-colunas"
 export default function Resultados() {
     return (
         <div>
             <HeaderPrincipal />
-            <BackgroundTabela tituloTabela="Lista de Resultados">
-                <HeaderTable />
-                {ResultadosData.map((objeto) => (
-                    <Tabela key={objeto.key} objeto={objeto} />
-                ))}
-            </BackgroundTabela>
+            <TituloFormatado objeto="Resultados"/>
+            <Mui3Colunas/>
         </div>
     )
 }

@@ -20,8 +20,8 @@ export default function Endereco({ sendDataToParent }: Props) {
     const [complemento, setComplemento] = useState("")
     const [telefone1, setTelefone1] = useState("")
     const [telefone2, setTelefone2] = useState("")
-    const [cidade, setCidade] = useState("")
-    const [estado, setEstado] = useState("")
+    const [localidade, setLocalidade] = useState("")
+    const [uf, setUf] = useState("")
 
     const buscarEnderecoPorCep = async (cep: string) => {
         try {
@@ -29,8 +29,8 @@ export default function Endereco({ sendDataToParent }: Props) {
             const enderecoData: FormDataEndereco = response.data;
             setBairro(enderecoData.bairro);
             setLogradouro(enderecoData.logradouro);
-            setCidade(enderecoData.localidade)
-            setEstado(enderecoData.uf);
+            setLocalidade(enderecoData.localidade)
+            setUf(enderecoData.uf);
         } catch (error) {
             console.error('Erro ao buscar endereço:', error);
         }
@@ -38,10 +38,17 @@ export default function Endereco({ sendDataToParent }: Props) {
 
     useEffect(() => {
         FormataTelefone()
-    },[telefone1,telefone2])
+    }, [telefone1, telefone2])
 
     const EnviarFormulario = (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
+        if (telefone1 !== "") {
+            sendDataToParent({
+                cep, bairro, logradouro, numero, complemento, localidade, uf, telefone1, telefone2,
+            })
+        } else {
+            console.log("Erro ao enviar formulario revise os dados")
+        }
     }
 
     const FormataCep = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -55,10 +62,10 @@ export default function Endereco({ sendDataToParent }: Props) {
         }
     };
     const FormataTelefone = () => {
-        if(telefone1.length <= 11){
+        if (telefone1.length <= 11) {
             setTelefone1(telefone1.replace(/(\d{2})(\d{5,6})(\d{4})/, '($1) $2-$3'))
         }
-        if(telefone2.length <= 11){
+        if (telefone2.length <= 11) {
             setTelefone2(telefone2.replace(/(\d{2})(\d{5,6})(\d{4})/, '($1) $2-$3'))
         }
     }
@@ -67,7 +74,7 @@ export default function Endereco({ sendDataToParent }: Props) {
         <div className="BoxForm">
             <form className="DivCadastroForm" onSubmit={EnviarFormulario}>
                 <FormControl sx={{ m: 1, width: '80vw' }} variant="outlined" onChange={FormataCep} >
-                    <InputLabel htmlFor="outlined-adornment-password" size="small">CEP</InputLabel>
+                    <InputLabel htmlFor="outlined-adornment-password" size="small" required>CEP</InputLabel>
                     <OutlinedInput value={cep} onChange={(e) => setCep(e.target.value)}
                         size="small"
                         type={'text'}
@@ -77,7 +84,7 @@ export default function Endereco({ sendDataToParent }: Props) {
                         }} />
                 </FormControl>
                 <FormControl sx={{ m: 1, width: '80vw' }} variant="outlined">
-                    <InputLabel htmlFor="outlined-adornment-password" size="small">Bairro</InputLabel>
+                    <InputLabel htmlFor="outlined-adornment-password" size="small" required>Bairro</InputLabel>
                     <OutlinedInput value={bairro} onChange={(e) => setBairro(e.target.value)}
                         size="small"
                         type={'text'}
@@ -85,7 +92,7 @@ export default function Endereco({ sendDataToParent }: Props) {
                 </FormControl>
                 <div className="agrupamentoInputEndereco">
                     <FormControl sx={{ m: 1, width: '40vw' }} variant="outlined">
-                        <InputLabel htmlFor="outlined-adornment-password" size="small">Logradouro</InputLabel>
+                        <InputLabel htmlFor="outlined-adornment-password" size="small" required>Logradouro</InputLabel>
                         <OutlinedInput value={logradouro} onChange={(e) => setLogradouro(e.target.value)}
                             size="small"
                             type={'text'}
@@ -107,21 +114,21 @@ export default function Endereco({ sendDataToParent }: Props) {
                         label="Complemento" />
                 </FormControl>
                 <FormControl sx={{ m: 1, width: '80vw' }} variant="outlined">
-                    <InputLabel htmlFor="outlined-adornment-password" size="small">Cidade</InputLabel>
-                    <OutlinedInput value={cidade} onChange={(e) => setCidade(e.target.value)}
+                    <InputLabel htmlFor="outlined-adornment-password" size="small" required>Cidade</InputLabel>
+                    <OutlinedInput value={localidade} onChange={(e) => setLocalidade(e.target.value)}
                         size="small"
                         type={'text'}
                         label="Cidade" />
                 </FormControl>
                 <FormControl sx={{ m: 1, width: '80vw' }} variant="outlined">
-                    <InputLabel htmlFor="outlined-adornment-password" size="small">Estado</InputLabel>
-                    <OutlinedInput value={estado} onChange={(e) => setEstado(e.target.value)}
+                    <InputLabel htmlFor="outlined-adornment-password" size="small" required>Estado</InputLabel>
+                    <OutlinedInput value={uf} onChange={(e) => setUf(e.target.value)}
                         size="small"
                         type={'text'}
                         label="Estado" />
                 </FormControl>
                 <FormControl sx={{ m: 1, width: '80vw' }} variant="outlined">
-                    <InputLabel htmlFor="outlined-adornment-password" size="small">Telefone1</InputLabel>
+                    <InputLabel htmlFor="outlined-adornment-password" size="small" required>Telefone1</InputLabel>
                     <OutlinedInput value={telefone1} onChange={(e) => setTelefone1(e.target.value)}
                         size="small"
                         inputProps={{

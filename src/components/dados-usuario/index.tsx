@@ -13,7 +13,7 @@ export default function DadosUsuario() {
             <FormularioDadosUsuario />
 
             {UsuarioData.map((objeto) => (
-                <BoxUserPrincipal key={objeto.key} style="#F5F2F2" objeto={objeto} />
+                <BoxUserPrincipal key={objeto.key}  objeto={objeto} />
             ))}
 
 
