@@ -96,7 +96,7 @@
     }
 
     .LinhaDivisoria {
-        width: 40vw;
+        width: 30vw;
     }
 
     .ContainerSlider {
@@ -107,29 +107,59 @@
     }
 
     .Caixa {
-        background-color: red;
         overflow: hidden;
         position: absolute;
         display: grid;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
+        width: 100%;
+        height: 100%;
     }
-    .slides{
+
+    .slides {
         display: flex;
         align-items: center;
         width: 500%;
         justify-content: center;
         align-items: center;
     }
-    .slide{
+
+    .slide {
         width: 20%;
+        display: flex;
+        /* Add display flex to make the image center */
+        justify-content: center;
+    }
+
+   
+    .slide Img {
+        object-fit: cover;
+    }
+    .inputImg{
+        position: absolute;
+        z-index: 1000;
+        top: 20px;
+        left: 20px;
+    }
+    .navigation{
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translate(-50%);
+        display: flex;
+        z-index: 10;
+    }
+    .bar{
+        width: 20px;
+        height: 20px;
+        border: 3px solid white;
+        margin: 6px;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: 0.5s;
+    }
+    .bar:hover{
+        background-color: white;
     }
     #test{
-        margin-left: -120%;
-    }
-    .slide Img {
-       
-        margin: auto;
+        margin-left: -80%;
     }
 }

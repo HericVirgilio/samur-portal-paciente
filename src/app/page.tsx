@@ -7,36 +7,37 @@ import { Visibility, VisibilityOff } from '@mui/icons-material'
 import BotaoEnviarFormulario from '@/components/botao-login-cadastro'
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+import { useEffect } from 'react';
 
 const Imagens = [
     {
-        class: "slide0",
+        class: "slide0 s0",
         id: "test",
-        img: "/slider/0.png",
+        img: "/images/samur-secundaria.png",
         alt: "banner"
     },
     {
         class: "slide1",
-        id: "",
+        id: "slide1",
         img: "/slider/1.jpg",
         alt: "banner"
     },
     {
         class: "slide2",
-        id: "",
-        img: "/slider/2.jpg",
+        id: "slide2",
+        img: "/slider/2.png",
         alt: "banner"
     },
     {
         class: "slide3",
-        id: "",
-        img: "/slider/3.jpg",
+        id: "slide3",
+        img: "/slider/3.png",
         alt: "banner"
     },
     {
         class: "slide4",
-        id: "",
-        img: "/slider/4.jpg",
+        id: "slide4",
+        img: "/slider/4.png",
         alt: "banner"
     }
 ]
@@ -47,6 +48,8 @@ export default function Login() {
     const [senha, setSenha] = useState("")
     const [showPassword, setShowPassword] = useState(false);
     const router = useRouter();
+    const [contador, setContador] = useState(0);
+    const [marginLeft, setMarginLeft] = useState("-0%")
 
     const handleClickShowPassword = () => setShowPassword((show) => !show);
 
@@ -59,6 +62,31 @@ export default function Login() {
         console.log(`email: ${email} senha: ${senha}`)
         router.push('/home');
     }
+
+    useEffect(() => {
+        switch (contador) {
+            case 0: {
+                setMarginLeft("-0%")
+                break;
+            }
+            case 1: {
+                setMarginLeft("-40%")
+                break;
+            }
+            case 2: {
+                setMarginLeft("-80%")
+                break;
+            }
+            case 3: {
+                setMarginLeft("-120%")
+                break;
+            }
+            case 4: {
+                setMarginLeft("-160%")
+                break;
+            }
+        }
+    }, [contador])
 
     return (
         <div className='ContainerLogin' style={{ backgroundColor: "var(--branco)" }}>
@@ -108,14 +136,20 @@ export default function Login() {
             </div>
             <div className='ContainerSlider' style={{ width: "50vw" }}>
                 <div className='Caixa'>
-                <div className='slides'>
-                        
-                        {Imagens.map((img) => (
-                            <div key={img.class} className='slide' id={img.id} >
-                                <Image src={img.img} alt={img.alt} width={200} height={150} />
+                    <div className='slides'>
+                        {Imagens.map((img, index) => (
+                            <div key={img.class} className='slide' id={img.id} style={index === 0 ? {marginLeft: marginLeft} : {}} >
+                                <Image src={img.img} alt={img.alt} width={400} height={400} />
                             </div>
                         ))}
                     </div>
+                </div>
+                <div className="navigation">
+                    <label className="bar" id="slide0" htmlFor='slide0' onClick={(e) => { setContador(0); }}></label>
+                    <label className="bar" id="slide1" htmlFor='slide1' onClick={(e) => { setContador(1); }}></label>
+                    <label className="bar" id="slide2" htmlFor='slide2' onClick={(e) => { setContador(2); }}></label>
+                    <label className="bar" id="slide3" htmlFor='slide3' onClick={(e) => { setContador(3); }}></label>
+                    <label className="bar" id="slide4" htmlFor='slide4' onClick={(e) => { setContador(4); }}></label>
                 </div>
             </div>
         </div>
