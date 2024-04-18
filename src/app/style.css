@@ -1,45 +1,53 @@
-.ContainerLogin{
+.ContainerLogin {
     height: 100vh;
 }
-.BoxHeaderLogin{
+
+.BoxHeaderLogin {
     display: grid;
     justify-content: center;
     align-items: center;
     margin-bottom: 30px;
     width: 100vw;
 }
-.BoxHeaderLogin > div{
+
+.BoxHeaderLogin>div {
     margin-top: 20px;
 }
-.FormControl{
+
+.FormControl {
     margin: 4px;
     width: 80vw;
 }
-.TituloHeader{
+
+.TituloHeader {
     color: var(--verde-escuro);
     font-size: 21px;
     font-weight: 600;
     text-align: center;
 }
-.TextLogin{
+
+.TextLogin {
     color: var(--verde-escuro);
     font-weight: 600;
     margin-left: 8px;
     font-size: 20px;
 }
-.textEsqueciSenha{
+
+.textEsqueciSenha {
     font-size: 14px;
     font-weight: 500;
     color: var(--cinza-input);
     margin-left: 8px;
     cursor: pointer;
 }
-.InputDados{
+
+.InputDados {
     height: 40px;
     border: 1px solid rgba(0, 0, 0, 0.63);
     border-radius: 10px;
 }
-#InputDados{
+
+#InputDados {
     width: 170px;
     margin: auto;
     margin-top: 10px;
@@ -52,40 +60,76 @@
     font-size: 18px;
     font-weight: bold;
 }
-.LinhaDivisoria{
+
+.LinhaDivisoria {
     width: 90vw;
     margin: auto;
     background-color: var(--verde-escuro);
     height: 1px;
 }
-.TextCadastrar-se{
+
+.TextCadastrar-se {
     color: var(--verde-escuro);
     text-align: center;
     font-size: 16px;
     font-weight: 500;
     margin-top: 30px;
 }
-@media (min-width: 1024px){
-    .InputsAndLogo{
+
+@media (min-width: 1024px) {
+    .InputsAndLogo {
         width: 50vw;
         height: 100vh;
         display: grid;
     }
-    .ContainerLogin{
+
+    .ContainerLogin {
         display: flex;
     }
-    .BoxHeaderLogin{
+
+    .BoxHeaderLogin {
         width: 50vw;
     }
-    .FormControl{
+
+    .FormControl {
         width: 30vw;
     }
-    .LinhaDivisoria{
+
+    .LinhaDivisoria {
         width: 40vw;
     }
-    .ContainerSlider{
-        background: linear-gradient(90deg, #B1D7C6,#F9FAFB);
-        width: 100%;
-        height: 100vh;
+
+    .ContainerSlider {
+        background: linear-gradient(90deg, #B1D7C6, #F9FAFB);
+        width: 50vw;
+        height: 100%;
+        position: relative;
+    }
+
+    .Caixa {
+        background-color: red;
+        overflow: hidden;
+        position: absolute;
+        display: grid;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+    .slides{
+        display: flex;
+        align-items: center;
+        width: 500%;
+        justify-content: center;
+        align-items: center;
+    }
+    .slide{
+        width: 20%;
+    }
+    #test{
+        margin-left: -120%;
+    }
+    .slide Img {
+       
+        margin: auto;
     }
 }
