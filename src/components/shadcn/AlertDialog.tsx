@@ -27,13 +27,13 @@ export function AlertDialogDemo(props: {objeto: string}) {
     
     return (
         <AlertDialog>
-            <div style={{display: "flex"}}>
-                <AlertDialogTrigger asChild style={{width: "20px", height: "20px", backgroundColor: "transparent"}}>
+            <div style={{display: "flex"}} >
+                <AlertDialogTrigger asChild style={{width: "20px", height: "20px", backgroundColor: "transparent", border: "none"}}>
                     <Button variant="outline"><CheckboxDemo habilitado={checkbox} /></Button>
                 </AlertDialogTrigger>
                 <p>{props.objeto}</p>
             </div>
-            <AlertDialogContent>
+            <AlertDialogContent style={{width: "90vw"}}>
                 <AlertDialogHeader>
                     <AlertDialogTitle>Leu e aceita a política de privacidade?</AlertDialogTitle>
                     <AlertDialogDescription>

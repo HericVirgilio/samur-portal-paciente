@@ -29,48 +29,53 @@ export default function Login() {
 
     return (
         <div className='ContainerLogin' style={{backgroundColor: "var(--branco)"}}>
-            <div className="BoxHeaderLogin">
-                <Image style={{marginTop: "30px"}} src={"/images/samur-principal.png"} alt="" width={250} height={150} />
-                <div>
-                    <h2 className="TituloHeader">Bem-vindo ao</h2>
-                    <h2 className="TituloHeader">Portal do paciente</h2>
+            <div className='InputsAndLogo'>
+                <div className="BoxHeaderLogin" id='BoxHeaderLogin'>
+                    <Image style={{marginTop: "30px"}} src={"/images/samur-principal.png"} alt="" width={250} height={150} />
+                    <div>
+                        <h2 className="TituloHeader">Bem-vindo ao</h2>
+                        <h2 className="TituloHeader">Portal do paciente</h2>
+                    </div>
                 </div>
-            </div>
-            <form className="BoxHeaderLogin" onSubmit={Logar}>
-                <p className='TextLogin'>Login</p>
-                <FormControl sx={{ m: 1, width: '80vw' }} variant="outlined">
-                    <InputLabel htmlFor="outlined-adornment-password"  size="small">Email</InputLabel>
-                    <OutlinedInput value={email} onChange={(e) => setEmail(e.target.value)}
-                        size="small"
-                        type={'email'}
-                        label="Email" />
-                </FormControl>
-                <FormControl sx={{ m: 1, width: '80vw' }} variant="outlined">
-                    <InputLabel htmlFor="outlined-adornment-password"  size="small">Senha</InputLabel>
-                    <OutlinedInput value={senha} onChange={(e) => setSenha(e.target.value)}
-                         size="small"
-                        type={showPassword ? 'text' : 'password'}
-                        endAdornment={
-                            <InputAdornment position="end">
-                                <IconButton
-                                    aria-label="toggle password visibility"
-                                    onClick={handleClickShowPassword}
-                                    onMouseDown={handleMouseDownPassword}
-                                    edge="end">
-                                    {showPassword ? <VisibilityOff /> : <Visibility />}
-                                </IconButton>
-                            </InputAdornment>
-                        } label="Senha" />
-                </FormControl>
-                <Link href={"/criar-nova-senha"}>
-                    <p className='textEsqueciSenha'>Esqueci minha senha</p>
+                <form className="BoxHeaderLogin" onSubmit={Logar}>
+                    <p className='TextLogin'>Login</p>
+                    <FormControl className='FormControl'  variant="outlined">
+                        <InputLabel htmlFor="outlined-adornment-password"  size="small">Email</InputLabel>
+                        <OutlinedInput value={email} onChange={(e) => setEmail(e.target.value)}
+                            size="small"
+                            type={'email'}
+                            label="Email" />
+                    </FormControl>
+                    <FormControl className='FormControl' variant="outlined">
+                        <InputLabel htmlFor="outlined-adornment-password"  size="small">Senha</InputLabel>
+                        <OutlinedInput value={senha} onChange={(e) => setSenha(e.target.value)}
+                             size="small"
+                            type={showPassword ? 'text' : 'password'}
+                            endAdornment={
+                                <InputAdornment position="end">
+                                    <IconButton
+                                        aria-label="toggle password visibility"
+                                        onClick={handleClickShowPassword}
+                                        onMouseDown={handleMouseDownPassword}
+                                        edge="end">
+                                        {showPassword ? <VisibilityOff /> : <Visibility />}
+                                    </IconButton>
+                                </InputAdornment>
+                            } label="Senha" />
+                    </FormControl>
+                    <Link href={"/criar-nova-senha"}>
+                        <p className='textEsqueciSenha'>Esqueci minha senha</p>
+                    </Link>
+                    <BotaoEnviarFormulario text="Entrar"/>
+                </form>
+                <div className='LinhaDivisoria'></div>
+                <Link href="/cadastro">
+                    <p className='TextCadastrar-se'>Não possui conta? Clique aqui para <br /> fazer o cadastro </p>
                 </Link>
-                <BotaoEnviarFormulario text="Entrar"/>
-            </form>
-            <div className='LinhaDivisoria'></div>
-            <Link href="/cadastro">
-                <p className='TextCadastrar-se'>Não possui conta? Clique aqui para <br /> fazer o cadastro </p>
-            </Link>
+            </div>
+            <div className='ContainerSlider'>
+                
+            </div>
         </div>
     )
 } 

@@ -11,6 +11,10 @@
 .BoxHeaderLogin > div{
     margin-top: 20px;
 }
+.FormControl{
+    margin: 4px;
+    width: 80vw;
+}
 .TituloHeader{
     color: var(--verde-escuro);
     font-size: 21px;
@@ -60,4 +64,28 @@
     font-size: 16px;
     font-weight: 500;
     margin-top: 30px;
+}
+@media (min-width: 1024px){
+    .InputsAndLogo{
+        width: 50vw;
+        height: 100vh;
+        display: grid;
+    }
+    .ContainerLogin{
+        display: flex;
+    }
+    .BoxHeaderLogin{
+        width: 50vw;
+    }
+    .FormControl{
+        width: 30vw;
+    }
+    .LinhaDivisoria{
+        width: 40vw;
+    }
+    .ContainerSlider{
+        background: linear-gradient(90deg, #B1D7C6,#F9FAFB);
+        width: 100%;
+        height: 100vh;
+    }
 }
