@@ -13,6 +13,7 @@ import Atalhos from "@/components/atalhos"
 import Image from "next/image";
 import Banner from "@/components/banner";
 import MenuDesktop from "@/components/menus-desktop";
+import Footer from "@/components/footer";
 
 export default function Home() {
   const [date, setDate] = useState<Date>(new Date())
@@ -46,6 +47,7 @@ export default function Home() {
           </div>
           <Image src="/images/propaganda.jpg" alt="propaganda" width={350} height={350}/>
       </div>
+      <Footer/>
     </main>
   );
 }
