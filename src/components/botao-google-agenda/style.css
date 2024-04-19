@@ -1,15 +1,16 @@
-.BoxGoogleAgenda{
+.BoxGoogleAgenda {
     background-color: var(--azul-claro);
     width: 90vw;
     height: 40px;
     margin: auto;
-    border-radius: 0 0 5px  5px;
+    border-radius: 0 0 5px 5px;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
 }
-.BoxLogoGoogleAgenda{
+
+.BoxLogoGoogleAgenda {
     background-color: var(--branco);
     width: 30px;
     height: 30px;
@@ -20,7 +21,21 @@
     margin-left: 5vw;
     margin-right: 5vw;
 }
-.TextoGoogleAgenda{
+
+.TextoGoogleAgenda {
     color: var(--branco);
     font-size: 14px;
+}
+
+@media(min-width: 1024px) {
+    .BoxGoogleAgenda {
+        width: 22vw;
+        display: grid;
+        grid-template-columns: 20% 80%;
+    }
+
+    .BoxLogoGoogleAgenda {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
 }

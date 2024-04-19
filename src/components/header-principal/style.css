@@ -61,3 +61,12 @@
 .ImagemPerfilMenu{
     border-radius: 50px ;
 }
+
+@media(min-width: 1024px){
+    .boxHeaderPrincipal{
+       padding: 0 5vw;
+    }
+    .Hamburguer{
+        display: none;
+    }
+}

@@ -1,0 +1,16 @@
+.BoxBanner{
+    width: 100vw;
+    height: 50vh;
+    background-color: red;
+    background-image: url("/images/banner.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.AtalhoPrinciapl{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%);
+}

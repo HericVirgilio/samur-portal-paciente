@@ -10,30 +10,41 @@ import BotaoGoogleAgenda from "@/components/botao-google-agenda";
 import { AtalhosPrincipal } from "@/data/atalhos-principal.data";
 import { UsuarioData } from "@/data/UsuarioData";
 import Atalhos from "@/components/atalhos"
+import Image from "next/image";
+import Banner from "@/components/banner";
+import MenuDesktop from "@/components/menus-desktop";
 
 export default function Home() {
   const [date, setDate] = useState<Date>(new Date())
 
   return (
     <main className="BoxPaginaPrincipal">
-      <HeaderPrincipal/>
+      <HeaderPrincipal />
+      <MenuDesktop />
+      <Banner/>
       <div className="BoxUserAndNovoAgendamento">
-        <BoxUserPrincipal objeto={UsuarioData[0]}/>
-        <NovoAgendamentoPrincipal/>
+        <BoxUserPrincipal objeto={UsuarioData[0]} />
+        <NovoAgendamentoPrincipal />
       </div>
-      <div style={{marginBottom:"20px"}}>
-        <Atalhos atalhos={AtalhosPrincipal}/>
+      <div className="AtalhosMobile" style={{ marginBottom: "20px" }}>
+        <Atalhos atalhos={AtalhosPrincipal} />
       </div>
-      <div className="ContainerProximoEventoAndCalendario">
-        <ProximoEvento/>
-        <div>
-          <Calendar
-            mode="single"
-            selected={date}
-            className="calendario rounded-md border w-[90vw] mx-auto"
-            style={{ backgroundColor: "white" }}/>
-            <BotaoGoogleAgenda/>
-        </div>
+      <div className="BoxCalendario">
+          <div className="ProximoEventoMobile">
+            <ProximoEvento />
+          </div>
+          <div>
+            <Calendar
+             mode="single"
+             selected={date}
+             className="calendario rounded-md border w-[90vw] mx-auto"
+             style={{ backgroundColor: "white" }} />
+           <BotaoGoogleAgenda />
+           </div>
+          <div className="ProximoEventoDesktop">
+            <ProximoEvento />
+          </div>
+          <Image src="/images/propaganda.jpg" alt="propaganda" width={350} height={350}/>
       </div>
     </main>
   );

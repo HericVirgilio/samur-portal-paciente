@@ -3,17 +3,37 @@
     overflow-x: hidden;
 }
 
+.ProximoEventoDesktop {
+    display: none;
+}
+.AtalhosMobile{
+    display: block;
+}
 @media(min-width: 1024px) {
     .BoxUserAndNovoAgendamento {
-        display: flex;
+        display: none;
     }
-
-    .ContainerProximoEventoAndCalendario {
-        display: flex;
-        width: 60vw;
+    .AtalhosMobile{
+        display: none;
     }
-
     .calendario {
         width: 22vw;
+    }
+
+    .BoxCalendario {
+        display: flex;
+        gap: 50px;
+        justify-content: center;
+        max-width: 80vw;
+        margin: auto;
+        margin-top: 100px;
+    }
+
+    .ProximoEventoMobile {
+        display: none;
+    }
+
+    .ProximoEventoDesktop {
+        display: block;
     }
 }

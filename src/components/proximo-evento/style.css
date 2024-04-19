@@ -1,7 +1,7 @@
 .BoxProximoEvento{
-    width: 90vw;
-    margin: auto;  
+    width: 90vw; 
     margin-bottom: 20px; 
+    margin: auto;
 }
 .BoxtituloProximoEvento{
     background-color: var(--verde-escuro);
@@ -33,6 +33,6 @@
 }
 @media(min-width: 1024px){
     .BoxProximoEvento{
-        width: 25vw;
+        max-width: 25vw;
     }
 }

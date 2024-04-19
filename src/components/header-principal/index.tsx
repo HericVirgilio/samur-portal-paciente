@@ -24,7 +24,7 @@ export default function HeaderPrincipal() {
     return (
         <div className='boxHeaderPrincipal'>
 
-            <Image src="/icons/menu.svg" alt='' height={30} width={30} onClick={menuHamburguer} />
+            <Image src="/icons/menu.svg" alt='' height={30} width={30} onClick={menuHamburguer} className='Hamburguer'/>
             <div className='menuHamburguer' style={menu}>
                 <div className='BoxClose'>
                     <Image src="/icons/close.svg" alt='close' height={26} width={26} onClick={fecharMenu} />
