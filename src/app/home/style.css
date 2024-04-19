@@ -1,4 +1,19 @@
-.BoxPaginaPrincipal{
+.BoxPaginaPrincipal {
     margin-bottom: 50px;
     overflow-x: hidden;
+}
+
+@media(min-width: 1024px) {
+    .BoxUserAndNovoAgendamento {
+        display: flex;
+    }
+
+    .ContainerProximoEventoAndCalendario {
+        display: flex;
+        width: 60vw;
+    }
+
+    .calendario {
+        width: 22vw;
+    }
 }

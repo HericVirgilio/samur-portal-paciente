@@ -31,3 +31,8 @@
     justify-content: left;
     align-items: center;
 }
+@media(min-width: 1024px){
+    .BoxProximoEvento{
+        width: 25vw;
+    }
+}

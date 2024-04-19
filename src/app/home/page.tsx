@@ -17,18 +17,24 @@ export default function Home() {
   return (
     <main className="BoxPaginaPrincipal">
       <HeaderPrincipal/>
-      <BoxUserPrincipal objeto={UsuarioData[0]}/>
-      <NovoAgendamentoPrincipal/>
+      <div className="BoxUserAndNovoAgendamento">
+        <BoxUserPrincipal objeto={UsuarioData[0]}/>
+        <NovoAgendamentoPrincipal/>
+      </div>
       <div style={{marginBottom:"20px"}}>
         <Atalhos atalhos={AtalhosPrincipal}/>
       </div>
-      <ProximoEvento/>
-      <Calendar
-        mode="single"
-        selected={date}
-        className="rounded-md border w-[90vw]  mx-auto"
-        style={{ backgroundColor: "white" }} />
-        <BotaoGoogleAgenda/>
+      <div className="ContainerProximoEventoAndCalendario">
+        <ProximoEvento/>
+        <div>
+          <Calendar
+            mode="single"
+            selected={date}
+            className="calendario rounded-md border w-[90vw] mx-auto"
+            style={{ backgroundColor: "white" }}/>
+            <BotaoGoogleAgenda/>
+        </div>
+      </div>
     </main>
   );
 }
