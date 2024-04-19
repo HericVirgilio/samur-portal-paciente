@@ -86,7 +86,12 @@ export default function Login() {
                 break;
             }
         }
-    }, [contador])
+        const timer = setInterval(() => {
+            setContador((contador) => (contador + 1) % Imagens.length);
+        }, 5000);
+    
+        return () => clearInterval(timer);
+    }, [contador, Imagens.length]) 
 
     return (
         <div className='ContainerLogin' style={{ backgroundColor: "var(--branco)" }}>
@@ -134,7 +139,7 @@ export default function Login() {
                     <p className='TextCadastrar-se'>Não possui conta? Clique aqui para <br /> fazer o cadastro </p>
                 </Link>
             </div>
-            <div className='ContainerSlider' style={{ width: "50vw" }}>
+            <div className='ContainerSlider'>
                 <div className='Caixa'>
                     <div className='slides'>
                         {Imagens.map((img, index) => (
