@@ -108,14 +108,14 @@ export default function CadastroFormulario({ sendDataToParent }: Props) {
     return (
         <div className="BoxForm">
             <form className="DivCadastroForm" onSubmit={EnviarFormulario} >
-                <FormControl sx={{ m: 1, width: '80vw' }} variant="outlined">
+                <FormControl className="FormControl" variant="outlined">
                     <InputLabel htmlFor="outlined-adornment-password" size="small">Email</InputLabel>
                     <OutlinedInput value={email} onChange={(e) => setEmail(e.target.value)}
                         type={'email'}
                         label="Email"
                         size="small" />
                 </FormControl>
-                <FormControl sx={{ m: 1, width: '80vw' }} variant="outlined">
+                <FormControl className="FormControl" variant="outlined">
                     <InputLabel htmlFor="outlined-adornment-password" size="small" >Senha</InputLabel>
                     <OutlinedInput value={senha} onChange={(e) => setSenha(e.target.value)}
                         size="small"
@@ -132,7 +132,7 @@ export default function CadastroFormulario({ sendDataToParent }: Props) {
                             </InputAdornment>
                         } label="Senha" />
                 </FormControl>
-                <FormControl sx={{ m: 1, width: '80vw' }} variant="outlined">
+                <FormControl className="FormControl" variant="outlined">
                     <InputLabel htmlFor="outlined-adornment-password" size="small">Digite a senha novamente</InputLabel>
                     <OutlinedInput value={senha2} onChange={(e) => setSenha2(e.target.value)}
                         size="small"

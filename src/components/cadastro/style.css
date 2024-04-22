@@ -5,7 +5,10 @@
     gap: 18px;
     width: 100vw;
 }
-
+.FormControl{
+    width: 80vw;
+    margin: 4px;
+}
 .DivCadastroForm {
     display: grid;
     width: 80vw;
@@ -43,4 +46,14 @@
 }
 .ContainerVeridicadoresDeSenha p{
     color: red;
+}
+@media(min-width: 1024px){
+    .FormControl{
+        width: 28vw;
+        margin: 0.3rem auto;
+    }
+    .RequisitosSenha{
+        width: 20vw;
+        margin: auto;
+    }
 }
