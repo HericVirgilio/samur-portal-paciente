@@ -22,3 +22,18 @@
     align-items: center;
     justify-content: space-between;
 }
+
+@media(min-width: 1024px){
+    .Container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: auto;
+        width: 80vw;
+        gap: 30px;
+    }
+    .ContainerIcons{
+        width: 40vw;
+        margin: 0;
+       
+    }
+}
