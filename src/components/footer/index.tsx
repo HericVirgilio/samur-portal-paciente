@@ -1,7 +1,16 @@
 import "./style.css"
 import Image from "next/image"
 import Link from "next/link"
+import { menuHamburguerData } from "@/data/menu-hamburguer.data"
+import { useRouter } from "next/navigation"
+import { MidiasSocaisData } from "@/data/midias-sociais.data"
 export default function Footer() {
+
+    const router = useRouter()
+
+    const IrPara = (url: string) => {
+        router.push(url)
+    }
     return (
         <footer className="ContainerFooter">
             <div className="CapsulaComponentesCima">
@@ -10,29 +19,22 @@ export default function Footer() {
                 </div>
                 <div>
                     <span>Navegação</span>
-                    <ul className="ItensLista">
-                        <li>Home</li>
-                        <li>Agendamento</li>
-                        <li>Documentos</li>
-                        <li>Financeiro</li>
-                        <li>Orçamento</li>
-                        <li>Prontuário</li>
-                        <li>Resultdos</li>
+                    <ul>
+                        {menuHamburguerData.map((objeto, index) => 
+                         index !== menuHamburguerData.length - 1 &&(
+                            <li key={objeto.key} onClick={(() => IrPara(objeto.nomeUrl))}>{objeto.nome}</li>
+                        ))}
                     </ul>
                 </div>
                 <div>
                     <span>Contate-nos</span>
-                    <ul className="ItensLista Contato">
-                        <Image src={"/midias/twitter.png"} alt="twitter" width={20} height={20}/>
-                        <li>Twitter</li>
-                        <Image src={"/midias/facebook.png"} alt="facebook" width={20} height={20}/>
-                        <li>Facebook</li>
-                        <Image src={"/midias/instagram.png"} alt="instagram" width={20} height={20}/>
-                        <li>Instagram</li>
-                        <Image src={"/midias/linkedin.png"} alt="Linkedin" width={20} height={20}/>
-                        <li>Linkedin</li>
-                        <Image src={"/midias/telefone.png"} alt="telefone" width={20} height={20}/>
-                        <li>Telefone</li>
+                    <ul>
+                        {MidiasSocaisData.map((objeto) => (
+                            <a className="ItensLista Contato" key={objeto.key} href={objeto.link} target="_blank" rel="follow">
+                                <Image src={objeto.img} alt={objeto.titulo} width={20} height={20}/>
+                                <li>{objeto.titulo}</li>
+                            </a>
+                        ))}
                     </ul>
                 </div>
                 <div>

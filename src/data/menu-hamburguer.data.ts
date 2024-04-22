@@ -4,7 +4,7 @@ export const menuHamburguerData:MenuHamburguerInterface [] = [
     {
         key: 1,
         nome: "Inicio",
-        nomeUrl: "/",
+        nomeUrl: "/home",
         url: "/icons/home.svg",
         width: 22,
         height: 18
