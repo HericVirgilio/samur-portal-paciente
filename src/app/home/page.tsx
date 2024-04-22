@@ -27,7 +27,7 @@ export default function Home() {
         <BoxUserPrincipal objeto={UsuarioData[0]} />
         <NovoAgendamentoPrincipal />
       </div>
-      <div className="AtalhosMobile" style={{ marginBottom: "20px" }}>
+      <div className="AtalhosMobile">
         <Atalhos atalhos={AtalhosPrincipal} />
       </div>
       <div className="BoxCalendario">
@@ -45,7 +45,7 @@ export default function Home() {
           <div className="ProximoEventoDesktop">
             <ProximoEvento />
           </div>
-          <Image src="/images/propaganda.jpg" alt="propaganda" width={350} height={350}/>
+          <Image src="/images/propaganda.jpg" alt="propaganda" width={350} height={350} className="ImagemPubli"/>
       </div>
       <Footer/>
     </main>

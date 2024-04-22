@@ -8,11 +8,20 @@
 .AtalhosMobile{
     display: block;
 }
+.ProximoEventoMobile{
+    margin-bottom: 8%;
+}
+
+@media(max-width: 500px){
+    .ImagemPubli{
+        width: 80vw;
+        margin: auto;
+        margin-top: 8%;
+    }
+}
+
 @media(min-width: 1024px) {
     .BoxUserAndNovoAgendamento {
-        display: none;
-    }
-    .AtalhosMobile{
         display: none;
     }
     .calendario {
@@ -25,7 +34,7 @@
         justify-content: center;
         max-width: 80vw;
         margin: auto;
-        margin-top: 100px;
+        margin-top: 50px;
     }
 
     .ProximoEventoMobile {

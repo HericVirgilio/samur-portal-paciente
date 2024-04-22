@@ -1,6 +1,6 @@
 .ContainerMenuDesktop {
     width: 100vw;
-    height: 5vw;
+    min-height: 5vw;
     background-color: var(--verde-escuro);
     display: flex;
 }
@@ -34,4 +34,10 @@
     padding: 15px;
     font-weight: 700;
     cursor: pointer;
+}
+
+@media(max-width: 500px){
+    .ContainerMenuDesktop{
+        display: none;
+    }
 }

@@ -48,3 +48,21 @@
 .Desenvolvedores h5 {
     font-family: 'Courier New', Courier, monospace;
 }
+
+@media(max-width: 500px){
+    .CapsulaComponentesCima{
+        display: grid;
+        gap: 5%;
+    }
+    .LinhaDivisoria{
+        width: 80vw;
+        margin: auto;
+        margin-top: 50%;
+    }
+    .Desenvolvedores{
+        font-size: 16px;
+        margin: auto;
+        width: 80vw;
+        margin-top: 5%;
+    }
+}
