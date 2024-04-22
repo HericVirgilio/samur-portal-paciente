@@ -1,6 +1,5 @@
 import "./style.css"
 import { menuHamburguerData } from "@/data/menu-hamburguer.data"
-import Link from "next/link"
 import { useRouter } from "next/navigation"
 export default function MenuDesktop() {
 
@@ -22,8 +21,7 @@ export default function MenuDesktop() {
                     </ul>
                 </div>
                 <div className="NovoAgendamento">
-
-                    <span>Novo Agendamento</span>
+                    <span onClick={() => IrPara("novo-agendamento")}>Novo Agendamento</span>
                 </div>
             </div>
         </div>

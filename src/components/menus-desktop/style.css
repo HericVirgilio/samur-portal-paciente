@@ -21,6 +21,10 @@
     cursor: pointer;
 }
 
+.AtalhosMenuHamburguer li:hover{
+    margin-top: -2px;
+}
+
 .NovoAgendamento {
     background-color: #B1D7C6;
     display: flex;
@@ -34,6 +38,10 @@
     padding: 15px;
     font-weight: 700;
     cursor: pointer;
+    text-align: center;
+}
+.NovoAgendamento:hover{
+    color: var(--branco);
 }
 
 @media(max-width: 500px){
