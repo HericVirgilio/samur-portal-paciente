@@ -1,7 +1,6 @@
 .BoxBanner{
     width: 100vw;
     height: 50vh;
-    background-color: red;
     background-image: url("/images/banner.jpg");
     background-position: center;
     background-repeat: no-repeat;
