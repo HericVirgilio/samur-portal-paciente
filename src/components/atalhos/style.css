@@ -23,6 +23,7 @@
     border: 1px solid var(--cor-border);
     text-align: center;
     font-size: 16px;
+    padding: 5px;
 }
 
 @media(min-width: 1024px) {

@@ -141,14 +141,14 @@ export default function Dados({ sendDataToParent }: Props) {
     return (
         <div className="BoxFormDados">
             <form className="DivDadosForm" onSubmit={EnviarFormulario}>
-                <FormControl sx={{ m: 1, width: '80vw' }} variant="outlined" required>
+                <FormControl className="FormControl" variant="outlined" required>
                     <InputLabel htmlFor="outlined-adornment-password" size="small">Nome Completo</InputLabel>
                     <OutlinedInput value={nome} onChange={(e) => setNome(e.target.value)}
                         type={'text'}
                         size="small"
                         label="Nome Completo" />
                 </FormControl>
-                <FormControl sx={{ m: 1, minWidth: 120 }}>
+                <FormControl className="FormControl" defaultChecked>
                     <InputLabel id="escolaridade-label" size="small">Nacionalidade</InputLabel>
                     <Select
                         size="small"
@@ -159,7 +159,7 @@ export default function Dados({ sendDataToParent }: Props) {
                         onChange={(e) => {
                             setNacionalide(e.target.value as string);
                         }}
-                        sx={{ width: '80vw' }}
+                        
                     >
                         <MenuItem value="Alemao">Alemão</MenuItem>
                         <MenuItem value="Argentino">Argentino</MenuItem>
@@ -185,9 +185,8 @@ export default function Dados({ sendDataToParent }: Props) {
                     </Select>
                 </FormControl>
                 <FormControl 
+                className="FormControl"
                     sx={{
-                        m:1,
-                        width: '80vw',
                         '& .MuiOutlinedInput-root': {
                             '&.Mui-focused fieldset': {
                                 borderColor: corInputCpf,
@@ -210,7 +209,7 @@ export default function Dados({ sendDataToParent }: Props) {
                         }}
                         label={textCpf} />
                 </FormControl>
-                <FormControl sx={{ m: 1, width: '80vw' }} variant="outlined" onChange={FormataRg} required>
+                <FormControl className="FormControl" variant="outlined" onChange={FormataRg} required>
                     <InputLabel htmlFor="outlined-adornment-password" size="small">RG</InputLabel>
                     <OutlinedInput value={rg} onChange={(e) => setRg(e.target.value)}
                         type={'text'}
@@ -221,7 +220,7 @@ export default function Dados({ sendDataToParent }: Props) {
                         label="RG" />
                 </FormControl>
                 <div className="agrupamentoInput">
-                    <FormControl sx={{ m: 1, minWidth: 120 }} required>
+                    <FormControl className="InputGenero"  required defaultChecked>
                         <InputLabel id="escolaridade-label" size="small">Genero</InputLabel>
                         <Select
                             size="small"
@@ -238,7 +237,7 @@ export default function Dados({ sendDataToParent }: Props) {
                             <MenuItem value="indeterminado">Indeterminado</MenuItem>
                         </Select>
                     </FormControl>
-                    <FormControl sx={{ m: 1 }} variant="outlined" >
+                    <FormControl sx={{ m: 1 }} variant="outlined" defaultChecked>
                         <InputLabel htmlFor="outlined-adornment-password" size="small"
                         ></InputLabel>
                         <OutlinedInput value={data} onChange={(e) => setData(e.target.value)}
@@ -247,7 +246,7 @@ export default function Dados({ sendDataToParent }: Props) {
                             style={{ color: '#6A6B6B' }} />
                     </FormControl>
                 </div>
-                <FormControl sx={{ m: 1, minWidth: 120 }} required>
+                <FormControl className="FormControl" required>
                     <InputLabel id="escolaridade-label" size="small">Escolaridade</InputLabel>
                     <Select
                         size="small"
@@ -256,7 +255,7 @@ export default function Dados({ sendDataToParent }: Props) {
                         value={escolaridade}
                         label="Escolaridade"
                         onChange={(e) => setEscolaridade(e.target.value as string)}
-                        sx={{ width: '80vw' }}
+                        className="FormSelect"
                     >
                         <MenuItem value="" disabled>
                             Escolha uma opção

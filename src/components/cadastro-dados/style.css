@@ -53,3 +53,23 @@
     color: red;
     margin-left: 10px;
 }
+.FormSelect{
+    width: 80vw;
+}
+.InputGenero{
+    margin: 4px;
+    width: 20vw;
+}
+@media(min-width: 1024px){
+    .FormSelect{
+        width: 28vw;
+    }
+    .InputGenero{
+        width: 15vw;
+    }
+    .agrupamentoInput{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

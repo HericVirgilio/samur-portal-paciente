@@ -1,7 +1,7 @@
 .ContainerCadastro{
     background-color: var(--branco);
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     padding-top: 30px;
 }
 .DivBoxHeaderPrincipal{
@@ -33,5 +33,8 @@
 @media(min-width: 1024px){
     .DivCadastroTitle{
         width: 30vw;
+    }
+    .ContainerCadastro{
+        height: 120vh;
     }
 }

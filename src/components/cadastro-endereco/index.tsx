@@ -76,7 +76,7 @@ export default function Endereco({ sendDataToParent }: Props) {
     return (
         <div className="BoxForm">
             <form className="DivCadastroForm" onSubmit={EnviarFormulario}>
-                <FormControl sx={{ m: 1, width: '80vw' }} variant="outlined" onChange={FormataCep} >
+                <FormControl className="FormControl" variant="outlined" onChange={FormataCep} >
                     <InputLabel htmlFor="outlined-adornment-password" size="small" required>CEP</InputLabel>
                     <OutlinedInput value={cep} onChange={(e) => setCep(e.target.value)}
                         size="small"
@@ -86,7 +86,7 @@ export default function Endereco({ sendDataToParent }: Props) {
                             maxLength: 9,
                         }} />
                 </FormControl>
-                <FormControl sx={{ m: 1, width: '80vw' }} variant="outlined">
+                <FormControl className="FormControl" variant="outlined">
                     <InputLabel htmlFor="outlined-adornment-password" size="small" required>Bairro</InputLabel>
                     <OutlinedInput value={bairro} onChange={(e) => setBairro(e.target.value)}
                         size="small"
@@ -94,14 +94,14 @@ export default function Endereco({ sendDataToParent }: Props) {
                         label="Bairro" />
                 </FormControl>
                 <div className="agrupamentoInputEndereco">
-                    <FormControl sx={{ m: 1, width: '40vw' }} variant="outlined">
+                    <FormControl className="InputLogradouro" sx={{ m: 1, width: '40vw' }} variant="outlined">
                         <InputLabel htmlFor="outlined-adornment-password" size="small" required>Logradouro</InputLabel>
                         <OutlinedInput value={logradouro} onChange={(e) => setLogradouro(e.target.value)}
                             size="small"
                             type={'text'}
                             label="Logradouro" />
                     </FormControl>
-                    <FormControl sx={{ m: 1 }} variant="outlined">
+                    <FormControl className="InputNumero" variant="outlined">
                         <InputLabel htmlFor="outlined-adornment-password" size="small">Número</InputLabel>
                         <OutlinedInput value={numero} onChange={(e) => setNumero(e.target.value)}
                             size="small"
@@ -109,28 +109,28 @@ export default function Endereco({ sendDataToParent }: Props) {
                             label="Número" />
                     </FormControl>
                 </div>
-                <FormControl sx={{ m: 1, width: '80vw' }} variant="outlined">
+                <FormControl className="FormControl" variant="outlined">
                     <InputLabel htmlFor="outlined-adornment-password" size="small">Complemento</InputLabel>
                     <OutlinedInput value={complemento} onChange={(e) => setComplemento(e.target.value)}
                         size="small"
                         type={'text'}
                         label="Complemento" />
                 </FormControl>
-                <FormControl sx={{ m: 1, width: '80vw' }} variant="outlined">
+                <FormControl className="FormControl" variant="outlined">
                     <InputLabel htmlFor="outlined-adornment-password" size="small" required>Cidade</InputLabel>
                     <OutlinedInput value={localidade} onChange={(e) => setLocalidade(e.target.value)}
                         size="small"
                         type={'text'}
                         label="Cidade" />
                 </FormControl>
-                <FormControl sx={{ m: 1, width: '80vw' }} variant="outlined">
+                <FormControl className="FormControl" variant="outlined">
                     <InputLabel htmlFor="outlined-adornment-password" size="small" required>Estado</InputLabel>
                     <OutlinedInput value={uf} onChange={(e) => setUf(e.target.value)}
                         size="small"
                         type={'text'}
                         label="Estado" />
                 </FormControl>
-                <FormControl sx={{ m: 1, width: '80vw' }} variant="outlined">
+                <FormControl className="FormControl" variant="outlined">
                     <InputLabel htmlFor="outlined-adornment-password" size="small" required>Telefone1</InputLabel>
                     <OutlinedInput value={telefone1} onChange={(e) => setTelefone1(e.target.value)}
                         size="small"
@@ -140,7 +140,7 @@ export default function Endereco({ sendDataToParent }: Props) {
                         type={'text'}
                         label="Telefone1" />
                 </FormControl>
-                <FormControl sx={{ m: 1, width: '80vw' }} variant="outlined">
+                <FormControl className="FormControl" variant="outlined">
                     <InputLabel htmlFor="outlined-adornment-password" size="small">Telefone2</InputLabel>
                     <OutlinedInput value={telefone2} onChange={(e) => setTelefone2(e.target.value)}
                         size="small"
@@ -150,8 +150,10 @@ export default function Endereco({ sendDataToParent }: Props) {
                         type={'text'}
                         label="Telefone2" />
                 </FormControl>
-                <AlertDialogDemo objeto="Li e aceito a política de privacidade !"/>
-                <AlertDialogDemo objeto="Aceito compartilhar os meus dados pessoais !"/>
+                <div className="AgrupamentoSelect">
+                    <AlertDialogDemo  objeto="Li e aceito a política de privacidade !"/>
+                    <AlertDialogDemo objeto="Aceito compartilhar os meus dados pessoais !"/>
+                </div>
 
                 <BotaoEnviarFormulario text="Cadastrar" />
             </form>

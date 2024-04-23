@@ -109,7 +109,7 @@ export default function Cadastro() {
                 <p>{controle}/3</p>
             </div>
             {visibilidadeCadastro.int === controle &&
-                <span style={{ display: visibilidadeCadastro.visib }} >
+                <span  style={{ display: visibilidadeCadastro.visib }} >
                     <CadastroFormulario sendDataToParent={FormularioCadastro} />
                 </span>
             }
