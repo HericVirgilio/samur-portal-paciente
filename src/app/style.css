@@ -16,7 +16,7 @@
 
 .FormControl {
     margin: 4px;
-    width: 80vw;
+    width: 300px;
 }
 
 .TituloHeader {
@@ -78,8 +78,7 @@
 .ContainerSlider{
     display: none;
 }
-
-@media (min-width: 1024px) {
+@media (min-width: 769px) {
     .InputsAndLogo {
         width: 40vw;
         height: 100vh;

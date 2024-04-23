@@ -30,7 +30,7 @@
     margin-top: 24px;
     margin-bottom: 24px;
 }
-@media(min-width: 1024px){
+@media(min-width: 769px){
     .DivCadastroTitle{
         width: 30vw;
     }

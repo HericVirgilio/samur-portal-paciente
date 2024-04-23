@@ -47,7 +47,7 @@
 .ContainerVeridicadoresDeSenha p{
     color: red;
 }
-@media(min-width: 1024px){
+@media(min-width: 769px){
     .FormControl{
         width: 28vw;
         margin: 0.3rem auto;

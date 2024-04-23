@@ -44,8 +44,20 @@
     color: var(--branco);
 }
 
-@media(max-width: 500px){
+@media(max-width: 768px){
     .ContainerMenuDesktop{
         display: none;
+    }
+}
+@media(max-width: 860px){
+    .ContainerIcones{
+        margin: 5px;
+    }
+    .AtalhosMenuHamburguer{
+        gap: 10px;
+    }
+    .NovoAgendamento{
+        margin-left: 30px;
+        min-width: 130px;
     }
 }
