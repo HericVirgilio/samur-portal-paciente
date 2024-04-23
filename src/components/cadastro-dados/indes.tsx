@@ -141,13 +141,6 @@ export default function Dados({ sendDataToParent }: Props) {
     return (
         <div className="BoxFormDados">
             <form className="DivDadosForm" onSubmit={EnviarFormulario}>
-                <FormControl className="FormControl" variant="outlined" required>
-                    <InputLabel htmlFor="outlined-adornment-password" size="small">Nome Completo</InputLabel>
-                    <OutlinedInput value={nome} onChange={(e) => setNome(e.target.value)}
-                        type={'text'}
-                        size="small"
-                        label="Nome Completo" />
-                </FormControl>
                 <FormControl className="FormControl" defaultChecked>
                     <InputLabel id="escolaridade-label" size="small">Nacionalidade</InputLabel>
                     <Select
@@ -208,6 +201,13 @@ export default function Dados({ sendDataToParent }: Props) {
                             maxLength: 14,
                         }}
                         label={textCpf} />
+                </FormControl>
+                <FormControl className="FormControl" variant="outlined" required>
+                    <InputLabel htmlFor="outlined-adornment-password" size="small">Nome Completo</InputLabel>
+                    <OutlinedInput value={nome} onChange={(e) => setNome(e.target.value)}
+                        type={'text'}
+                        size="small"
+                        label="Nome Completo" />
                 </FormControl>
                 <FormControl className="FormControl" variant="outlined" onChange={FormataRg} required>
                     <InputLabel htmlFor="outlined-adornment-password" size="small">RG</InputLabel>

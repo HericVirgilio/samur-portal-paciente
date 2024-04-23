@@ -30,6 +30,8 @@
 .agrupamentoInput{
     display: grid;
     grid-template-columns: 45% 55%;
+    justify-content: center;
+    align-items: center;
 }
 .InputDados{
     height: 40px;
@@ -58,7 +60,7 @@
 }
 .InputGenero{
     margin: 4px;
-    width: 20vw;
+    width: 35vw;
 }
 @media(min-width: 1024px){
     .FormSelect{

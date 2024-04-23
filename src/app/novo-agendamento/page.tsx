@@ -9,7 +9,7 @@ import "./style.css"
 
 export default function NovoAgendamento(){
     return(
-        <div  className="Container">
+        <div  className="Container" style={{display: "grid", gap: "20px", marginBottom:"20px"}}>
             <HeaderPrincipal/>
             <h2 className="tituloPaginaNovoAgendamento">Novo Agendamento</h2>
             <div className="BoxSelecaoPacienete">
