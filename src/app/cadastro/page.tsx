@@ -80,7 +80,7 @@ export default function Cadastro() {
 
     useEffect(() => {
         if (controle === 0) {
-            window.location.href = "/login";
+            window.location.href = "/";
         }
     }, [controle]);
 
