@@ -20,9 +20,6 @@ export default function MenuDesktop() {
                         )}
                     </ul>
                 </div>
-                <div className="NovoAgendamento">
-                    <span onClick={() => IrPara("novo-agendamento")}>Novo Agendamento</span>
-                </div>
             </div>
         </div>
     )
