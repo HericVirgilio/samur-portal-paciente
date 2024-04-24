@@ -18,6 +18,7 @@ import SliderOption from "@/components/slider-option";
 import { SliderOptionData } from "@/data/slider-option.data";
 import { SliderEspecialidadesData } from "@/data/slider-especialidades.data";
 import Whatsapp from "@/components/whatsapp";
+import Cards from "@/components/cards";
 export default function Home() {
   const [date, setDate] = useState<Date>(new Date())
 

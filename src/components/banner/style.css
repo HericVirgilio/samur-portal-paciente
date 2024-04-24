@@ -8,6 +8,17 @@
     background-position-y: 80%;
     position: relative;
 }
+.ContainerBanner{
+    display: flex;
+    width: 100vw;
+}
+.CardsBanner{
+    filter: brightness(65%);
+}
+.CardsBanner:hover{
+    filter: brightness(100%);
+    transition: ease-in-out;
+}
 @media(max-width: 500px){
     .BoxBanner{
         display: none;
