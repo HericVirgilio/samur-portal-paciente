@@ -1,10 +1,11 @@
 .BoxBanner{
     width: 100vw;
-    height: 50vh;
-    background-image: url("/images/banner.jpg");
+    height: 60vh;
+    background-image: url("/images/banner-samur.jpeg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position-y: 80%;
     position: relative;
 }
 @media(max-width: 500px){

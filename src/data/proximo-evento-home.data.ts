@@ -1,6 +1,6 @@
 import { CardProximoEventoInterface } from "@/interface/card-proximo-evento.interface";
 
-export const DataCarrousel: CardProximoEventoInterface [] = [
+export const ProximoEventoHome: CardProximoEventoInterface [] = [
     {
         id: 1,
         img: "/images/eduarda-ferreira.png",
@@ -43,6 +43,22 @@ export const DataCarrousel: CardProximoEventoInterface [] = [
     },
     {
         id: 5,
+        img: "/images/eduarda-ferreira.png",
+        nome: "Eduarda Ferreira",
+        medico: "Dr Davi Salomão",
+        data: new Date(2024,11,17),
+        hora: "15:30"
+    },
+    {
+        id: 6,
+        img: "/images/eduarda-ferreira.png",
+        nome: "Eduarda Ferreira",
+        medico: "Dr Davi Salomão",
+        data: new Date(2024,11,17),
+        hora: "15:30"
+    },
+    {
+        id: 7,
         img: "/images/eduarda-ferreira.png",
         nome: "Eduarda Ferreira",
         medico: "Dr Davi Salomão",

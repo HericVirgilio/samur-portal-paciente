@@ -1,19 +1,24 @@
 section{
     width: 100%;
 }
-
-.list-section {
+.TituloSection{
+    font-size: 28px;
+    margin-top: 3vh;
+    margin-bottom: 1vh;
+    margin-left: 4rem;
+    color: var(--preto);
+}
+.list-section-option {
     padding-top: 1rem;
     display: flex;
     position: relative;
     margin: 0 auto;
     align-items: center;
     width: calc(100vw - 1vw);
-    height: 380px;
-    width: 80vw;
+    height: 230px;
 }
 
-.slider-list {
+.slider-list-option {
     width: 100%;
     height: 100%;
     overflow-x: scroll;
@@ -31,47 +36,39 @@ section{
 .slider-list::-webkit-scrollbar {
     display: none;
 }
-.item-section {
-    width: 220px;
-    height: 320px;
+.item-section-option {
+    width: 260px;
+    height: 150px;
     border-radius: 2rem;
     cursor: pointer;
     filter: brightness(80%);
-}
-.item-section:hover{
-    top: -2px;
-    filter: brightness(100%);
-}
-.Card{
-    background-color: var(--verde-claro);
+    background-color: #079e8f;
     display: grid;
-    padding: 15px;
-    border-radius: 4px;
-    min-width: 400px;
-    border-radius: 2rem;
-    cursor: pointer;
-    filter: brightness(80%);
-    margin: 10px;
+    padding: 30px;
+    color: #F1F1F1;
 }
-.Card:hover{
+.item-section-option:hover{
     top: -2px;
     filter: brightness(100%);
-}
-.CapsulaFotoComNome{
-    display: flex;
-    gap: 5%;
-    align-items: center;
-}
-.Foto{
-    border-radius: 50%;
 }
 .arrow {
     color: white;
     opacity: 50%;
     cursor: pointer;
-    position: absolute;
 }
 
 .arrow:hover {
     opacity: 100%;
+}
+
+
+.item-section:hover {
+    scale: 1.08;
+    transition: ease-in-out;
+    transition-duration: 50ms;
+}
+@media (max-width: 600px){
+    .arrow{
+        display: none;
+    }
 }

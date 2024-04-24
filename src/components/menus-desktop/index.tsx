@@ -1,6 +1,7 @@
 import "./style.css"
 import { menuHamburguerData } from "@/data/menu-hamburguer.data"
 import { useRouter } from "next/navigation"
+import Image from "next/image";
 export default function MenuDesktop() {
 
     const router = useRouter();
@@ -19,6 +20,9 @@ export default function MenuDesktop() {
                             )
                         )}
                     </ul>
+                </div>
+                <div className="ImageMascote">
+                    <Image src={"/images/mascote.png"} alt="mascote" width={70} height={70}/>
                 </div>
             </div>
         </div>
