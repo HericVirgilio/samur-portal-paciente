@@ -2,6 +2,7 @@ import "./style.css"
 import { ProximoEventoHome } from "@/data/proximo-evento-home.data"
 import '@fontsource/poppins';
 import Image from "next/image"
+import '@fontsource/ibm-plex-sans';
 
 export default function ProximoEvento(props: { id: string }) {
 
@@ -22,7 +23,7 @@ export default function ProximoEvento(props: { id: string }) {
     }
     return (
         <section>
-            <h3 className="TituloSection">Seus Agendamentos</h3>
+            <h3 className="TituloSection" style={{ fontFamily: 'IBM Plex Sans', fontSize: "50px"}}>Seus Agendamentos</h3>
             <div className="list-section">
                 <Image src={'/icons/arrow-left.svg'} alt="Voltar" onClick={slideLeft} width={40} height={40} className='arrow' />
                 <div id={props.id} className="slider-list">
