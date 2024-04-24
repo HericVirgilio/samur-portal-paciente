@@ -30,6 +30,8 @@
 .agrupamentoInput{
     display: grid;
     grid-template-columns: 45% 55%;
+    justify-content: center;
+    align-items: center;
 }
 .InputDados{
     height: 40px;
@@ -52,4 +54,24 @@
 .mensagemErroCpf{
     color: red;
     margin-left: 10px;
+}
+.FormSelect{
+    width: 80vw;
+}
+.InputGenero{
+    margin: 4px;
+    width: 35vw;
+}
+@media(min-width: 1024px){
+    .FormSelect{
+        width: 28vw;
+    }
+    .InputGenero{
+        width: 15vw;
+    }
+    .agrupamentoInput{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }

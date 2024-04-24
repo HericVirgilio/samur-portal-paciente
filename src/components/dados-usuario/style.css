@@ -25,3 +25,8 @@
     font-weight: 700;
     cursor: pointer;
 }
+@media(min-width: 1024px){
+    .TituloMinhaConta{
+        margin: 1rem;
+    }
+}

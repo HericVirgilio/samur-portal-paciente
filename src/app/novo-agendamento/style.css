@@ -1,3 +1,4 @@
+
 .tituloPaginaNovoAgendamento{
     text-align: center;
     font-size: 18px;
@@ -12,4 +13,9 @@
 }
 .tituloAtalhos{
     text-align: center;
+}
+@media(min-width: 1024px){
+    .BoxSelecaoPacienete{
+        width: 40vw;
+    }
 }

@@ -80,7 +80,7 @@ export default function Cadastro() {
 
     useEffect(() => {
         if (controle === 0) {
-            window.location.href = "/login";
+            window.location.href = "/";
         }
     }, [controle]);
 
@@ -109,7 +109,7 @@ export default function Cadastro() {
                 <p>{controle}/3</p>
             </div>
             {visibilidadeCadastro.int === controle &&
-                <span style={{ display: visibilidadeCadastro.visib }} >
+                <span  style={{ display: visibilidadeCadastro.visib }} >
                     <CadastroFormulario sendDataToParent={FormularioCadastro} />
                 </span>
             }

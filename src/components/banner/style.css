@@ -1,0 +1,25 @@
+
+.ContainerBanner{
+    display: flex;
+    width: 99vw;
+    border-radius: 20%;
+    padding: 1%;
+}
+#PrimeiraImg{
+    border-radius: 20px 0 0 20px ;
+}
+#UltimaImg{
+    border-radius: 0px 20px 20px 0px;
+}
+.CardsBanner{
+    filter: brightness(65%);
+}
+.CardsBanner:hover{
+    filter: brightness(100%);
+    transition: ease-in-out;
+}
+@media(max-width: 500px){
+    .ContainerBanner{
+        display: none;
+    }
+}

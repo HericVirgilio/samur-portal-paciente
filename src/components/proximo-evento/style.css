@@ -1,33 +1,121 @@
-.BoxProximoEvento{
-    width: 90vw;
-    margin: auto;  
-    margin-bottom: 20px; 
+section {
+    width: 100%;
 }
-.BoxtituloProximoEvento{
-    background-color: var(--verde-escuro);
-    color: var(--branco);
-    height: 30px;
-    justify-content: center;
-    align-items: center;
+
+.TituloSection {
+    font-size: 28px;
+    margin-top: 3vh;
+    margin-bottom: 1vh;
+    margin-left: 4rem;
+    color: var(--preto);
+}
+
+.list-section {
+    padding-top: 1rem;
     display: flex;
-    border-radius: 5px 5px 0px 0px;
-    font-size: 16px;
-    font-weight: 700;
-}
-.tituloEvento{
-    font-size: 14px;
-    font-weight: 700;
-    text-align: center;
-}
-.BoxProximoEventoDetalhes{
-    background-color: var(--verde-claro);
-    padding: 10px;
-    border-radius: 0 0 5px 5px;
-}
-.BoxDataHora{
-    display: grid;
-    grid-template-columns: 10% 1fr;
-    margin: 5px 0;
-    justify-content: left;
+    position: relative;
+    margin: 0 auto;
     align-items: center;
+    width: calc(100vw - 1vw);
+    height: 230px;
+}
+
+.slider-list {
+    width: 100%;
+    height: 100%;
+    overflow-x: scroll;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.slider-list::-webkit-scrollbar {
+    display: none;
+}
+
+.item-section {
+    width: 300px;
+    height: 200px;
+    border-radius: 1rem;
+    cursor: pointer;
+    filter: brightness(80%);
+    background-color: #DAE4D4;
+    display: grid;
+    padding: 30px;
+}
+
+.item-component-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.ImageUser {
+    border-radius: 50%;
+}
+
+.item-component-description {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: left;
+    gap: 10px;
+    color: #fffafa ;
+    font-size: 17px;
+}
+
+.item-component-section span {
+    margin-left: 20px;
+    font-size: 18px;
+}
+
+.item-section:hover {
+    top: -2px;
+    
+}
+
+.name-section {
+    max-width: 100%;
+    color: #fffafa ;
+    position: relative;
+    margin-top: 4rem;
+    padding-left: 3vw;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.arrow {
+    color: white;
+    opacity: 50%;
+    cursor: pointer;
+}
+
+.arrow:hover {
+    opacity: 100%;
+}
+
+
+.item-section:hover {
+    filter: brightness(100%);
+    scale: 1.08;
+    transition: ease-in-out;
+    transition-duration: 50ms;
+}
+
+
+@media (max-width: 500px) {
+    .arrow {
+        display: none;
+    }
+
+    .TituloSection {
+        font-size: 24px;
+        margin-left: 1rem;
+    }
 }

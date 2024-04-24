@@ -15,3 +15,10 @@
     border: 1px solid #676767;
     border-bottom: 0;
 }
+
+@media(min-width: 1024px){
+    .BackGroundTabela{
+        width: 40vw;
+        margin-top: 3%;
+    }
+}

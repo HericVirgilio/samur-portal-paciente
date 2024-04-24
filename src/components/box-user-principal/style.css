@@ -1,6 +1,8 @@
-.boxUserPrincipal{
+.ContainerBoxUser{
     max-width: 90vw;
     margin: 20px auto 0 auto;
+}
+.boxUserPrincipal{
     display: flex;
     align-items: center;
     padding: 10px;
@@ -13,3 +15,9 @@
     font-size: 17px;
     font-weight: 500;
 }
+@media(min-width: 500px ){
+    .ContainerBoxUser{
+        display: none;
+    }
+}
+

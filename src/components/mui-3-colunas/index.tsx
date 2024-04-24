@@ -45,7 +45,7 @@ function Row(props: { row: ReturnType<typeof createData> }) {
         <TableCell component="th" scope="row">
           {row.name}
         </TableCell>
-        <TableCell align="right">{row.data}</TableCell>
+        <TableCell align="left">{row.data}</TableCell>
         <TableCell>
           <IconButton
             aria-label="expand row"
@@ -104,7 +104,7 @@ export default function Mui3Colunas() {
         <TableHead>
           <TableRow>
             <TableCell>Paciente</TableCell>
-            <TableCell align="center">Data</TableCell>
+            <TableCell align="left">Data</TableCell>
             <TableCell />
           </TableRow>
         </TableHead>

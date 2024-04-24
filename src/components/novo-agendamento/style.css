@@ -18,3 +18,8 @@
 .imagemNovoAgendamento{
     margin-right: 5%;
 }
+@media(min-width: 500px){
+    .BoxNovoAgendamento{
+        display: none;
+    }
+}

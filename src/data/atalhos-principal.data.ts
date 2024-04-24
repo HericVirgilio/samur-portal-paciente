@@ -9,7 +9,7 @@ export const AtalhosPrincipal: AtalhoInterface [] = [
     },
     {
         key: 2,
-        nome: "TeleConsulta",
+        nome: "Teleconsulta",
         nomeUrl: "/prontuario/teleconsulta",
         url: "/icons/computer.svg"
     },

@@ -1,0 +1,13 @@
+.Container{
+    margin: 25px 15px;
+}
+.Titulo{
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--verde-escuro);
+}
+@media(min-width: 1024px){
+    .Container{
+        margin: 25px 40px;
+    }
+}

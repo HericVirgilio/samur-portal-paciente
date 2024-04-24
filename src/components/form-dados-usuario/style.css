@@ -27,3 +27,21 @@
 .lapisDivButton{
     margin-left: 10px;
 }
+@media(min-width: 1024px){
+    .ContanerDadosUser{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr ;
+        gap: 20px;
+    }
+    .EnderecoUser{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 20px;
+    }
+    h2{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 18px;
+        border-bottom: 1px solid black;
+    }
+}

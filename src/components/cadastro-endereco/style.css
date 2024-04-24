@@ -6,3 +6,30 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
+.InputLogradouro{
+    width: 40vw;
+    margin: 4px;
+}
+.InputNumero{
+    margin: 4px;
+}
+@media (min-width: 1024px) {
+    .InputLogradouro{
+        width: 17.5vw;
+    }
+    .agrupamentoInputEndereco{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .InputNumero{
+        width: 10vw;
+    }
+    .AgrupamentoSelect{
+        width: 100vw;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+    }
+}

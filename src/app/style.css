@@ -1,41 +1,53 @@
-.ContainerLogin{
+.ContainerLogin {
     height: 100vh;
 }
-.BoxHeaderLogin{
+
+.BoxHeaderLogin {
     display: grid;
     justify-content: center;
     align-items: center;
     margin-bottom: 30px;
     width: 100vw;
 }
-.BoxHeaderLogin > div{
+
+.BoxHeaderLogin>div {
     margin-top: 20px;
 }
-.TituloHeader{
+
+.FormControl {
+    margin: 4px;
+    width: 300px;
+}
+
+.TituloHeader {
     color: var(--verde-escuro);
     font-size: 21px;
     font-weight: 600;
     text-align: center;
 }
-.TextLogin{
+
+.TextLogin {
     color: var(--verde-escuro);
     font-weight: 600;
     margin-left: 8px;
     font-size: 20px;
 }
-.textEsqueciSenha{
+
+.textEsqueciSenha {
     font-size: 14px;
     font-weight: 500;
     color: var(--cinza-input);
     margin-left: 8px;
     cursor: pointer;
 }
-.InputDados{
+
+.InputDados {
     height: 40px;
     border: 1px solid rgba(0, 0, 0, 0.63);
     border-radius: 10px;
 }
-#InputDados{
+
+#InputDados {
     width: 170px;
     margin: auto;
     margin-top: 10px;
@@ -48,16 +60,110 @@
     font-size: 18px;
     font-weight: bold;
 }
-.LinhaDivisoria{
+
+.LinhaDivisoria {
     width: 90vw;
     margin: auto;
     background-color: var(--verde-escuro);
     height: 1px;
 }
-.TextCadastrar-se{
+
+.TextCadastrar-se {
     color: var(--verde-escuro);
     text-align: center;
     font-size: 16px;
     font-weight: 500;
     margin-top: 30px;
+}
+.ContainerSlider{
+    display: none;
+}
+@media (min-width: 769px) {
+    .InputsAndLogo {
+        width: 40vw;
+        height: 100vh;
+        display: grid;
+    }
+
+    .ContainerLogin {
+        display: flex;
+    }
+
+    .BoxHeaderLogin {
+        width: 40vw;
+    }
+
+    .FormControl {
+        width: 30vw;
+    }
+
+    .LinhaDivisoria {
+        width: 30vw;
+    }
+
+    .ContainerSlider {
+        background: linear-gradient(90deg, #B1D7C6, #F9FAFB);
+        width: 60vw;
+        height: 100%;
+        position: relative;
+        display: block;
+    }
+
+    .Caixa {
+        overflow: hidden;
+        position: absolute;
+        display: grid;
+        width: 100%;
+        height: 100%;
+        width: 60vw;
+    }
+
+    .slides {
+        display: flex;
+        align-items: center;
+        width: 500%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .slide {
+        width: 20%;
+        display: flex;
+        justify-content: center;
+        transition: 0.6s;
+    }
+
+   
+    .slide Img {
+        object-fit: cover;
+    }
+    .inputImg{
+        position: absolute;
+        z-index: 1000;
+        top: 20px;
+        left: 20px;
+    }
+    .navigation{
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translate(-50%);
+        display: flex;
+        z-index: 10;
+    }
+    .bar{
+        width: 20px;
+        height: 20px;
+        border: 3px solid white;
+        margin: 6px;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: 0.5s;
+    }
+    .bar:hover{
+        background-color: white;
+    }
+    #test{
+        margin-left: -80%;
+    }
 }
