@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export default function BoxUserPrincipal(props: { objeto: UsuarioInterface }) {
     return (
-        <div className='Container'>
+        <div className='ContainerBoxUser'>
             <Link href={"/minha-conta/usuario"} className='boxUserPrincipal'>
                 <div >
                     <Image src={props.objeto.urlImg} alt='' height={60} width={60} className='ImagemPerfil' />

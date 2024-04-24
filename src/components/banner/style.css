@@ -20,7 +20,7 @@
     transition: ease-in-out;
 }
 @media(max-width: 500px){
-    .BoxBanner{
+    .ContainerBanner{
         display: none;
     }
 }

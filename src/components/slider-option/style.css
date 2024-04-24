@@ -67,8 +67,15 @@ section{
     transition: ease-in-out;
     transition-duration: 50ms;
 }
-@media (max-width: 600px){
-    .arrow{
+
+
+@media (max-width: 500px) {
+    .arrow {
         display: none;
+    }
+
+    .TituloSection {
+        font-size: 24px;
+        margin-left: 1rem;
     }
 }

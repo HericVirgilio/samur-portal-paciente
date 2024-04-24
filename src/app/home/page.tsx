@@ -27,6 +27,9 @@ export default function Home() {
       <HeaderPrincipal />
       <MenuDesktop />
       <Banner/>
+      <BoxUserPrincipal objeto={UsuarioData[0]}/>
+      <NovoAgendamentoPrincipal/>
+      <Atalhos atalhos={AtalhosPrincipal}/>
       <ProximoEvento id="1"/>
       <SliderOption id="2" ObjectData={SliderOptionData} titulo="Prontuário"/>
       <SliderOption id="3" ObjectData={SliderEspecialidadesData} titulo="Nossas Especialidades"/>

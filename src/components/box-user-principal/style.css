@@ -1,4 +1,4 @@
-.Container{
+.ContainerBoxUser{
     max-width: 90vw;
     margin: 20px auto 0 auto;
 }
@@ -15,9 +15,9 @@
     font-size: 17px;
     font-weight: 500;
 }
-
-@media(min-width: 1024px){
-    .Container{
-        
+@media(min-width: 500px ){
+    .ContainerBoxUser{
+        display: none;
     }
 }
+
