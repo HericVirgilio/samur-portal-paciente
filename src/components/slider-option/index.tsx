@@ -2,6 +2,7 @@ import "./style.css"
 import { SliderOptionData } from "@/data/slider-option.data"
 import { SliderOPtion } from "@/interface/slider-option.interface"
 import Image from "next/image"
+import '@fontsource/ibm-plex-sans';
 export default function ProximoEvento(props: { id: string, ObjectData:SliderOPtion[], titulo: string}) {
 
     const id = props.id
@@ -21,14 +22,14 @@ export default function ProximoEvento(props: { id: string, ObjectData:SliderOPti
     }
     return (
         <section>
-            <h3 className="TituloSection">{props.titulo}</h3>
+            <h3 className="TituloSection" style={{ fontFamily: 'IBM Plex Sans', fontSize: "50px"}}>{props.titulo}</h3>
             <div className="list-section-option">
                 <Image src={'/icons/arrow-left.svg'} alt="Voltar" onClick={slideLeft} width={40} height={40} className='arrow' />
                 <div id={props.id} className="slider-list-option">
                     {props.ObjectData.map((objeto) => 
                         <div key={objeto.name}>
                             <div key={objeto.name} className="item-section-option">
-                                <Image src={objeto.img} alt={objeto.name} width={60} height={60}/>
+                                <Image src={objeto.img} alt={objeto.name} width={70} height={70}/>
                                 <h5>{objeto.name}</h5>
                             </div>
                         </div>

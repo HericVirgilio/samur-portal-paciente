@@ -1,15 +1,18 @@
 .ContainerMenuDesktop {
-    width: 100vw;
+    width: 60vw;
     min-height: 5vw;
-    background: linear-gradient(to right, var(--verde-escuro) 0%, #ffff 500%);
+    background: transparent;
     display: flex;
+    position: absolute;
+    left: 22%;
+    z-index: 3;
+    top: 0%;
 }
 
 .ContainerIcones {
     display: grid;
-    grid-template-columns: 85% 15%;
+    grid-template-columns: 1fr;
     align-items: center;
-    width: 90vw;
     margin: auto;
 }
 .ImageMascote{
@@ -25,6 +28,8 @@
 }
 .AtalhosMenuHamburguer li{
     cursor: pointer;
+    font-size: 20px;
+    font-weight: 700;
 }
 
 .AtalhosMenuHamburguer li:hover{

@@ -45,7 +45,7 @@ section {
     border-radius: 1rem;
     cursor: pointer;
     filter: brightness(80%);
-    background-color: #038C7F;
+    background-color: #DAE4D4;
     display: grid;
     padding: 30px;
 }
@@ -66,7 +66,7 @@ section {
     grid-template-columns: 1fr 1fr;
     justify-content: left;
     gap: 10px;
-    color: #F1F1F1;
+    color: #fffafa ;
     font-size: 17px;
 }
 
@@ -77,12 +77,12 @@ section {
 
 .item-section:hover {
     top: -2px;
-    filter: brightness(100%);
+    
 }
 
 .name-section {
     max-width: 100%;
-    color: white;
+    color: #fffafa ;
     position: relative;
     margin-top: 4rem;
     padding-left: 3vw;
@@ -102,6 +102,7 @@ section {
 
 
 .item-section:hover {
+    filter: brightness(100%);
     scale: 1.08;
     transition: ease-in-out;
     transition-duration: 50ms;

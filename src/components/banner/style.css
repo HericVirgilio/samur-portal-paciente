@@ -1,16 +1,15 @@
-.BoxBanner{
-    width: 100vw;
-    height: 60vh;
-    background-image: url("/images/banner-samur.jpeg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position-y: 80%;
-    position: relative;
-}
+
 .ContainerBanner{
     display: flex;
-    width: 100vw;
+    width: 99vw;
+    border-radius: 20%;
+    padding: 1%;
+}
+#PrimeiraImg{
+    border-radius: 20px 0 0 20px ;
+}
+#UltimaImg{
+    border-radius: 0px 20px 20px 0px;
 }
 .CardsBanner{
     filter: brightness(65%);
