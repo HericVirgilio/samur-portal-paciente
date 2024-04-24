@@ -1,6 +1,8 @@
 import "./style.css"
 import { ProximoEventoHome } from "@/data/proximo-evento-home.data"
+import '@fontsource/poppins';
 import Image from "next/image"
+
 export default function ProximoEvento(props: { id: string }) {
 
     const id = props.id
@@ -29,9 +31,9 @@ export default function ProximoEvento(props: { id: string }) {
                             <div key={objeto.id} className="item-section">
                                 <div className="item-component-section">
                                     <Image src={objeto.img} alt={objeto.nome} width={60} height={60} className="ImageUser"/>
-                                    <span>{objeto.nome}</span>
+                                    <span style={{ fontFamily: 'Poppins, sans-serif'}}>{objeto.nome}</span>
                                 </div>
-                                <div className="item-component-description">
+                                <div className="item-component-description" style={{ fontFamily: 'Poppins, sans-serif'}}>
                                     <Image src={"/icons/medico.png"} alt="medico" width={24} height={24}/>
                                     <span>Médico: {objeto.medico}</span>
                                     <Image src={"/icons/calendario.png"} alt="medico" width={24} height={24}/>

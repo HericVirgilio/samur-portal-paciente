@@ -42,7 +42,6 @@ section{
     height: 150px;
     border-radius: 1rem;
     cursor: pointer;
-    filter: brightness(80%);
     background-color: var(--verde-escuro);
     display: grid;
     padding: 30px;
@@ -55,7 +54,6 @@ section{
 }
 .item-section-option:hover{
     margin-top: -5px;
-    filter: brightness(100%);
 }
 .arrow {
     color: white;
