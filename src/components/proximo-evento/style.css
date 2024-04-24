@@ -101,7 +101,6 @@ section {
 
 
 .item-section:hover {
-    filter: brightness(100%);
     scale: 1.08;
     transition: ease-in-out;
     transition-duration: 50ms;
