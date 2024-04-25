@@ -19,24 +19,28 @@ import { SliderOptionData } from "@/data/slider-option.data";
 import { SliderEspecialidadesData } from "@/data/slider-especialidades.data";
 import Whatsapp from "@/components/whatsapp";
 import Cards from "@/components/cards";
+import { PrincipaisServicos } from "@/data/principais-servicos.data";
+import MenuAnimation from "@/components/menu-animation";
+
 export default function Home() {
   const [date, setDate] = useState<Date>(new Date())
 
   return (
-    <main className="BoxPaginaPrincipal" style={{overflowX: "hidden"}}>
+    <main className="BoxPaginaPrincipal" style={{ overflowX: "hidden" }}>
       <div className="ConteudoBanner">
-      <HeaderPrincipal />
-      <Banner/>
+        <MenuAnimation />
+        <Banner />
       </div>
       <div className="ConteudoPrincipal">
-        <BoxUserPrincipal objeto={UsuarioData[0]}/>
-        <NovoAgendamentoPrincipal/>
-        <Atalhos atalhos={AtalhosPrincipal}/>
-        <SliderOption id="2" ObjectData={SliderOptionData} titulo="Prontuário"/>
-        <ProximoEvento id="1"/>
+        <BoxUserPrincipal objeto={UsuarioData[0]} />
+        <NovoAgendamentoPrincipal />
+        <Atalhos atalhos={AtalhosPrincipal} />
+        <SliderOption id="2" ObjectData={SliderOptionData} titulo="Prontuário" background="var(--cor-logo-samur)" />
+        <SliderOption id="3" ObjectData={PrincipaisServicos} titulo="Principais Serviços" background="#6B8D8C" />
+        <ProximoEvento id="1" />
       </div>
-      <Whatsapp/>
-      <Footer/>
+      <Whatsapp />
+      <Footer />
     </main>
   );
 }

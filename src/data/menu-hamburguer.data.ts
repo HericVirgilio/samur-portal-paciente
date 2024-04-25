@@ -2,7 +2,7 @@ import { MenuHamburguerInterface } from "@/interface/menuHamburguer.interface";
 
 export const menuHamburguerData:MenuHamburguerInterface [] = [
     {
-        key: 1,
+        key: 157,
         nome: "Inicio",
         nomeUrl: "/home",
         url: "/icons/home.svg",
@@ -10,7 +10,7 @@ export const menuHamburguerData:MenuHamburguerInterface [] = [
         height: 18
     },
     {
-        key: 2,
+        key: 27575,
         nome: "Agendamento",
         nomeUrl: "/agendamento",
         url: "/icons/calendarioMenu.svg",
@@ -18,7 +18,7 @@ export const menuHamburguerData:MenuHamburguerInterface [] = [
         height: 24
     },
     {
-        key: 3,
+        key: 3575,
         nome: "Documentos",
         nomeUrl: "/documentos",
         url: "/icons/documentosHamburguer.svg",
@@ -26,7 +26,7 @@ export const menuHamburguerData:MenuHamburguerInterface [] = [
         height: 19
     },
     {
-        key: 4,
+        key: 4575,
         nome: "Financeiro",
         nomeUrl: "/financeiro",
         url:"/icons/financeiroMenu.svg",
@@ -34,7 +34,7 @@ export const menuHamburguerData:MenuHamburguerInterface [] = [
         height: 24
     },
     {
-        key: 5,
+        key: 55757,
         nome: "Orçamento",
         nomeUrl: "/orçamento",
         url: "/icons/orcamento.svg",
@@ -42,15 +42,7 @@ export const menuHamburguerData:MenuHamburguerInterface [] = [
         height: 24
     },
     {
-        key: 6,
-        nome: "Prontuário",
-        nomeUrl: "/prontuario",
-        url: "/icons/protuario.svg",
-        width: 24,
-        height: 24
-    },
-    {
-        key: 7,
+        key: 6575,
         nome: "Resultados",
         nomeUrl: "/resultados",
         url: "/icons/resultados.svg",
@@ -58,7 +50,7 @@ export const menuHamburguerData:MenuHamburguerInterface [] = [
         height: 24
     },
     {
-        key: 8,
+        key: 774575,
         nome: "Sair",
         nomeUrl: "/Sair",
         url: "/icons/sair.svg",
