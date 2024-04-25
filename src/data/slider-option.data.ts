@@ -15,7 +15,7 @@ export const SliderOptionData: SliderOPtion [] =[
     },
     {
         name: "Procedimentos Externos",
-        img: "/images/atestado-white.svg"
+        img: "/icons/externo.png"
     },
     {
         name: "Vacinas",

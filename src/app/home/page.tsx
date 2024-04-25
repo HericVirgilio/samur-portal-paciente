@@ -23,7 +23,7 @@ export default function Home() {
   const [date, setDate] = useState<Date>(new Date())
 
   return (
-    <main className="BoxPaginaPrincipal" style={{overflowX: "hidden"}}>
+    <main className="BoxPaginaPrincipal" style={{overflowX: "hidden" }}>
       <div className="ConteudoBanner">
       <HeaderPrincipal />
       <Banner/>

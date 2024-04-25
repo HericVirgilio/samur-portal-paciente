@@ -29,7 +29,9 @@ export default function ProximoEvento(props: { id: string, ObjectData:SliderOPti
                     {props.ObjectData.map((objeto) => 
                         <div key={objeto.name}>
                             <div key={objeto.name} className="item-section-option">
-                                <Image src={objeto.img} alt={objeto.name} width={70} height={70}/>
+                                <div className="item-section-option-DivImg">
+                                    <Image src={objeto.img} alt={objeto.name} width={70} height={70}/>
+                                </div>
                                 <h5>{objeto.name}</h5>
                             </div>
                         </div>
