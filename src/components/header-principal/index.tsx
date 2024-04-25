@@ -4,6 +4,8 @@ import { useState } from 'react'
 import Link from 'next/link';
 import { menuHamburguerData } from '@/data/menu-hamburguer.data';
 import MenuDesktop from '../menus-desktop';
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+
 export default function HeaderPrincipal() {
     const [menu, setMenu] = useState({});
     const menuHamburguer = () => {
@@ -25,14 +27,14 @@ export default function HeaderPrincipal() {
     return (
         <div className='boxHeaderPrincipal'>
 
-            <Image src="/icons/menu.svg" alt='' height={30} width={30} onClick={menuHamburguer} className='Hamburguer'/>
+            <Image src="/icons/menu.svg" alt='' height={30} width={30} onClick={menuHamburguer} className='Hamburguer' />
             <div className='menuHamburguer' style={menu}>
                 <div className='BoxClose'>
                     <Image src="/icons/close.svg" alt='close' height={26} width={26} onClick={fecharMenu} />
                 </div>
                 <div className='ImagensCloseLogoSamurEncapsulamento'>
                     <div className='ImagensCloseLogoSamur'>
-                        <Image src="/images/eduarda-ferreira.png" alt='' height={60} width={60} className='ImagemPerfilMenu'/>
+                        <Image src="/images/eduarda-ferreira.png" alt='' height={60} width={60} className='ImagemPerfilMenu' />
                         <h2>Eduarda Ferreira</h2>
                     </div>
                 </div>
@@ -54,7 +56,10 @@ export default function HeaderPrincipal() {
             </Link>
 
             <Link href={"/minha-conta"}>
-                <Image src="/icons/user.svg" alt='usuario' height={30} width={30} className='divIconUser' />
+                <Avatar className='divIconUser'>
+                    <AvatarImage src="https://github.com/shadcn.png" />
+                    <AvatarFallback>CN</AvatarFallback>
+                </Avatar>
             </Link>
 
         </div>

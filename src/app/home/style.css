@@ -1,4 +1,13 @@
 .Container{
     width: 80vw;
-    margin: auto;
+    
+}
+.ConteudoBanner{
+    margin: 0;
+}
+.ConteudoPrincipal{
+    background-color: var(--cinza-cor-de-fundo);
+    border-radius: 20px;
+    width: 98%;
+    margin: 10px auto;
 }

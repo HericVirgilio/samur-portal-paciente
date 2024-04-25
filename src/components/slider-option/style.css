@@ -1,9 +1,10 @@
 section{
-    width: 100%;
+    width: 90%;
+    height: 100%;
+    margin-top: 0;
 }
 .TituloSection{
     font-size: 28px;
-    margin-top: 3vh;
     margin-bottom: 1vh;
     margin-left: 4rem;
     color: var(--preto);
@@ -20,7 +21,7 @@ section{
 }
 
 .slider-list-option {
-    width: 100%;
+    width: 92%;
     height: 100%;
     overflow-x: scroll;
     display: flex;

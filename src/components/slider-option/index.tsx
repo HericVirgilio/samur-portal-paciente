@@ -22,7 +22,7 @@ export default function ProximoEvento(props: { id: string, ObjectData:SliderOPti
     }
     return (
         <section>
-            <h3 className="TituloSection" style={{ fontFamily: 'IBM Plex Sans', fontSize: "50px"}}>{props.titulo}</h3>
+            <span className="TituloSection" style={{ fontFamily: 'IBM Plex Sans', fontSize: "50px"}}>{props.titulo}</span>
             <div className="list-section-option">
                 <Image src={'/icons/arrow-left.svg'} alt="Voltar" onClick={slideLeft} width={40} height={40} className='arrow' />
                 <div id={props.id} className="slider-list-option">

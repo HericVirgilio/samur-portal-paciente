@@ -44,7 +44,7 @@
 
 .ImagensCloseLogoSamurEncapsulamento{
     width: 80vw;
-    margin: auto;
+    margin: 0 auto;
 }
 .ImagensCloseLogoSamur{
     display: grid;
@@ -58,7 +58,7 @@
 .DivisoriaMenuBox{
     height: 1px;
     width: 90vw;
-    margin: 20px auto;
+    margin: 20px auto 0 auto;
     background-color: var(--preto);
 }
 .ImagemPerfilMenu{

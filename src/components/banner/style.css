@@ -4,6 +4,7 @@
     width: 99vw;
     border-radius: 20%;
     padding: 1%;
+    padding-bottom: 0;
 }
 #PrimeiraImg{
     border-radius: 20px 0 0 20px ;
