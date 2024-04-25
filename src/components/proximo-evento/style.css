@@ -1,5 +1,5 @@
 section {
-    width: 100%;
+    width: 90%;
 }
 
 .TituloSection {
@@ -21,7 +21,7 @@ section {
 }
 
 .slider-list {
-    width: 100%;
+    width: 92%;
     height: 100%;
     overflow-x: scroll;
     display: flex;
@@ -43,51 +43,29 @@ section {
     width: 300px;
     height: 200px;
     border-radius: 1rem;
+    /*background-color: #DAE4D4;*/
+    background-color: #DBE5D5;
+    padding: 0 30px;
+    padding-top: 20px;
     cursor: pointer;
-    filter: brightness(80%);
-    background-color: #DAE4D4;
-    display: grid;
-    padding: 30px;
 }
 
 .item-component-section {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 80%;
     align-items: center;
-    margin-bottom: 10px;
-    color: white;
+    margin-bottom: 20px;
 }
-
-.ImageUser {
-    border-radius: 50%;
-}
-
 .item-component-description {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-content: left;
+    grid-template-columns: 1fr 80%;
+    align-items: center;
     gap: 10px;
-    color: #fffafa ;
-    font-size: 17px;
-}
-
-.item-component-section span {
-    margin-left: 20px;
-    font-size: 18px;
 }
 
 .item-section:hover {
     top: -2px;
     
-}
-
-.name-section {
-    max-width: 100%;
-    color: #fffafa ;
-    position: relative;
-    margin-top: 4rem;
-    padding-left: 3vw;
-    font-size: 24px;
-    font-weight: 600;
 }
 
 .arrow {
@@ -102,7 +80,6 @@ section {
 
 
 .item-section:hover {
-    filter: brightness(100%);
     scale: 1.08;
     transition: ease-in-out;
     transition-duration: 50ms;

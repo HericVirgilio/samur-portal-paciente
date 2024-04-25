@@ -24,18 +24,17 @@ export default function Home() {
 
   return (
     <main className="BoxPaginaPrincipal" style={{overflowX: "hidden"}}>
-      
-      <div>
+      <div className="ConteudoBanner">
       <HeaderPrincipal />
-      
       <Banner/>
       </div>
-      
-      <BoxUserPrincipal objeto={UsuarioData[0]}/>
-      <NovoAgendamentoPrincipal/>
-      <Atalhos atalhos={AtalhosPrincipal}/>
-      <SliderOption id="2" ObjectData={SliderOptionData} titulo="Prontuário"/>
-      <ProximoEvento id="1"/>
+      <div className="ConteudoPrincipal">
+        <BoxUserPrincipal objeto={UsuarioData[0]}/>
+        <NovoAgendamentoPrincipal/>
+        <Atalhos atalhos={AtalhosPrincipal}/>
+        <SliderOption id="2" ObjectData={SliderOptionData} titulo="Prontuário"/>
+        <ProximoEvento id="1"/>
+      </div>
       <Whatsapp/>
       <Footer/>
     </main>

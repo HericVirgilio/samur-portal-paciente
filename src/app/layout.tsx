@@ -13,7 +13,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body style={{ fontFamily: 'urbanist', backgroundColor:" var(--cinza-cor-de-fundo)" }}>{children}</body>
+      <body style={{ fontFamily: 'urbanist', backgroundColor:"var(--branco)" }}>{children}</body>
     </html>
   );
 }
