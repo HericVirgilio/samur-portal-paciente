@@ -3,7 +3,7 @@ import { SliderOptionData } from "@/data/slider-option.data"
 import { SliderOPtion } from "@/interface/slider-option.interface"
 import Image from "next/image"
 import '@fontsource/ibm-plex-sans';
-export default function ProximoEvento(props: { id: string, ObjectData:SliderOPtion[], titulo: string}) {
+export default function ProximoEvento(props: { id: string, ObjectData:SliderOPtion[], titulo: string, background: string}) {
 
     const id = props.id
 
@@ -28,7 +28,8 @@ export default function ProximoEvento(props: { id: string, ObjectData:SliderOPti
                 <div id={props.id} className="slider-list-option">
                     {props.ObjectData.map((objeto) => 
                         <div key={objeto.name}>
-                            <div key={objeto.name} className="item-section-option">
+                            <div key={objeto.name} className="item-section-option" 
+                            style={{ backgroundColor: props.background }}>
                                 <div className="item-section-option-DivImg">
                                     <Image src={objeto.img} alt={objeto.name} width={70} height={70}/>
                                 </div>

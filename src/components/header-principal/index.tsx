@@ -1,3 +1,4 @@
+"use client"
 import './style.css'
 import Image from 'next/image'
 import { useState } from 'react'
@@ -45,17 +46,17 @@ export default function HeaderPrincipal() {
 
                 {menuHamburguerData.map((objeto) =>
                     <Link onClick={fecharMenu} className='BoxMapMenuHamburguer' key={objeto.key} href={`${objeto.nomeUrl}`}>
-                        <Image src={objeto.url} alt={objeto.nomeUrl} height={25} width={25} />
-                        <p className='TextoMapMenuHamburguer'>{objeto.nome}</p>
+                        <Image key={objeto.url} src={objeto.url} alt={objeto.nomeUrl} height={25} width={25} />
+                        <p key={objeto.nome} className='TextoMapMenuHamburguer'>{objeto.nome}</p>
                     </Link>
                 )}
             </div>
-            <Link href={"/home"}>
+            <Link key={"home"} href={"/home"}>
                 <Image src="/images/logo-samur-branco.webp" alt='logo samur' width={200} height={100} />
                 <MenuDesktop />
             </Link>
 
-            <Link href={"/minha-conta"}>
+            <Link key={"minha-conta"} href={"/minha-conta"}>
                 <Avatar className='divIconUser'>
                     <AvatarImage src="https://github.com/shadcn.png" />
                     <AvatarFallback>CN</AvatarFallback>

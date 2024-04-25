@@ -43,7 +43,6 @@ section{
     height: 150px;
     border-radius: 1rem;
     cursor: pointer;
-    background-color: var(--cor-logo-samur);
     display: grid;
     padding: 30px;
     color: #F1F1F1;

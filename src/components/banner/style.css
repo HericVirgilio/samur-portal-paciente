@@ -14,6 +14,7 @@
 }
 .CardsBanner{
     filter: brightness(65%);
+    height: 300px;
 }
 .CardsBanner:hover{
     filter: brightness(100%);
