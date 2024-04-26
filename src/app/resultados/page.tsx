@@ -5,7 +5,6 @@ import Mui3Colunas from "@/components/mui-3-colunas"
 export default function Resultados() {
     return (
         <div>
-            <HeaderPrincipal />
             <TituloFormatado objeto="Resultados"/>
             <Mui3Colunas/>
         </div>

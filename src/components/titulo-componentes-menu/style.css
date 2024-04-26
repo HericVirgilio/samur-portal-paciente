@@ -4,7 +4,7 @@
 .Titulo{
     font-size: 22px;
     font-weight: 700;
-    color: var(--verde-escuro);
+    color: black;
 }
 @media(min-width: 1024px){
     .Container{

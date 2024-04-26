@@ -13,47 +13,27 @@ export default function Footer() {
     }
     return (
         <footer className="ContainerFooter">
-            <div className="CapsulaComponentesCima">
-                <div className="DivImg">
-                    <Image src={"/images/samurFooter.png"} alt="" width={120} height={120} />
-                </div>
-                <div>
-                    <span>Navegação</span>
-                    <ul>
-                        {menuHamburguerData.map((objeto, index) => 
-                         index !== menuHamburguerData.length - 1 &&(
-                            <li key={objeto.key} onClick={(() => IrPara(objeto.nomeUrl))}>{objeto.nome}</li>
-                        ))}
-                    </ul>
-                </div>
-                <div>
-                    <span>Contate-nos</span>
-                    <ul>
-                        {MidiasSocaisData.map((objeto) => (
-                            <a className="ItensLista Contato" key={objeto.key} href={objeto.link} target="_blank" rel="follow">
-                                <Image src={objeto.img} alt={objeto.titulo} width={20} height={20}/>
-                                <li>{objeto.titulo}</li>
-                            </a>
-                        ))}
-                    </ul>
-                </div>
-                <div>
+            <div></div>
+            <div className="ContainerSamur">
                     <span>Hospital Samur</span>
-                    <ul className="ItensLista">
+                    <ul className="ItensLista" style={{marginTop: "8px"}}>
                         <li>Sobre</li>
                         <li>Ajuda/FAQ</li>
                         <li>Termos de Uso</li>
                         <li>Politíca de Privacidade</li>
                         <li>Trabalhe Conosco</li>
                     </ul>
+                    <div style={{marginTop:"3px"}}>
+                    <ul className="MidiasSociais">
+                        {MidiasSocaisData.map((objeto) => (
+                            <div key={objeto.key} className="ImagensMidias">
+                                <Image src={objeto.img} alt={objeto.titulo} width={20} height={20} />    
+                                <span style={{fontSize: "14px", fontWeight: "200"}}>{objeto.titulo}</span>
+                            </div>
+                        ))}
+                    </ul>
                 </div>
-            </div>
-            <div className="LinhaDivisoria"></div>
-            <div className="Desenvolvedores">
-                <Link href={"#"}>
-                    <h5>Desenvolvimento STI |  &copy; SA SAMUR</h5>
-                </Link>
-            </div>
+                </div>
         </footer>
     )
 }
