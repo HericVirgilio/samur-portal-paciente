@@ -2,12 +2,6 @@ import { MidiasSociaisInterface } from "@/interface/midias-sociais.interface"
 
 export const MidiasSocaisData: MidiasSociaisInterface [] = [
     {
-        key: 1,
-        titulo: "Facebook",
-        img: "/midias/facebook.png",
-        link: "https://www.facebook.com/hospitalsamur/?locale=pt_BR"
-    },
-    {
         key: 2,
         titulo: "Instagram",
         img: "/midias/instagram.png",
@@ -18,12 +12,6 @@ export const MidiasSocaisData: MidiasSociaisInterface [] = [
         titulo: "LinkedIn",
         img: "/midias/linkedin.png",
         link: "https://br.linkedin.com/company/hospitalsamur"
-    },
-    {
-        key: 4,
-        titulo: "Twitter",
-        img: "/midias/twitter.png",
-        link: "#"
     },
     {
         key: 5,

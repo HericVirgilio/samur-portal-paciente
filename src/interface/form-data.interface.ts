@@ -4,7 +4,7 @@ export interface FormData {
 }
 export interface FormDataDados {
     nome: string;
-    nacionalidade: string;
+    nacionalidadeId: number;
     cpf: string;
     rg: string;
     genero: string;

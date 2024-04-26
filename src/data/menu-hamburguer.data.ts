@@ -34,14 +34,6 @@ export const menuHamburguerData:MenuHamburguerInterface [] = [
         height: 24
     },
     {
-        key: 55757,
-        nome: "Orçamento",
-        nomeUrl: "/orçamento",
-        url: "/icons/orcamento.svg",
-        width: 24,
-        height: 24
-    },
-    {
         key: 6575,
         nome: "Resultados",
         nomeUrl: "/resultados",

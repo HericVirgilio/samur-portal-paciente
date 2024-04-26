@@ -17,4 +17,8 @@ export const PrincipaisServicos: SliderOPtion [] =[
         name: "Cirurgia",
         img: "/icons/cirurgia.png"
     },
+    {
+        name: "Orçamento",
+        img: "/icons/orcamento.svg"
+    }
 ]

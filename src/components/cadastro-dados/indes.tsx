@@ -5,11 +5,15 @@ import { FormDataDados } from "@/interface/form-data.interface";
 import * as React from 'react';
 import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
+import axios from "axios";
 
 interface Props {
     sendDataToParent: (data: FormDataDados) => void;
 }
-
+interface Nacionalidade {
+    id: Number,
+    nacionalidade: string
+}
 export default function Dados({ sendDataToParent }: Props) {
 
     const [nome, setNome] = useState<string>("")
@@ -19,39 +23,49 @@ export default function Dados({ sendDataToParent }: Props) {
     const [data, setData] = useState<string>("")
     const [escolaridade, setEscolaridade] = useState<string>("")
     const [nacionalidade, setNacionalide] = useState<string>("Brasileiro")
+    const [nacionalidadeId, setNacionalideId] = useState<number>(0)
     const [sequencia, setSequencia] = useState<string>("")
     const [validadeCpf, setValidadeCpf] = useState<boolean | null>(null)
     const [corInputCpf, setCorInputCpf] = useState<string>("")
     const [textCpf, setTextCpf] = useState<string>("CPF")
     const [erroDados, setErroDados] = useState<string>("")
+    const [nacionalidadeData, setNacionalideData] = useState<Nacionalidade[]>()
 
     useEffect(() => {
         if (cpf !== "" && validadeCpf === false) {
             mudarCorInput()
         }
-        if(nacionalidade !== "Brasileiro" && nacionalidade !== ""){
+        if (nacionalidade !== "Brasileiro" && nacionalidade !== "") {
             setTextCpf("Número do Passaporte")
-        }else{
+        } else {
             setTextCpf("CPF")
+        }
+        const carregarNoticias = async () => {
+            try {
+                const response = await axios.get<Nacionalidade[]>('http://192.168.1.90:3030/nacionalidade');
+                setNacionalideData(response.data)
+            } catch (error) {
+                console.error("Erro ao carregar nacionalidades: ", error)
+            }
         }
     }, [cpf, nacionalidade])
 
     const EnviarFormulario = (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        if(nacionalidade === "Brasileiro"){
+        if (nacionalidade === "Brasileiro") {
             if (validadeCpf === true) {
-                sendDataToParent({ nome, cpf, rg, genero, data, escolaridade, nacionalidade })
+                sendDataToParent({ nome, cpf, rg, genero, data, escolaridade, nacionalidadeId })
             } else {
                 setErroDados("Existem campos incorretos, é necessário fazer as correções antes de enviar !")
             }
-        }else{
-            if(cpf !== ""){
-                sendDataToParent({ nome, cpf, rg, genero, data, escolaridade, nacionalidade })
-            }else{
+        } else {
+            if (cpf !== "") {
+                sendDataToParent({ nome, cpf, rg, genero, data, escolaridade, nacionalidadeId })
+            } else {
                 setErroDados("Existem campos que não foram preenchidos !")
             }
         }
-        
+
     }
 
     const FormataCpf = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -152,33 +166,15 @@ export default function Dados({ sendDataToParent }: Props) {
                         onChange={(e) => {
                             setNacionalide(e.target.value as string);
                         }}
-                        
+
                     >
-                        <MenuItem value="Alemao">Alemão</MenuItem>
-                        <MenuItem value="Argentino">Argentino</MenuItem>
-                        <MenuItem value="Belga">Belga</MenuItem>
-                        <MenuItem value="Boliviano">Boliviano</MenuItem>
-                        <MenuItem value="Brasileiro" selected>Brasileiro</MenuItem>
-                        <MenuItem value="Britanico">Britanico</MenuItem>
-                        <MenuItem value="Chines">Chines</MenuItem>
-                        <MenuItem value="Colombiano">Colombiano</MenuItem>
-                        <MenuItem value="Costa Rica">Costa Rica</MenuItem>
-                        <MenuItem value="Equatoriano">Equatoriano</MenuItem>
-                        <MenuItem value="Espanhol">Espanhol</MenuItem>
-                        <MenuItem value="Frances">Frances</MenuItem>
-                        <MenuItem value="Italiano">Italiano</MenuItem>
-                        <MenuItem value="Japones">Japones</MenuItem>
-                        <MenuItem value="Mexicano">Mexicano</MenuItem>
-                        <MenuItem value="Naturalizado Brasileiro">Naturalizado Brasileiro</MenuItem>
-                        <MenuItem value="Outros">Outros</MenuItem>
-                        <MenuItem value="Peruano">Peruano</MenuItem>
-                        <MenuItem value="Portugues">Português</MenuItem>
-                        <MenuItem value="Uruquaio">Uruquaio</MenuItem>
-                        <MenuItem value="Venezuelano">Venezuelano</MenuItem>
+                        {nacionalidadeData?.map((objeto) => (
+                            <MenuItem key={objeto.nacionalidade} value={objeto.nacionalidade}>{objeto.nacionalidade}</MenuItem>
+                        ))}
                     </Select>
                 </FormControl>
-                <FormControl 
-                className="FormControl"
+                <FormControl
+                    className="FormControl"
                     sx={{
                         '& .MuiOutlinedInput-root': {
                             '&.Mui-focused fieldset': {
@@ -220,7 +216,7 @@ export default function Dados({ sendDataToParent }: Props) {
                         label="RG" />
                 </FormControl>
                 <div className="agrupamentoInput">
-                    <FormControl className="InputGenero"  required defaultChecked>
+                    <FormControl className="InputGenero" required defaultChecked>
                         <InputLabel id="escolaridade-label" size="small">Genero</InputLabel>
                         <Select
                             size="small"

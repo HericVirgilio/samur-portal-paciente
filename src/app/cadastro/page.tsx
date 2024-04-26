@@ -14,7 +14,7 @@ export default function Cadastro() {
 
     const [formDataDados, setFormDataDados] = useState({
         nome: "", cpf: "", rg: "", genero: "", data: "",
-        escolaridade: "", nacionalidade: ""
+        escolaridade: "", nacionalidade: 0
     });
 
     const [formDataEndereco, setFormDataEndereco] = useState({
@@ -40,13 +40,13 @@ export default function Cadastro() {
     const FormularioDados = (data: FormDataDados) => {
         console.log(`nome: ${data.nome}, cpf: ${data.cpf}, rf: ${data.rg}
         , genero: ${data.genero}, data: ${data.data}, escolariada: ${data.escolaridade},
-        nacionalidade: ${data.nacionalidade}`);
+        nacionalidade: ${data.nacionalidadeId}`);
         try {
             setFormDataDados({
                 ...formDataDados,
                 nome: data.nome,
-                nacionalidade: data.nacionalidade,
-                cpf: data.nacionalidade,
+                nacionalidade: data.nacionalidadeId,
+                cpf: data.cpf,
                 rg: data.rg,
                 genero: data.genero,
                 data: data.data,
