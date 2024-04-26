@@ -4,7 +4,6 @@ import Image from 'next/image'
 import { useState } from 'react'
 import Link from 'next/link';
 import { menuHamburguerData } from '@/data/menu-hamburguer.data';
-import MenuDesktop from '../menus-desktop';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 
 export default function HeaderPrincipal() {
@@ -51,10 +50,6 @@ export default function HeaderPrincipal() {
                     </Link>
                 )}
             </div>
-            <Link key={"home"} href={"/home"}>
-                <Image src="/images/logo-samur-branco.webp" alt='logo samur' width={200} height={100} />
-                <MenuDesktop />
-            </Link>
 
             <Link key={"minha-conta"} href={"/minha-conta"}>
                 <Avatar className='divIconUser'>
