@@ -12,23 +12,30 @@
 .InputNumero {
   margin: 4px;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1000px) {
   .InputLogradouro {
-    width: 17.5vw;
+    width: 80;
+    margin: 0;
   }
   .agrupamentoInputEndereco {
     display: flex;
     justify-content: center;
     align-items: center;
+    max-width: 350px;
+    margin: auto;
+    gap: 15px;
   }
   .InputNumero {
-    width: 10vw;
+    width: 20;
+    margin: 0;
   }
   .AgrupamentoSelect {
-    width: 100vw;
+    width: 100%;
+    max-width: 90%;
     display: grid;
     justify-content: center;
     align-items: center;
     margin: 10px;
+    margin-left: 20px;
   }
 }

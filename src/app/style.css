@@ -91,10 +91,11 @@
 
     .BoxHeaderLogin {
         width: 40vw;
+       
     }
 
     .FormControl {
-        width: 30vw;
+        width: 350px;
     }
 
     .LinhaDivisoria {

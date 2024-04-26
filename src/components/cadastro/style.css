@@ -48,9 +48,19 @@
   color: red;
 }
 @media (min-width: 769px) {
+  .BoxForm {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    max-width: 40vw;
+  }
   .FormControl {
-    width: 28vw;
+    width: 350px;
     margin: 0.3rem auto;
+  }
+  .DivCadastroForm{
+    max-width: 35vw;
   }
   .RequisitosSenha {
     width: 20vw;

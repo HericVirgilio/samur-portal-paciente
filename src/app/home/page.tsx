@@ -24,18 +24,8 @@ export default function Home() {
       <div className="ConteudoPrincipal">
         <BoxUserPrincipal objeto={UsuarioData[0]} />
         <NovoAgendamentoPrincipal />
-        <SliderOption
-          id="3"
-          ObjectData={PrincipaisServicos}
-          titulo="Principais Serviços"
-          background="#6B8D8C"
-        />
-        <SliderOption
-          id="2"
-          ObjectData={SliderOptionData}
-          titulo="Prontuário"
-          background="var(--cor-logo-samur)"
-        />
+        <SliderOption id="3" ObjectData={PrincipaisServicos} titulo="Principais Serviços"background="#6B8D8C"/>
+        <SliderOption id="2" ObjectData={SliderOptionData} titulo="Prontuário"  background="var(--cor-logo-samur)"/>
         <ProximoEvento id="1" />
       </div>
       <Footer />

@@ -63,15 +63,24 @@
   width: 35vw;
 }
 @media (min-width: 1024px) {
+  .BoxFormDados{
+    max-width: 40vw;
+  }
   .FormSelect {
-    width: 28vw;
+    width: 350px;
   }
   .InputGenero {
-    width: 15vw;
+    width: 20vw;
   }
   .agrupamentoInput {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: auto;
+    max-width: 350px;
+    gap: 15px;
+  }
+  .InputGenero{
+    margin: 0;
   }
 }

@@ -82,7 +82,7 @@ export default function Endereco({ sendDataToParent }: Props) {
 
   return (
     <div className="BoxForm">
-      <form className="DivCadastroForm" onSubmit={EnviarFormulario}>
+      <form  style={{maxWidth: "40vw"}} className="DivCadastroForm" onSubmit={EnviarFormulario}>
         <FormControl
           className="FormControl"
           variant="outlined"

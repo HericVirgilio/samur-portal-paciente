@@ -1,9 +1,3 @@
-.ContainerCadastro {
-  background-color: var(--branco);
-  width: 100vw;
-  min-height: 100vh;
-  padding-top: 30px;
-}
 .DivBoxHeaderPrincipal {
   width: 100vw;
   display: flex;
@@ -31,10 +25,85 @@
   margin-bottom: 24px;
 }
 @media (min-width: 769px) {
-  .DivCadastroTitle {
-    width: 30vw;
+  .DivBoxHeaderPrincipal {
+    margin-top: 5vh;
+    max-width: 40vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
   }
   .ContainerCadastro {
-    height: 120vh;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+  }
+  .DivCadastroTitle {
+    width: 350px;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+  }
+  .CadastroLeft {
+    max-width: 40vw;
+  }
+  .CadastroRight {
+    background: linear-gradient(90deg, #b1d7c6, #f9fafb);
+    width: 60vw;
+    max-height: 100vh;
+    position: relative;
+    display: block;
+  }
+  .Caixa {
+    overflow: hidden;
+    position: absolute;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    width: 60vw;
+  }
+
+  .slides {
+    display: flex;
+    align-items: center;
+    width: 500%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .slide {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    transition: 0.6s;
+  }
+
+  .slide Img {
+    object-fit: cover;
+  }
+  .inputImg {
+    position: absolute;
+    z-index: 1000;
+    top: 20px;
+    left: 20px;
+  }
+  .navigation {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    z-index: 10;
+  }
+  .bar {
+    width: 20px;
+    height: 20px;
+    border: 3px solid white;
+    margin: 6px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  .bar:hover {
+    background-color: white;
   }
 }
