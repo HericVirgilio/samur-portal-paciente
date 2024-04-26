@@ -1,87 +1,85 @@
-section{
-    width: 90%;
-    height: 100%;
-    margin-top: 0;
+section {
+  width: 90%;
+  height: 100%;
+  margin-top: 0;
 }
-.TituloSection{
-    font-size: 28px;
-    margin-bottom: 1vh;
-    margin-left: 4rem;
-    color: var(--preto);
-    font-weight: 700;
+.TituloSection {
+  font-size: 28px;
+  margin-bottom: 1vh;
+  margin-left: 4rem;
+  color: var(--preto);
+  font-weight: 700;
 }
 .list-section-option {
-    padding-top: 1rem;
-    display: flex;
-    position: relative;
-    margin: 0 auto;
-    align-items: center;
-    width: calc(100vw - 1vw);
-    height: 230px;
+  padding-top: 1rem;
+  display: flex;
+  position: relative;
+  margin: 0 auto;
+  align-items: center;
+  width: calc(100vw - 1vw);
+  height: 230px;
 }
 
 .slider-list-option {
-    width: 92%;
-    height: 100%;
-    overflow-x: scroll;
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-    white-space: nowrap;
-    scroll-behavior: smooth;
-    -ms-overflow-style: none;
-    /* IE and Edge */
-    scrollbar-width: none;
-    /* Firefox */
+  width: 92%;
+  height: 100%;
+  overflow-x: scroll;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
 
 .slider-list::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 .item-section-option {
-    width: 260px;
-    height: 150px;
-    border-radius: 1rem;
-    cursor: pointer;
-    display: grid;
-    padding: 30px;
-    color: #F1F1F1;
-    justify-content: center;
-    font-size: 20px;
+  width: 260px;
+  height: 150px;
+  border-radius: 1rem;
+  cursor: pointer;
+  display: grid;
+  padding: 30px;
+  color: #f1f1f1;
+  justify-content: center;
+  font-size: 20px;
 }
-.item-section-option-DivImg{
-    width: 100%;
-    display: flex;
-    justify-content: center;
+.item-section-option-DivImg {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
-.item-section-option:hover{
-    margin-top: -5px;
+.item-section-option:hover {
+  margin-top: -5px;
 }
 .arrow {
-    color: white;
-    opacity: 50%;
-    cursor: pointer;
+  color: white;
+  opacity: 50%;
+  cursor: pointer;
 }
 
 .arrow:hover {
-    opacity: 100%;
+  opacity: 100%;
 }
-
 
 .item-section:hover {
-    scale: 1.08;
-    transition: ease-in-out;
-    transition-duration: 50ms;
+  scale: 1.08;
+  transition: ease-in-out;
+  transition-duration: 50ms;
 }
 
-
 @media (max-width: 500px) {
-    .arrow {
-        display: none;
-    }
+  .arrow {
+    display: none;
+  }
 
-    .TituloSection {
-        font-size: 24px;
-        margin-left: 1rem;
-    }
+  .TituloSection {
+    font-size: 24px;
+    margin-left: 1rem;
+  }
 }

@@ -1,20 +1,19 @@
-.InputDados{
-    height: 40px;
-    border: 1px solid rgba(0, 0, 0, 0.63);
-    border-radius: 10px;
-    cursor: pointer;
-    
+.InputDados {
+  height: 40px;
+  border: 1px solid rgba(0, 0, 0, 0.63);
+  border-radius: 10px;
+  cursor: pointer;
 }
-#InputDados{
-    margin-top: 30px;
-    margin-bottom: 10px;
-    width: 170px;
-    background-color: var(--verde-escuro);
-    color: white;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    border: none;
-    font-size: 18px;
-    font-weight: bold;
+#InputDados {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  width: 170px;
+  background-color: var(--verde-escuro);
+  color: white;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
 }

@@ -1,75 +1,75 @@
 .boxHeaderPrincipal {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 20px;
-    padding-right: 20px;
-    background-color: transparent;
-    width: 100vw;
-    height: 70px;
-    cursor: pointer;
-    position: absolute;
-    z-index: 3;
-    top: 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: transparent;
+  width: 100vw;
+  height: 70px;
+  cursor: pointer;
+  position: absolute;
+  z-index: 3;
+  top: 5%;
 }
 
 .menuHamburquer {
-    width: 30px;
-    height: 30px;
+  width: 30px;
+  height: 30px;
 }
-.BoxClose{
-    width: 100vw;
-    display: grid;
-    align-items: center;
-    justify-content: end;
-    padding: 20px;
+.BoxClose {
+  width: 100vw;
+  display: grid;
+  align-items: center;
+  justify-content: end;
+  padding: 20px;
 }
 .menuHamburguer {
-    background-color: var(--branco);
+  background-color: var(--branco);
+  display: none;
+  overflow-y: scroll;
+}
+.BoxMapMenuHamburguer {
+  display: flex;
+  margin-top: 28px;
+  margin-left: 40px;
+  align-items: center;
+}
+.TextoMapMenuHamburguer {
+  margin-left: 20px;
+  color: var(--preto);
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.ImagensCloseLogoSamurEncapsulamento {
+  width: 80vw;
+  margin: 0 auto;
+}
+.ImagensCloseLogoSamur {
+  display: grid;
+  grid-template-columns: 20% 1fr;
+  align-items: center;
+  color: var(--preto);
+  font-weight: 500;
+  gap: 20px;
+  font-size: 20px;
+}
+.DivisoriaMenuBox {
+  height: 1px;
+  width: 90vw;
+  margin: 20px auto 0 auto;
+  background-color: var(--preto);
+}
+.ImagemPerfilMenu {
+  border-radius: 50px;
+}
+
+@media (min-width: 769px) {
+  .boxHeaderPrincipal {
+    padding: 0 5vw;
+  }
+  .Hamburguer {
     display: none;
-    overflow-y: scroll;
-}
-.BoxMapMenuHamburguer{
-    display: flex;
-    margin-top: 28px;
-    margin-left: 40px;
-    align-items: center;
-}
-.TextoMapMenuHamburguer{
-    margin-left: 20px;
-    color: var(--preto);
-    font-weight: 500;
-    font-size: 20px;
-}
-
-.ImagensCloseLogoSamurEncapsulamento{
-    width: 80vw;
-    margin: 0 auto;
-}
-.ImagensCloseLogoSamur{
-    display: grid;
-    grid-template-columns: 20% 1fr;
-    align-items: center;
-    color: var(--preto);
-    font-weight: 500;
-    gap: 20px;
-    font-size: 20px;
-}
-.DivisoriaMenuBox{
-    height: 1px;
-    width: 90vw;
-    margin: 20px auto 0 auto;
-    background-color: var(--preto);
-}
-.ImagemPerfilMenu{
-    border-radius: 50px ;
-}
-
-@media(min-width: 769px){
-    .boxHeaderPrincipal{
-       padding: 0 5vw;
-    }
-    .Hamburguer{
-        display: none;
-    }
+  }
 }

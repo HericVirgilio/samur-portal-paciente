@@ -1,49 +1,53 @@
-.ContainerMenuAnimeted{
-    z-index: 5;
-    width: 100vw;
-    background-color: transparent;
-    position: fixed;  
-    top: 5%;
+.ContainerMenuAnimeted {
+  z-index: 5;
+  width: 100vw;
+  background-color: transparent;
+  position: fixed;
+  top: 5%;
 }
-.Scrolled{
-    z-index: 5;
-    width: 95vw;
-    left: 50%;
-    transform: translate(-50%);
-    background-color: white;
-    border-radius: 20px;
-    position: fixed;  
-    top: 2%;
-    height: 80px;
-    align-items: center;
-    display: flex;
+.Scrolled {
+  z-index: 5;
+  width: 95vw;
+  left: 50%;
+  transform: translate(-50%);
+  background-color: white;
+  border-radius: 20px;
+  position: fixed;
+  top: 2%;
+  height: 80px;
+  align-items: center;
+  display: flex;
 }
 .LogoScrolled {
-    animation: slideInFromTop 0.5s ease-in-out;
-  }
-  
-  @keyframes slideInFromTop {
-    0% { transform: translateY(-90%); }
-    100% { transform: translateY(0); }
-  }
-.AgrupamentoItens{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 90vw;
-    margin: auto;
-}
-.AtalhosMenuHamburguer{
-    display: flex;
-    gap: 20px;
-    color: var(--branco);
-}
-.AtalhosMenuHamburguer li{
-    cursor: pointer;
-    font-size: 20px;
-    font-weight: 700;
+  animation: slideInFromTop 0.5s ease-in-out;
 }
 
-.AtalhosMenuHamburguer li:hover{
-    margin-top: -2px;
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-90%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.AgrupamentoItens {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90vw;
+  margin: auto;
+}
+.AtalhosMenuHamburguer {
+  display: flex;
+  gap: 20px;
+  color: var(--branco);
+}
+.AtalhosMenuHamburguer li {
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.AtalhosMenuHamburguer li:hover {
+  margin-top: -2px;
 }

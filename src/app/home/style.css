@@ -1,14 +1,13 @@
-.Container{
-    width: 80vw;
-    
+.Container {
+  width: 80vw;
 }
-.ConteudoBanner{
-    margin: 0;
+.ConteudoBanner {
+  margin: 0;
 }
-.ConteudoPrincipal{
-    background-color: var(--cinza-cor-de-fundo);
-    border-radius: 20px;
-    width: 98%;
-    margin: 10px auto;
-    padding-bottom: 20px;
+.ConteudoPrincipal {
+  background-color: var(--cinza-cor-de-fundo);
+  border-radius: 20px;
+  width: 98%;
+  margin: 10px auto;
+  padding-bottom: 20px;
 }

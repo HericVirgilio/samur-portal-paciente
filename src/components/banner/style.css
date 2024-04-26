@@ -1,27 +1,26 @@
-
-.ContainerBanner{
-    display: flex;
-    width: 99vw;
-    border-radius: 20%;
-    padding: 1%;
-    padding-bottom: 0;
+.ContainerBanner {
+  display: flex;
+  width: 99vw;
+  border-radius: 20%;
+  padding: 1%;
+  padding-bottom: 0;
 }
-#PrimeiraImg{
-    border-radius: 20px 0 0 20px ;
+#PrimeiraImg {
+  border-radius: 20px 0 0 20px;
 }
-#UltimaImg{
-    border-radius: 0px 20px 20px 0px;
+#UltimaImg {
+  border-radius: 0px 20px 20px 0px;
 }
-.CardsBanner{
-    filter: brightness(65%);
-    height: 300px;
+.CardsBanner {
+  filter: brightness(65%);
+  height: 300px;
 }
-.CardsBanner:hover{
-    filter: brightness(100%);
-    transition: ease-in-out;
+.CardsBanner:hover {
+  filter: brightness(100%);
+  transition: ease-in-out;
 }
-@media(max-width: 500px){
-    .ContainerBanner{
-        display: none;
-    }
+@media (max-width: 500px) {
+  .ContainerBanner {
+    display: none;
+  }
 }

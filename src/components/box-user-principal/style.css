@@ -1,23 +1,22 @@
-.ContainerBoxUser{
-    max-width: 90vw;
-    margin: 20px auto 0 auto;
+.ContainerBoxUser {
+  max-width: 90vw;
+  margin: 20px auto 0 auto;
 }
-.boxUserPrincipal{
-    display: flex;
-    align-items: center;
-    padding: 10px;
+.boxUserPrincipal {
+  display: flex;
+  align-items: center;
+  padding: 10px;
 }
-.ImagemPerfil{
-    border-radius: 50%;
+.ImagemPerfil {
+  border-radius: 50%;
 }
-.BoxWelcomeEmail{
-    margin-left: 15px;
-    font-size: 17px;
-    font-weight: 500;
+.BoxWelcomeEmail {
+  margin-left: 15px;
+  font-size: 17px;
+  font-weight: 500;
 }
-@media(min-width: 500px ){
-    .ContainerBoxUser{
-        display: none;
-    }
+@media (min-width: 500px) {
+  .ContainerBoxUser {
+    display: none;
+  }
 }
-

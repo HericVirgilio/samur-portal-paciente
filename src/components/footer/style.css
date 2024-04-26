@@ -1,97 +1,97 @@
-.ContainerFooter{
-    width: 100vw;
-    background-image: url("/images/banner-samur.jpeg");
-    background-position: bottom;
-    padding: 10px;
-    height: 35vh;
-    width: 98%;
-    margin: auto;
-    border-radius: 20px 20px 0 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.ContainerFooter {
+  width: 100vw;
+  background-image: url("/images/banner-samur.jpeg");
+  background-position: bottom;
+  padding: 10px;
+  height: 35vh;
+  width: 98%;
+  margin: auto;
+  border-radius: 20px 20px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.CapsulaComponentesCima{
-    width: 90vw;
-    margin: auto;
-    display: flex;
-    justify-content: space-around;
-    gap: 100px;
+.CapsulaComponentesCima {
+  width: 90vw;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  gap: 100px;
 }
-.CapsulaComponentesCima span{
-    font-size: 18px;
-    color: #292929;
+.CapsulaComponentesCima span {
+  font-size: 18px;
+  color: #292929;
 }
-.DivImg{
-    display: flex;
-    align-items: center;
+.DivImg {
+  display: flex;
+  align-items: center;
 }
-.ContainerSamur{
-    text-align: center;
-    height: 25vh;
+.ContainerSamur {
+  text-align: center;
+  height: 25vh;
 }
-.MidiasSociais{
-    display: flex;
-    justify-content: center;
+.MidiasSociais {
+  display: flex;
+  justify-content: center;
 }
-.ImagensMidias{
-   display: flex;
-   align-items: center;
-   gap: 5px;
-   margin-right: 20px;
+.ImagensMidias {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-right: 20px;
 }
-.TituloMidias{
-    font-size: 10px;
+.TituloMidias {
+  font-size: 10px;
 }
-.ContainerSamur span{
-    color: white;
-    font-size: 24px;
-    font-weight: bold;
+.ContainerSamur span {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
 }
-.ItensLista{
-    margin-top: 7px;
-    display: flex;
-    gap: 8px;
-    color: white;
-    font-size: 14px;
+.ItensLista {
+  margin-top: 7px;
+  display: flex;
+  gap: 8px;
+  color: white;
+  font-size: 14px;
 }
-.ItensLista li{
-    cursor: pointer;
+.ItensLista li {
+  cursor: pointer;
 }
-.Contato{
-    display: grid;
-    grid-template-columns: 20% 80%;
+.Contato {
+  display: grid;
+  grid-template-columns: 20% 80%;
 }
-.LinhaDivisoria{
-    width: 90vw;
-    background-color: var(--cor-border);
-    height: 1px;
-    margin: 40px;
-    margin-bottom: 20px;
+.LinhaDivisoria {
+  width: 90vw;
+  background-color: var(--cor-border);
+  height: 1px;
+  margin: 40px;
+  margin-bottom: 20px;
 }
-.Desenvolvedores{
-    width: 90vw;
-    margin-left: 40px;
-    font-size: 18px;
+.Desenvolvedores {
+  width: 90vw;
+  margin-left: 40px;
+  font-size: 18px;
 }
 .Desenvolvedores h5 {
-    font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
 }
 
-@media(max-width: 500px){
-    .CapsulaComponentesCima{
-        display: grid;
-        gap: 5%;
-    }
-    .LinhaDivisoria{
-        width: 80vw;
-        margin: auto;
-        margin-top: 50%;
-    }
-    .Desenvolvedores{
-        font-size: 16px;
-        margin: auto;
-        width: 80vw;
-        margin-top: 5%;
-    }
+@media (max-width: 500px) {
+  .CapsulaComponentesCima {
+    display: grid;
+    gap: 5%;
+  }
+  .LinhaDivisoria {
+    width: 80vw;
+    margin: auto;
+    margin-top: 50%;
+  }
+  .Desenvolvedores {
+    font-size: 16px;
+    margin: auto;
+    width: 80vw;
+    margin-top: 5%;
+  }
 }

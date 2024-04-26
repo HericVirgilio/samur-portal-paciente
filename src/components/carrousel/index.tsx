@@ -1,12 +1,5 @@
-import "./style.css"
+import "./style.css";
 
-
-export default function Carrousel(props: {id:string}){
-
-    
-    return(
-        <div className="section">
-           
-        </div>
-    )
+export default function Carrousel(props: { id: string }) {
+  return <div className="section"></div>;
 }
