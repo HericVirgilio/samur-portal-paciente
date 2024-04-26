@@ -6,7 +6,6 @@ import Mui3Colunas from "@/components/mui-3-colunas"
 export default function Agendamento() {
     return (
         <div>
-            <HeaderPrincipal/>
             <TituloFormatado objeto="Agendamento"/>
             <Mui3Colunas/>
         </div>

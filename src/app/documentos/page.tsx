@@ -7,7 +7,6 @@ export default function Documentos() {
   
     return (
         <div>
-            <HeaderPrincipal />
             <TituloFormatado objeto="Documentos"/>
             <Mui3Colunas/>
         </div>
