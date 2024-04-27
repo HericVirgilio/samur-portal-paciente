@@ -276,7 +276,7 @@ export default function Dados({ sendDataToParent }: Props) {
               <MenuItem value="indeterminado">Indeterminado</MenuItem>
             </Select>
           </FormControl>
-          <FormControl className="InputGenero" sx={{ m: 1 }} variant="outlined" defaultChecked>
+          <FormControl className="InputGenero DATA" sx={{ m: 1 }} variant="outlined" defaultChecked>
             <InputLabel
               htmlFor="outlined-adornment-password"
               size="small"

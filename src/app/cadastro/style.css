@@ -4,10 +4,11 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 30px;
+  margin-top: 20px;
 }
 .BoxVoltar {
   position: absolute;
-  left: 5%;
+  left: 2%;
 }
 .imgVoltar {
   margin-right: 30px;
@@ -24,7 +25,10 @@
   margin-top: 24px;
   margin-bottom: 24px;
 }
-@media (min-width: 769px) {
+.CadastroRight{
+  display: none;
+}
+@media (min-width: 1000px) {
   .DivBoxHeaderPrincipal {
     margin-top: 5vh;
     max-width: 40vw;
@@ -105,5 +109,25 @@
   }
   .bar:hover {
     background-color: white;
+  }
+}
+@media(min-width: 500px) and (max-width: 999px ){
+  .CadastroLeft{
+    width: 100vw;
+    margin: auto;
+  }
+  .DivBoxHeaderPrincipal {
+    margin-top: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    margin-left: -3%;
+  }
+  .DivCadastroTitle {
+    width: 350px;
+  }
+  .BoxVoltar {
+    position: relative;
   }
 }

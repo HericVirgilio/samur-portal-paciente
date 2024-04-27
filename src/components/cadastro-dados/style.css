@@ -58,9 +58,15 @@
 .FormSelect {
   width: 80vw;
 }
+.agrupamentoInput{
+  max-width: 80vw;
+}
 .InputGenero {
   margin: 4px;
   width: 35vw;
+}
+.DATA{
+  width: 100%;
 }
 @media (min-width: 1024px) {
   .BoxFormDados{

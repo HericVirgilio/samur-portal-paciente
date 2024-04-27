@@ -47,7 +47,7 @@
 .ContainerVeridicadoresDeSenha p {
   color: red;
 }
-@media (min-width: 769px) {
+@media (min-width: 1000px) {
   .BoxForm {
     display: grid;
     justify-content: center;
@@ -65,5 +65,15 @@
   .RequisitosSenha {
     width: 20vw;
     margin: auto;
+  }
+}
+@media(min-width: 426px) and (max-width: 999px){
+  .FormControl {
+    width: 350px;
+    margin: 0.3rem auto;
+  }
+  .RequisitosSenha {
+    margin: auto;
+    max-width: 30vw;
   }
 }
