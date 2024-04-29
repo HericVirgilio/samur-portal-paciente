@@ -70,12 +70,24 @@ export default function MenuAnimation() {
             )}
           </ul>
         </div>
-        <Link key={"minha-conta"} href={"/minha-conta"}>
-          <Avatar className="divIconUser">
-            <AvatarImage src="https://github.com/shadcn.png" />
-            <AvatarFallback>CN</AvatarFallback>
-          </Avatar>
-        </Link>
+        <div className="ContainerAvatarBoxHover">
+          <Link key={"minha-conta"} href={"/minha-conta"} className="LinkContainer">
+            <Avatar className="divIconUser">
+              <AvatarImage src="https://github.com/shadcn.png" />
+              <AvatarFallback>CN</AvatarFallback>
+            </Avatar>
+          </Link>
+          <div className="MenuHoverProfile">
+            <ul>
+              <li className="ItensListaHeader">Minha Conta</li>
+              <li className="ItensListaHeader">Familiares</li>
+              <li className="ItensListaHeader">Formas de Pagamento</li>
+              <li className="ItensListaHeader">Notificações</li>
+              <li className="ItensListaHeader">Meus Pagamentos</li>
+              <li className="ItensListaHeader">Excluir conta</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   );
