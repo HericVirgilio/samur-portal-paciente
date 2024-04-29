@@ -81,3 +81,15 @@
 .AtalhosMenuHamburguer li:hover {
   margin-top: -2px;
 }
+@media(max-width: 999px){
+  .ContainerAtalhosMenuHamburguer{
+    display: none;
+  }
+  .ContainerHeader{
+    display: flex;
+  }
+  #LogoSamurMenuAnimationMobile{
+    width: 170px;
+    margin-left: 5px;
+  }
+}

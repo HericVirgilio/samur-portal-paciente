@@ -34,6 +34,11 @@ export default function MenuAnimation() {
     <div className={scrolled ? "Scrolled" : "ContainerMenuAnimeted"}>
       <div className="AgrupamentoItens">
         <Link key={"home"} href={"/home"} className="ContainerHeader">
+          <Image src={
+              scrolled 
+                ? "/icons/menu-hamburguer-preto.png"
+                : "/icons/menu-hamburguer-branco.png"
+            } alt="" width={50} height={50}/>
           <Image
             src={
               scrolled
@@ -43,8 +48,8 @@ export default function MenuAnimation() {
             alt="logo samur"
             width={200}
             height={100}
-            className={scrolled ? "LogoScrolled" : ""}
-          />
+            className={scrolled ? "LogoScrolled" : ""} 
+            id="LogoSamurMenuAnimationMobile"/>
         </Link>
         <div className="ContainerAtalhosMenuHamburguer">
           <ul className="AtalhosMenuHamburguer">

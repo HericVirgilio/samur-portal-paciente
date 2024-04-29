@@ -28,7 +28,8 @@ export default function ProximoEvento(props: {
     <section>
       <span
         className="TituloSection"
-        style={{ fontFamily: "IBM Plex Sans", fontSize: "50px" }}
+        id="TituloSectionSliderID"
+        style={{ fontFamily: "IBM Plex Sans"}}
       >
         {props.titulo}
       </span>
@@ -55,6 +56,7 @@ export default function ProximoEvento(props: {
                     alt={objeto.name}
                     width={70}
                     height={70}
+                    className="ImagensResponsividade"
                   />
                 </div>
                 <h5>{objeto.name}</h5>

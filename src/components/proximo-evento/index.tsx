@@ -25,7 +25,8 @@ export default function ProximoEvento(props: { id: string }) {
     <section>
       <h3
         className="TituloSection"
-        style={{ fontFamily: "IBM Plex Sans", fontSize: "50px" }}
+        id="TituloSectionSliderID"
+        style={{ fontFamily: "IBM Plex Sans"}}
       >
         Seus Agendamentos
       </h3>
@@ -40,7 +41,7 @@ export default function ProximoEvento(props: { id: string }) {
         />
         <div id={props.id} className="slider-list">
           {ProximoEventoHome.map((objeto) => (
-            <div key={objeto.id}>
+            <div key={objeto.id} className="ContainerObjetosProximoEvento">
               <div key={objeto.id} className="item-section">
                 <div className="item-component-section">
                   <Avatar>

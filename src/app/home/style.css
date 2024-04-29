@@ -1,7 +1,7 @@
 .Container {
   width: 80vw;
 }
-.ConteudoBanner {
+.ConteudoBannerDesktop {
   margin: 0;
 }
 .ConteudoPrincipal {
@@ -10,4 +10,15 @@
   width: 98%;
   margin: 10px auto;
   padding-bottom: 20px;
+}
+.ConteudoBannerMobile{
+  display: none;
+}
+@media(max-width: 999px){
+  .ConteudoBannerDesktop{
+    display: none;
+  }
+  .ConteudoBannerMobile{
+    display: block;
+  }
 }

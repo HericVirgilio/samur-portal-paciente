@@ -53,9 +53,23 @@
 .ItensLista li {
   cursor: pointer;
 }
-@media (max-width: 500px) {
+@media (max-width: 999px) {
   .CapsulaComponentesCima {
     display: grid;
     gap: 5%;
+  }
+  .ContainerSamur{
+    max-width: 90vw;
+    top: 58%;
+  }
+  .ItensLista{
+    display: grid;
+  }
+  .ContainerFooter{
+    height: 300px;
+  }
+  .MidiasSociais{
+    margin-top: 30px;
+    gap: 15px;
   }
 }

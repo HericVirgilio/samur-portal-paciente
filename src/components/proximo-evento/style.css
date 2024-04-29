@@ -3,11 +3,13 @@ section {
 }
 
 .TituloSection {
-  font-size: 28px;
   margin-top: 3vh;
   margin-bottom: 1vh;
   margin-left: 4rem;
   color: var(--preto);
+}
+#TituloSectionSliderID{
+  font-size: 50px;
 }
 
 .list-section {
@@ -88,8 +90,13 @@ section {
     display: none;
   }
 
-  .TituloSection {
-    font-size: 24px;
-    margin-left: 1rem;
+}
+@media(max-width: 999px){
+  #TituloSectionSliderID{
+    font-size: 28px;
+  }
+  .item-section{
+    width: 80vw;
+    padding-left: 8px;
   }
 }

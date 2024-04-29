@@ -11,21 +11,24 @@ import SliderOption from "@/components/slider-option";
 import { SliderOptionData } from "@/data/slider-option.data";
 import { PrincipaisServicos } from "@/data/principais-servicos.data";
 import MenuAnimation from "@/components/menu-animation";
+import BannerMobile from "@/components/banner-mobile";
 
 export default function Home() {
   const [date, setDate] = useState<Date>(new Date());
 
   return (
     <main className="BoxPaginaPrincipal" style={{ overflowX: "hidden" }}>
-      <div className="ConteudoBanner">
+      <div className="ConteudoBannerDesktop">
         <MenuAnimation />
         <Banner />
       </div>
+      <div className="ConteudoBannerMobile">
+        <MenuAnimation />
+        <BannerMobile />
+      </div>
       <div className="ConteudoPrincipal">
-        <BoxUserPrincipal objeto={UsuarioData[0]} />
-        <NovoAgendamentoPrincipal />
-        <SliderOption id="3" ObjectData={PrincipaisServicos} titulo="Principais Serviços"background="#6B8D8C"/>
-        <SliderOption id="2" ObjectData={SliderOptionData} titulo="Prontuário"  background="var(--cor-logo-samur)"/>
+        <SliderOption id="3" ObjectData={PrincipaisServicos} titulo="Principais Serviços" background="#6B8D8C" />
+        <SliderOption id="2" ObjectData={SliderOptionData} titulo="Prontuário" background="var(--cor-logo-samur)" />
         <ProximoEvento id="1" />
       </div>
       <Footer />
