@@ -1,73 +1,73 @@
 .BoxSelect {
-    background-color: transparent;
-    width: 90vw;
-    padding: 10px;
-    margin: auto;
+  background-color: transparent;
+  width: 90vw;
+  padding: 10px;
+  margin: auto;
 }
 
 .select-button {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2.5px;
-    background-color: var(--branco);
-    cursor: pointer;
-    border-radius: 5px 5px 5px 5px;
-    border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.5px;
+  background-color: var(--branco);
+  cursor: pointer;
+  border-radius: 5px 5px 5px 5px;
+  border: 1px solid black;
 }
 
 .selected-titulo {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    color: black;
-    padding: 0.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: black;
+  padding: 0.3rem;
 }
-.subtituloNovoAgendamento{
-    font-weight: 700;
-    margin-bottom: 15px;
+.subtituloNovoAgendamento {
+  font-weight: 700;
+  margin-bottom: 15px;
 }
 
 .ImagemSelectTitulo {
-    border-radius: 25px;
-    margin-right: 20px;
+  border-radius: 25px;
+  margin-right: 20px;
 }
 
-.Arrow{
-    margin-right: 10px;
+.Arrow {
+  margin-right: 10px;
 }
 
 .BoxMapPaciente {
-    display: none;
+  display: none;
 }
 
 .MapListaPacientes {
-    display: flex;
-    border: 1px solid black;
-    border-top: none;
-    padding: 5px;
-    align-items: center;
-    background-color: var(--branco);
-    cursor: pointer;
+  display: flex;
+  border: 1px solid black;
+  border-top: none;
+  padding: 5px;
+  align-items: center;
+  background-color: var(--branco);
+  cursor: pointer;
 }
 
 .UltimoItemMap {
-    display: flex;
-    border: 1px solid black;
-    border-top: none;
-    padding: 5px;
-    align-items: center;
-    background-color: var(--branco);
-    cursor: pointer;
-    border-radius: 0 0 5px 5px;
+  display: flex;
+  border: 1px solid black;
+  border-top: none;
+  padding: 5px;
+  align-items: center;
+  background-color: var(--branco);
+  cursor: pointer;
+  border-radius: 0 0 5px 5px;
 }
 
 .ImagemBodySelect {
-    border-radius: 20px;
-    margin-right: 20px;
+  border-radius: 20px;
+  margin-right: 20px;
 }
-@media(min-width: 1024px ){
-    .BoxSelect{
-        width: 30vw;
-    }
+@media (min-width: 1024px) {
+  .BoxSelect {
+    width: 30vw;
+  }
 }

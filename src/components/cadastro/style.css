@@ -1,59 +1,79 @@
 .BoxForm {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  width: 100vw;
+}
+.FormControl {
+  width: 80vw;
+  margin: 4px;
+}
+.DivCadastroForm {
+  display: grid;
+  width: 80vw;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+#InputPlaceholders {
+  padding: 10px;
+}
+
+.DivErro {
+  color: red;
+  margin: auto;
+  text-align: center;
+}
+
+.RequisitosSenha {
+  font-size: 14px;
+  margin: auto;
+  color: var(--verde-escuro);
+  font-weight: 600;
+  margin-top: 20px;
+}
+.ContainerVeridicadoresDeSenha {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 5px;
+  width: 70vw;
+}
+.RequisitosSenha h5 {
+  margin-bottom: 10px;
+}
+.ContainerVeridicadoresDeSenha p {
+  color: red;
+}
+@media (min-width: 1000px) {
+  .BoxForm {
     display: grid;
     justify-content: center;
     align-items: center;
     gap: 18px;
-    width: 100vw;
-}
-.FormControl{
-    width: 80vw;
-    margin: 4px;
-}
-.DivCadastroForm {
-    display: grid;
-    width: 80vw;
-    grid-template-columns: 1fr;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-}
-
-#InputPlaceholders {
-    padding: 10px;
-}
-
-.DivErro {
-    color: red;
+    max-width: 40vw;
+  }
+  .FormControl {
+    width: 350px;
+    margin: 0.3rem auto;
+  }
+  .DivCadastroForm{
+    max-width: 35vw;
+  }
+  .RequisitosSenha {
+    width: 20vw;
     margin: auto;
-    text-align: center;
+  }
 }
-
-.RequisitosSenha {
-    font-size: 14px;
+@media(min-width: 426px) and (max-width: 999px){
+  .FormControl {
+    width: 350px;
+    margin: 0.3rem auto;
+  }
+  .RequisitosSenha {
     margin: auto;
-    color: var(--verde-escuro);
-    font-weight: 600;
-    margin-top: 20px;
-}
-.ContainerVeridicadoresDeSenha{
-    display: flex;
-    gap: 5px;
-    margin-bottom: 5px;
-    width: 70vw;
-}
-.RequisitosSenha h5 {
-    margin-bottom: 10px;
-}
-.ContainerVeridicadoresDeSenha p{
-    color: red;
-}
-@media(min-width: 769px){
-    .FormControl{
-        width: 28vw;
-        margin: 0.3rem auto;
-    }
-    .RequisitosSenha{
-        width: 20vw;
-        margin: auto;
-    }
+    max-width: 30vw;
+  }
 }

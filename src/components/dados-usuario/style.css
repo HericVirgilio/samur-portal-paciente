@@ -1,32 +1,32 @@
-.TituloMinhaConta{
-    font-size: 24px;
-    margin: 5px;
+.TituloMinhaConta {
+  font-size: 24px;
+  margin: 5px;
 }
-.BoxDadosUsuario{
-    max-width: 95vw;
-    background-color: var(--branco);
-    margin: 10px auto 0 auto; 
-    padding: 10px;
-    font-weight: 700;
+.BoxDadosUsuario {
+  max-width: 95vw;
+  background-color: var(--branco);
+  margin: 10px auto 0 auto;
+  padding: 10px;
+  font-weight: 700;
 }
-.ImgUser{
-    margin: 10px auto; 
+.ImgUser {
+  margin: 10px auto;
 }
-.buttonCadastrarMais{
-    margin-top: 20px;
-    width: 100%;
-    background-color: var(--azul-claro);
-    color: white;
-    border-radius: 20px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-    cursor: pointer;
+.buttonCadastrarMais {
+  margin-top: 20px;
+  width: 100%;
+  background-color: var(--azul-claro);
+  color: white;
+  border-radius: 20px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  cursor: pointer;
 }
-@media(min-width: 1024px){
-    .TituloMinhaConta{
-        margin: 1rem;
-    }
+@media (min-width: 1024px) {
+  .TituloMinhaConta {
+    margin: 1rem;
+  }
 }

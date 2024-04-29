@@ -1,10 +1,10 @@
-.ContainerWhatsapp{
-    position: fixed;
-    bottom: 5%;
-    left: 2%;
+.ContainerWhatsapp {
+  position: fixed;
+  bottom: 5%;
+  left: 2%;
 }
-@media(max-width: 425px){
-    .ContainerWhatsapp{
-        display: none;
-    }
+@media (max-width: 425px) {
+  .ContainerWhatsapp {
+    display: none;
+  }
 }

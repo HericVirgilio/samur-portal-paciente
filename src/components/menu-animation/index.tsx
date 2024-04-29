@@ -1,60 +1,128 @@
-import "./style.css"
-import Link from "next/link"
-import Image from "next/image"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { menuHamburguerData } from "@/data/menu-hamburguer.data"
-import { useRouter } from "next/navigation"
-import { useState, useEffect } from "react"
+import "./style.css";
+import Link from "next/link";
+import Image from "next/image";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { menuHamburguerData } from "@/data/menu-hamburguer.data";
+import { useRouter } from "next/navigation";
+import { useState, useEffect } from "react";
 
 export default function MenuAnimation() {
+  const router = useRouter();
+  const [scrolled, setScrolled] = useState<boolean>(false);
+  const [visibilidadeMenuHamburguer, setVisibilidadeMenuHamburguer] = useState<boolean>(false)
+  const [visibilidadeMenuHamburguerAvatar, setVisibilidadeMenuHamburguerAvatar] = useState<boolean>(false)
 
-    const router = useRouter();
-    const [scrolled,setScrolled] = useState<boolean>(false)
-
-    useEffect(() => {
-        const TransformaScroll = () => {
-          const scrollTop =  window.scrollY;
-          if (scrollTop > 100) { 
-            setScrolled(true);
-          } else {
-            setScrolled(false);
-          }
-        };
-    
-        window.addEventListener('scroll', TransformaScroll);
-    
-        return () => {
-          window.removeEventListener('scroll', TransformaScroll);
-        };
-      }, []);
-
-    const IrPara = (url: string) => {
-        router.push(url)
+  const MostrarMenu = () => {
+      if(visibilidadeMenuHamburguer === false){
+        setVisibilidadeMenuHamburguer(true) 
+      }else{
+        setVisibilidadeMenuHamburguer(false)
+      }
+  }
+  const MostrarMenuAvatar = () => {
+    if(visibilidadeMenuHamburguerAvatar === false){
+      setVisibilidadeMenuHamburguerAvatar(true) 
+    }else{
+      setVisibilidadeMenuHamburguerAvatar(false)
     }
-    return (
-        <div className={scrolled ? "Scrolled" : "ContainerMenuAnimeted"}>
-            <div className="AgrupamentoItens">
-                <Link key={"home"} href={"/home"} className="ContainerHeader" >
-                    <Image src={scrolled ? "/images/samur-principal.png" :"/images/logo-samur-branco.webp"} alt='logo samur' width={200} height={100} className={scrolled ? "LogoScrolled" : ""}/>
-                </Link>
-                <div className="ContainerAtalhosMenuHamburguer">
-                    <ul className="AtalhosMenuHamburguer">
-                        {menuHamburguerData.map((objeto, index) =>
-                            index !== menuHamburguerData.length - 1 && (
-                                <Link key={objeto.key} href={objeto.nomeUrl}>
-                                    <li style={{ fontFamily: 'Yantramanav, sans-serif', fontWeight: "700", fontSize: "19px", letterSpacing: "2px", color: scrolled ? "black" : "white" }} key={objeto.key} onClick={() => IrPara(objeto.nomeUrl)}>{objeto.nome}</li>
-                                </Link>
-                            )
-                        )}
-                    </ul>
-                </div>
-                <Link key={"minha-conta"} href={"/minha-conta"}>
-                    <Avatar className='divIconUser'>
-                        <AvatarImage src="https://github.com/shadcn.png" />
-                        <AvatarFallback>CN</AvatarFallback>
-                    </Avatar>
-                </Link>
+}
+
+  useEffect(() => {
+    const TransformaScroll = () => {
+      const scrollTop = window.scrollY;
+      if (scrollTop > 100) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", TransformaScroll);
+
+    return () => {
+      window.removeEventListener("scroll", TransformaScroll);
+    };
+  }, []);
+
+  const IrPara = (url: string) => {
+    router.push(url);
+  };
+  return (
+    <div className={scrolled ? "Scrolled" : "ContainerMenuAnimeted"}>
+      <div className="AgrupamentoItens">
+        <div key={"home"}  className="ContainerHeader">
+          <div className="ContainerDaDivMenuHamburguerMobile">
+            <Image src={
+              scrolled
+                ? "/icons/menu-hamburguer-preto.png"
+                : "/icons/menu-hamburguer-branco.png"
+            } alt="" width={50} height={50} onClick={MostrarMenu} />
+            <div className="MenuHoverProfileMobile" style={{display:visibilidadeMenuHamburguer ? "block" : "none" }}>
+              <ul>
+                <li className="ItensListaHeader">Inicio</li>
+                <li className="ItensListaHeader">Agendamento</li>
+                <li className="ItensListaHeader">Documentos</li>
+                <li className="ItensListaHeader">Financeiro</li>
+                <li className="ItensListaHeader">Resultados</li>
+                <li className="ItensListaHeader">Sair</li>
+              </ul>
             </div>
+          </div>
+          <Image
+            src={
+              scrolled
+                ? "/images/samur-principal.png"
+                : "/images/logo-samur-branco.webp"
+            }
+            alt="logo samur"
+            width={200}
+            height={100}
+            className={scrolled ? "LogoScrolled" : ""}
+            id="LogoSamurMenuAnimationMobile" />
         </div>
-    )
+        <div className="ContainerAtalhosMenuHamburguer">
+          <ul className="AtalhosMenuHamburguer">
+            {menuHamburguerData.map(
+              (objeto, index) =>
+                index !== menuHamburguerData.length - 1 && (
+                  <Link key={objeto.key} href={objeto.nomeUrl}>
+                    <li
+                      style={{
+                        fontFamily: "Yantramanav, sans-serif",
+                        fontWeight: "700",
+                        fontSize: "19px",
+                        letterSpacing: "2px",
+                        color: scrolled ? "black" : "white",
+                      }}
+                      key={objeto.key}
+                      onClick={() => IrPara(objeto.nomeUrl)}
+                    >
+                      {objeto.nome}
+                    </li>
+                  </Link>
+                )
+            )}
+          </ul>
+        </div>
+        <div className="ContainerAvatarBoxHover">
+          <div key={"minha-conta"}  className="LinkContainer" onClick={MostrarMenuAvatar}>
+            <Avatar className="divIconUser">
+              <AvatarImage src="https://github.com/shadcn.png" />
+              <AvatarFallback>CN</AvatarFallback>
+            </Avatar>
+          </div>
+          <div className="MenuHoverProfile"  style={{display: visibilidadeMenuHamburguerAvatar? "block" : "none"}}>
+            <ul>
+              <li className="ItensListaHeader">Minha Conta</li>
+              <li className="ItensListaHeader">Familiares</li>
+              <li className="ItensListaHeader">Formas de Pagamento</li>
+              <li className="ItensListaHeader">Notificações</li>
+              <li className="ItensListaHeader">Meus Pagamentos</li>
+              <li className="ItensListaHeader">Excluir conta</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }

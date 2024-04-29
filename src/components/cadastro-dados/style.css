@@ -1,77 +1,92 @@
-.BoxFormDados{
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    gap: 18px;
-    width: 100vw;
-    margin-bottom: 30px;
+.BoxFormDados {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  width: 100vw;
+  margin-bottom: 30px;
 }
-.DivDadosTitle{
-    display: flex;
-    justify-content: space-between;
-    color: var(--verde-escuro);
-    margin-top: 18px;
-    font-size: 20px;
-    font-weight: 500 ;
-    width: 80vw;
-    margin: auto;
+.DivDadosTitle {
+  display: flex;
+  justify-content: space-between;
+  color: var(--verde-escuro);
+  margin-top: 18px;
+  font-size: 20px;
+  font-weight: 500;
+  width: 80vw;
+  margin: auto;
 }
-.DivDadosForm{
-    display: grid;
-    width: 80vw;
-    grid-template-columns: 1fr;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
+.DivDadosForm {
+  display: grid;
+  width: 80vw;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
 }
-.item-selectGenero{
-    margin: 4px;
+.item-selectGenero {
+  margin: 4px;
+}
+.agrupamentoInput {
+  display: grid;
+  grid-template-columns: 45% 55%;
+  justify-content: center;
+  align-items: center;
+}
+.InputDados {
+  height: 40px;
+  border: 1px solid rgba(0, 0, 0, 0.63);
+  border-radius: 10px;
+}
+#InputDados {
+  width: 170px;
+  margin: auto;
+  margin-top: 10px;
+  background-color: var(--verde-escuro);
+  color: white;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+}
+.mensagemErroCpf {
+  color: red;
+  margin-left: 10px;
+}
+.FormSelect {
+  width: 80vw;
 }
 .agrupamentoInput{
-    display: grid;
-    grid-template-columns: 45% 55%;
-    justify-content: center;
-    align-items: center;
+  max-width: 80vw;
 }
-.InputDados{
-    height: 40px;
-    border: 1px solid rgba(0, 0, 0, 0.63);
-    border-radius: 10px;
+.InputGenero {
+  margin: 4px;
+  width: 35vw;
 }
-#InputDados{
-    width: 170px;
-    margin: auto;
-    margin-top: 10px;
-    background-color: var(--verde-escuro);
-    color: white;
-    justify-content: center;
-    align-items: center;
+.DATA{
+  width: 100%;
+}
+@media (min-width: 1024px) {
+  .BoxFormDados{
+    max-width: 40vw;
+  }
+  .FormSelect {
+    width: 350px;
+  }
+  .InputGenero {
+    width: 20vw;
+  }
+  .agrupamentoInput {
     display: flex;
-    border: none;
-    font-size: 18px;
-    font-weight: bold;
-}
-.mensagemErroCpf{
-    color: red;
-    margin-left: 10px;
-}
-.FormSelect{
-    width: 80vw;
-}
-.InputGenero{
-    margin: 4px;
-    width: 35vw;
-}
-@media(min-width: 1024px){
-    .FormSelect{
-        width: 28vw;
-    }
-    .InputGenero{
-        width: 15vw;
-    }
-    .agrupamentoInput{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    max-width: 350px;
+    gap: 15px;
+  }
+  .InputGenero{
+    margin: 0;
+  }
 }

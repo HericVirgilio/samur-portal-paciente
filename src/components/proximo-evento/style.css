@@ -1,98 +1,102 @@
 section {
-    width: 90%;
+  width: 90%;
 }
 
 .TituloSection {
-    font-size: 28px;
-    margin-top: 3vh;
-    margin-bottom: 1vh;
-    margin-left: 4rem;
-    color: var(--preto);
+  margin-top: 3vh;
+  margin-bottom: 1vh;
+  margin-left: 4rem;
+  color: var(--preto);
+}
+#TituloSectionSliderID{
+  font-size: 50px;
 }
 
 .list-section {
-    padding-top: 1rem;
-    display: flex;
-    position: relative;
-    margin: 0 auto;
-    align-items: center;
-    width: calc(100vw - 1vw);
-    height: 230px;
+  padding-top: 1rem;
+  display: flex;
+  position: relative;
+  margin: 0 auto;
+  align-items: center;
+  width: calc(100vw - 1vw);
+  height: 230px;
 }
 
 .slider-list {
-    width: 92%;
-    height: 100%;
-    overflow-x: scroll;
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-    white-space: nowrap;
-    scroll-behavior: smooth;
-    -ms-overflow-style: none;
-    /* IE and Edge */
-    scrollbar-width: none;
-    /* Firefox */
+  width: 92%;
+  height: 100%;
+  overflow-x: scroll;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
 
 .slider-list::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 .item-section {
-    width: 300px;
-    height: 200px;
-    border-radius: 1rem;
-    /*background-color: #DAE4D4;*/
-    background-color: #DBE5D5;
-    padding: 0 30px;
-    padding-top: 20px;
-    cursor: pointer;
+  width: 300px;
+  height: 200px;
+  border-radius: 1rem;
+  /*background-color: #DAE4D4;*/
+  background-color: #dbe5d5;
+  padding: 0 30px;
+  padding-top: 20px;
+  cursor: pointer;
 }
 
 .item-component-section {
-    display: grid;
-    grid-template-columns: 1fr 80%;
-    align-items: center;
-    margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: 1fr 80%;
+  align-items: center;
+  margin-bottom: 20px;
 }
 .item-component-description {
-    display: grid;
-    grid-template-columns: 1fr 80%;
-    align-items: center;
-    gap: 10px;
+  display: grid;
+  grid-template-columns: 1fr 80%;
+  align-items: center;
+  gap: 10px;
 }
 
 .item-section:hover {
-    top: -2px;
-    
+  top: -2px;
 }
 
 .arrow {
-    color: white;
-    opacity: 50%;
-    cursor: pointer;
+  color: white;
+  opacity: 50%;
+  cursor: pointer;
 }
 
 .arrow:hover {
-    opacity: 100%;
+  opacity: 100%;
 }
-
 
 .item-section:hover {
-    scale: 1.08;
-    transition: ease-in-out;
-    transition-duration: 50ms;
+  scale: 1.08;
+  transition: ease-in-out;
+  transition-duration: 50ms;
 }
 
-
 @media (max-width: 500px) {
-    .arrow {
-        display: none;
-    }
+  .arrow {
+    display: none;
+  }
 
-    .TituloSection {
-        font-size: 24px;
-        margin-left: 1rem;
-    }
+}
+@media(max-width: 999px){
+  #TituloSectionSliderID{
+    font-size: 28px;
+  }
+  .item-section{
+    width: 80vw;
+    padding-left: 8px;
+  }
 }

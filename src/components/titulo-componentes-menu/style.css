@@ -1,5 +1,6 @@
-.Container{
-    margin: 25px 15px;
+.ContainerTituloFormatado{
+    margin-left: 4rem;
+    margin-bottom: 1.5rem;
 }
 .Titulo{
     font-size: 22px;
@@ -7,7 +8,5 @@
     color: black;
 }
 @media(min-width: 1024px){
-    .Container{
-        margin: 25px 40px;
-    }
+    
 }

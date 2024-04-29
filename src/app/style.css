@@ -78,7 +78,7 @@
 .ContainerSlider{
     display: none;
 }
-@media (min-width: 769px) {
+@media (min-width: 950px) {
     .InputsAndLogo {
         width: 40vw;
         height: 100vh;
@@ -91,10 +91,11 @@
 
     .BoxHeaderLogin {
         width: 40vw;
+       
     }
 
     .FormControl {
-        width: 30vw;
+        width: 350px;
     }
 
     .LinhaDivisoria {
@@ -165,5 +166,15 @@
     }
     #test{
         margin-left: -80%;
+    }
+}
+@media (max-width: 949px) and (min-width: 425px){
+    .LinhaDivisoria {
+        width: 70vw;
+    }
+}
+@media (max-width: 949px) and (min-width: 500px){
+    .LinhaDivisoria {
+        width: 50vw;
     }
 }
