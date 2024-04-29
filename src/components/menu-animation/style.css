@@ -51,6 +51,20 @@
   font-size: 15px;
   cursor: pointer;
 }
+.ContainerDaDivMenuHamburguerMobile{
+  position: relative;
+}
+.MenuHoverProfileMobile{
+  position: absolute;
+  top: 110%;
+  width: 60vw;
+  padding: 15px;
+  border-radius: 20px;
+  background-color: var(--branco);
+}
+.ItensListaHeader{
+  margin: 8px;
+}
 
 @keyframes slideInFromTop {
   0% {

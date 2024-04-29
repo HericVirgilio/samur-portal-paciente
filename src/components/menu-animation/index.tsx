@@ -9,6 +9,15 @@ import { useState, useEffect } from "react";
 export default function MenuAnimation() {
   const router = useRouter();
   const [scrolled, setScrolled] = useState<boolean>(false);
+  const [visibilidadeMenuHamburguer, setVisibilidadeMenuHamburguer] = useState<boolean>(false)
+
+  const MostrarMenu = () => {
+      if(visibilidadeMenuHamburguer === false){
+        setVisibilidadeMenuHamburguer(true) 
+      }else{
+        setVisibilidadeMenuHamburguer(false)
+      }
+  }
 
   useEffect(() => {
     const TransformaScroll = () => {
@@ -34,11 +43,23 @@ export default function MenuAnimation() {
     <div className={scrolled ? "Scrolled" : "ContainerMenuAnimeted"}>
       <div className="AgrupamentoItens">
         <Link key={"home"} href={"/home"} className="ContainerHeader">
-          <Image src={
-              scrolled 
+          <div className="ContainerDaDivMenuHamburguerMobile">
+            <Image src={
+              scrolled
                 ? "/icons/menu-hamburguer-preto.png"
                 : "/icons/menu-hamburguer-branco.png"
-            } alt="" width={50} height={50}/>
+            } alt="" width={50} height={50} onClick={MostrarMenu} />
+            <div className="MenuHoverProfileMobile" style={{display:visibilidadeMenuHamburguer ? "block" : "none" }}>
+              <ul>
+                <li className="ItensListaHeader">Minha Conta</li>
+                <li className="ItensListaHeader">Familiares</li>
+                <li className="ItensListaHeader">Formas de Pagamento</li>
+                <li className="ItensListaHeader">Notificações</li>
+                <li className="ItensListaHeader">Meus Pagamentos</li>
+                <li className="ItensListaHeader">Excluir conta</li>
+              </ul>
+            </div>
+          </div>
           <Image
             src={
               scrolled
@@ -48,8 +69,8 @@ export default function MenuAnimation() {
             alt="logo samur"
             width={200}
             height={100}
-            className={scrolled ? "LogoScrolled" : ""} 
-            id="LogoSamurMenuAnimationMobile"/>
+            className={scrolled ? "LogoScrolled" : ""}
+            id="LogoSamurMenuAnimationMobile" />
         </Link>
         <div className="ContainerAtalhosMenuHamburguer">
           <ul className="AtalhosMenuHamburguer">
@@ -76,7 +97,7 @@ export default function MenuAnimation() {
           </ul>
         </div>
         <div className="ContainerAvatarBoxHover">
-          <Link key={"minha-conta"} href={"/minha-conta"} className="LinkContainer">
+          <Link key={"minha-conta"} href={"/home"} className="LinkContainer">
             <Avatar className="divIconUser">
               <AvatarImage src="https://github.com/shadcn.png" />
               <AvatarFallback>CN</AvatarFallback>
