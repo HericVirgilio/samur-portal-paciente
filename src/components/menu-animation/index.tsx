@@ -10,6 +10,7 @@ export default function MenuAnimation() {
   const router = useRouter();
   const [scrolled, setScrolled] = useState<boolean>(false);
   const [visibilidadeMenuHamburguer, setVisibilidadeMenuHamburguer] = useState<boolean>(false)
+  const [visibilidadeMenuHamburguerAvatar, setVisibilidadeMenuHamburguerAvatar] = useState<boolean>(false)
 
   const MostrarMenu = () => {
       if(visibilidadeMenuHamburguer === false){
@@ -18,6 +19,13 @@ export default function MenuAnimation() {
         setVisibilidadeMenuHamburguer(false)
       }
   }
+  const MostrarMenuAvatar = () => {
+    if(visibilidadeMenuHamburguerAvatar === false){
+      setVisibilidadeMenuHamburguerAvatar(true) 
+    }else{
+      setVisibilidadeMenuHamburguerAvatar(false)
+    }
+}
 
   useEffect(() => {
     const TransformaScroll = () => {
@@ -42,7 +50,7 @@ export default function MenuAnimation() {
   return (
     <div className={scrolled ? "Scrolled" : "ContainerMenuAnimeted"}>
       <div className="AgrupamentoItens">
-        <Link key={"home"} href={"/home"} className="ContainerHeader">
+        <div key={"home"}  className="ContainerHeader">
           <div className="ContainerDaDivMenuHamburguerMobile">
             <Image src={
               scrolled
@@ -51,12 +59,12 @@ export default function MenuAnimation() {
             } alt="" width={50} height={50} onClick={MostrarMenu} />
             <div className="MenuHoverProfileMobile" style={{display:visibilidadeMenuHamburguer ? "block" : "none" }}>
               <ul>
-                <li className="ItensListaHeader">Minha Conta</li>
-                <li className="ItensListaHeader">Familiares</li>
-                <li className="ItensListaHeader">Formas de Pagamento</li>
-                <li className="ItensListaHeader">Notificações</li>
-                <li className="ItensListaHeader">Meus Pagamentos</li>
-                <li className="ItensListaHeader">Excluir conta</li>
+                <li className="ItensListaHeader">Inicio</li>
+                <li className="ItensListaHeader">Agendamento</li>
+                <li className="ItensListaHeader">Documentos</li>
+                <li className="ItensListaHeader">Financeiro</li>
+                <li className="ItensListaHeader">Resultados</li>
+                <li className="ItensListaHeader">Sair</li>
               </ul>
             </div>
           </div>
@@ -71,7 +79,7 @@ export default function MenuAnimation() {
             height={100}
             className={scrolled ? "LogoScrolled" : ""}
             id="LogoSamurMenuAnimationMobile" />
-        </Link>
+        </div>
         <div className="ContainerAtalhosMenuHamburguer">
           <ul className="AtalhosMenuHamburguer">
             {menuHamburguerData.map(
@@ -97,13 +105,13 @@ export default function MenuAnimation() {
           </ul>
         </div>
         <div className="ContainerAvatarBoxHover">
-          <Link key={"minha-conta"} href={"/home"} className="LinkContainer">
+          <div key={"minha-conta"}  className="LinkContainer" onClick={MostrarMenuAvatar}>
             <Avatar className="divIconUser">
               <AvatarImage src="https://github.com/shadcn.png" />
               <AvatarFallback>CN</AvatarFallback>
             </Avatar>
-          </Link>
-          <div className="MenuHoverProfile">
+          </div>
+          <div className="MenuHoverProfile"  style={{display: visibilidadeMenuHamburguerAvatar? "block" : "none"}}>
             <ul>
               <li className="ItensListaHeader">Minha Conta</li>
               <li className="ItensListaHeader">Familiares</li>

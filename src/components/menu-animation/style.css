@@ -5,6 +5,9 @@
   position: fixed;
   top: 5%;
 }
+.ContainerDaDivMenuHamburguerMobile{
+  display: none;
+}
 .Scrolled {
   z-index: 5;
   width: 95vw;
@@ -99,11 +102,29 @@
   .ContainerAtalhosMenuHamburguer{
     display: none;
   }
+  .ContainerDaDivMenuHamburguerMobile{
+    display: block;
+  }
   .ContainerHeader{
     display: flex;
   }
   #LogoSamurMenuAnimationMobile{
     width: 170px;
     margin-left: 5px;
+  }
+  .ContainerAvatarBoxHover{
+    position: relative;
+  }
+  .MenuHoverProfile{
+    position: absolute;
+    width: 60vw;
+    top: 110%;
+    left: -45vw;
+  }
+  .LinkContainer:hover + .MenuHoverProfile{
+    display: none;
+  }
+  .MenuHoverProfile:hover{
+    display: none;
   }
 }
