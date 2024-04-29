@@ -11,8 +11,8 @@ export default function Footer() {
     router.push(url);
   };
   return (
-    <footer className="ContainerFooter">
-      <div></div>
+    <footer style={{position: "relative"}} >
+      <div className="ContainerFooter"></div>
       <div className="ContainerSamur">
         <span>Hospital Samur</span>
         <ul className="ItensLista" style={{ marginTop: "8px" }}>

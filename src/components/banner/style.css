@@ -1,8 +1,8 @@
 .ContainerBanner {
   display: flex;
-  width: 99vw;
+  width: 98vw;
   border-radius: 20%;
-  padding: 1%;
+  margin: 1% auto;
   padding-bottom: 0;
 }
 #PrimeiraImg {
@@ -11,8 +11,12 @@
 #UltimaImg {
   border-radius: 0px 20px 20px 0px;
 }
+.CardBanner{
+  min-width: 20%;
+}
 .CardsBanner {
   filter: brightness(65%);
+  width: 100%;
   height: 300px;
 }
 .CardsBanner:hover {
@@ -22,5 +26,16 @@
 @media (max-width: 500px) {
   .ContainerBanner {
     display: none;
+  }
+  .CardBanner{
+    min-width: 20%;
+  }
+}
+@media(min-width: 1441px){
+  .CardBanner{
+    min-width: 20%;
+  }
+  .CardsBanner{
+    height: 500px;
   }
 }
