@@ -38,7 +38,7 @@ section {
   display: none;
 }
 .item-section-option {
-  width: 260px;
+  min-width: 260px;
   height: 150px;
   border-radius: 1rem;
   cursor: pointer;
