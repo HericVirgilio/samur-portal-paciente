@@ -1,9 +1,9 @@
 import "./style.css";
 import Image from "next/image";
 import Link from "next/link";
-import { menuHamburguerData } from "@/data/menu-hamburguer.data";
 import { useRouter } from "next/navigation";
 import { MidiasSocaisData } from "@/data/midias-sociais.data";
+
 export default function Footer() {
   const router = useRouter();
 
@@ -25,7 +25,7 @@ export default function Footer() {
         <div style={{ marginTop: "3px" }}>
           <ul className="MidiasSociais">
             {MidiasSocaisData.map((objeto) => (
-              <div key={objeto.key} className="ImagensMidias">
+              <Link href={objeto.link} key={objeto.key} className="ImagensMidias" target="_blank" rel="follow">
                 <Image
                   src={objeto.img}
                   alt={objeto.titulo}
@@ -35,7 +35,7 @@ export default function Footer() {
                 <span style={{ fontSize: "14px", fontWeight: "200" }}>
                   {objeto.titulo}
                 </span>
-              </div>
+              </Link>
             ))}
           </ul>
         </div>
